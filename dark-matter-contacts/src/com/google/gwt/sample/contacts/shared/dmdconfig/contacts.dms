@@ -1,0 +1,11 @@
+SchemaDefinition
+name            contacts
+schemaPackage   com.google.gwt.sample.contacts.shared
+schemaBaseID    1000
+schemaIDRange   50
+//dependsOn       dmr.base
+defFiles        attributes.dmd
+defFiles        classes.dmd
+defFiles		slices.dmd
+description     The contacts schema defines objects associated with the contacts
+ GWT application example.
