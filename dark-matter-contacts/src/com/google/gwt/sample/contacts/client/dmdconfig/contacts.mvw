@@ -1,0 +1,21 @@
+Module
+moduleName  contacts
+genPackage  com.google.gwt.sample.contacts.client
+description The contacts module defines components that let us manage a set of contacts.
+
+View
+viewName        ContactListView
+broadcastEvent  addButtonClicked
+displayData     Contact LIST contactList
+selectData      contactList MULTI BROADCAST
+deleteData      contactList MULTI LOCAL
+clickData       contactList BROADCAST
+description     The ContactListView displays a list of Contacts and shows the first
+ and last names and the email address of the contact.
+
+PresenterImpl
+presenterName   ContactListPresenter
+presentsView    ContactListView
+
+
+
