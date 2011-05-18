@@ -6,11 +6,11 @@ description     The contacts module defines components that let us manage a set 
 
 View
 viewName        ContactListView
-broadcastOnly  	AddContactButtonClickedEvent
-displayDMO     	Contact MULTI contactList
-selectEvent     contactList MULTI BROADCAST
-deleteEvent     contactList MULTI LOCAL
-clickEvent      contactList BROADCAST
+broadcastOnly  	AddContactEvent
+displayDMO     	Contact MULTI contacts
+selectEvent     contacts MULTI BROADCAST
+deleteEvent     contacts MULTI LOCAL
+clickEvent      contacts BROADCAST
 description     The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
 
@@ -18,5 +18,11 @@ description     The ContactListView displays a list of Contacts and shows the fi
 //presenterName   ContactListPresenter
 //presentsView    ContactListView
 
-
+View
+viewName        EditContactView
+broadcastOnly  	EditContactCancelledEvent
+displayDMO     	Contact SINGLE contact
+description		The EditContactView allows the user to alter the information associated
+ with a Contact. This view is also used when adding new contacts; a new Contact will be
+ passed in by the presenter in this case.
 
