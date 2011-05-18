@@ -6,8 +6,8 @@ description     The contacts module defines components that let us manage a set 
 
 View
 viewName        ContactListView
-broadcastEvent  addButtonClicked
-displayData     Contact MULTI contactList
+broadcastOnly  	AddContactButtonClickedEvent
+displayDMO     	Contact MULTI contactList
 selectEvent     contactList MULTI BROADCAST
 deleteEvent     contactList MULTI LOCAL
 clickEvent      contactList BROADCAST
