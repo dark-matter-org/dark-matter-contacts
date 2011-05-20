@@ -7,16 +7,12 @@ description     The contacts module defines components that let us manage a set 
 View
 viewName        ContactListView
 broadcastOnly  	AddContactEvent
-displayDMO     	Contact MULTI contacts
+displayDMO     	Contact  MULTI contacts
 selectEvent     contacts MULTI BROADCAST
 deleteEvent     contacts MULTI LOCAL
 clickEvent      contacts BROADCAST
 description     The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
-
-//PresenterImpl
-//presenterName   ContactListPresenter
-//presentsView    ContactListView
 
 View
 viewName        EditContactView
@@ -26,3 +22,16 @@ description		The EditContactView allows the user to alter the information associ
  with a Contact. This view is also used when adding new contacts; a new Contact will be
  passed in by the presenter in this case.
 
+//local			onItemClicked (Contact contact) Contact : Called when a single Contact is clicked
+//broadcast		ContactsSelectedEvent
+//broadcastOnly	AddContactEvent : Fired when the Add button is clicked
+
+//Event
+//eventName       ContactsSelectedEvent
+//argVector       (List<Contact> contacts)
+//importDMO       Contact
+//importOther     java.util.List
+//description     Fired when one or more Contacts are selected.
+ 
+ 
+ 
