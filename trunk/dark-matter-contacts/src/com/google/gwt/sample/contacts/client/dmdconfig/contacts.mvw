@@ -4,23 +4,87 @@ dependsOnSchema contacts
 genPackage      com.google.gwt.sample.contacts.client
 description     The contacts module defines components that let us manage a set of contacts.
 
+///////////////////////////////////////////////////////////////////////////////
+//EVENTS
+
+Event
+eventName       AddContactEvent
+description     Fired when the Add button is clicked.
+ 
+Event
+eventName       DeleteContactsEvent
+argVector		(List<ContactDMO> deletedContacts)
+importThis		java.util.List
+importThis		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description     Indicates one or more contacts to be deleted.
+ 
+Event
+eventName       ContactUpdatedEvent
+argVector		(ContactDMO updatedContact)
+importThis		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description		Fired when a contact has its information alterred. The modifications
+ will have been recorded in the updatedContact. In the case of a newly added contact,
+ the Contact will not have an object name; this must be generated on the server.
+
+Event
+eventName       EditContactCancelledEvent
+description     Fired when the user hits cancel when viewing or adding Contact. We
+ revert back to the ContactListView
+
+Event
+eventName       EditContactEvent
+argVector		(ContactDMO contact)
+importThis		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description     Fired when a single Contact is clicked by the user. When this is
+ done, we display the EditContactView.
+
+///////////////////////////////////////////////////////////////////////////////
+// VIEWS
+ 
 View
 viewName        ContactListView
-broadcastOnly  	AddContactEvent
-displayDMO     	Contact  MULTI contacts
-selectEvent     contacts MULTI BROADCAST
-deleteEvent     contacts MULTI LOCAL
-clickEvent      contacts BROADCAST
-description     The ContactListView displays a list of Contacts and shows the first
+broadcastOnly	AddContactEvent
+broadcastOnly	EditContactEvent
+local			DeleteContactsEvent
+local			ContactUpdatedEvent
+// 
+viewMethod		displayContacts(List<ContactDMO> contacts)
+viewMethod		deleteContact(ContactDMO contact)
+viewImport		java.util.List
+viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description		The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
 
 View
-viewName        EditContactView
-broadcastOnly  	EditContactCancelledEvent
-displayDMO     	Contact SINGLE contact
-description		The EditContactView allows the user to alter the information associated
- with a Contact. This view is also used when adding new contacts; a new Contact will be
- passed in by the presenter in this case.
+viewName		EditContactView
+local			ContactUpdatedEvent
+broadcastOnly	EditContactCancelledEvent
+//
+viewMethod		setContact(ContactDMO contact)
+viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description		The EditContactView displays a single Contact. 
+ If the Save button is clicked, a ContactUpdatedEvent is sent with the recorded
+ modifications. If cancel is clicked, we revert to the ContactListView.
+
+WebApplication
+appName			ContactApp
+//View
+//viewName        ContactListView
+//broadcastOnly  	AddContactEvent
+//displayDMO     	Contact  MULTI contacts
+//selectEvent     contacts MULTI BROADCAST
+//deleteEvent     contacts MULTI LOCAL
+//clickEvent      contacts BROADCAST
+//description     The ContactListView displays a list of Contacts and shows the first
+//and last names and the email address of the contact.
+
+//View
+//viewName        EditContactView
+//broadcastOnly  	EditContactCancelledEvent
+//displayDMO     	Contact SINGLE contact
+//description		The EditContactView allows the user to alter the information associated
+//with a Contact. This view is also used when adding new contacts; a new Contact will be
+//passed in by the presenter in this case.
 
 //local			onItemClicked (Contact contact) Contact : Called when a single Contact is clicked
 //broadcast		ContactsSelectedEvent
@@ -32,6 +96,4 @@ description		The EditContactView allows the user to alter the information associ
 //importDMO       Contact
 //importOther     java.util.List
 //description     Fired when one or more Contacts are selected.
- 
- 
- 
+
