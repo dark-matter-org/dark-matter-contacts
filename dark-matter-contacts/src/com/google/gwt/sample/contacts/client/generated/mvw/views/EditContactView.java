@@ -1,20 +1,18 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:34)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatView(ViewFormatter.java:20)
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // Data class
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:68)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:319)
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // View import
 
 public interface EditContactView {
 
     public interface Presenter {
 
+        public void onContactUpdatedEvent(ContactDMO updatedContact);
+
     }
 
     public void setPresenter(Presenter presenter);
-
-    public void setContact(ContactDMO contact);
-
-    public ContactDMO getContact();
 
 }
 
