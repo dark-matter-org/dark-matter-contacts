@@ -1,13 +1,13 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:68)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:319)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:68)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:368)
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // View import
 import java.util.List;                                                         // View import
 
 public interface ContactListView {
 
-    public interface Presenter {
+    public interface ContactListViewPresenter {
 
         public void onContactUpdatedEvent(ContactDMO updatedContact);
 
@@ -15,7 +15,11 @@ public interface ContactListView {
 
     }
 
-    public void setPresenter(Presenter presenter);
+    public void setPresenter(ContactListViewPresenter presenter);
+
+    public void displayContacts(List<ContactDMO> contacts);
+
+    public void deleteContact(ContactDMO contact);
 
 }
 
