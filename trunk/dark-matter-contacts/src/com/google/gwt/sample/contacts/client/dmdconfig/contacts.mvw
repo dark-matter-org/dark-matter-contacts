@@ -47,9 +47,8 @@ broadcastOnly	AddContactEvent
 broadcastOnly	EditContactEvent
 local			DeleteContactsEvent
 local			ContactUpdatedEvent
-// 
-viewMethod		displayContacts(List<ContactDMO> contacts)
-viewMethod		deleteContact(ContactDMO contact)
+viewMethod		void displayContacts(List<ContactDMO> contacts)
+viewMethod		void deleteContact(ContactDMO contact)
 viewImport		java.util.List
 viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
 description		The ContactListView displays a list of Contacts and shows the first
@@ -59,12 +58,20 @@ View
 viewName		EditContactView
 local			ContactUpdatedEvent
 broadcastOnly	EditContactCancelledEvent
-//
-viewMethod		setContact(ContactDMO contact)
+viewMethod		void setContact(ContactDMO contact)
 viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
 description		The EditContactView displays a single Contact. 
  If the Save button is clicked, a ContactUpdatedEvent is sent with the recorded
  modifications. If cancel is clicked, we revert to the ContactListView.
+
+Controller
+controllerName	ContactAppController
+handlesEvent	AddContactEvent
+handlesEvent	EditContactEvent
+handlesEvent	EditContactCancelledEvent
+handlesEvent	ContactUpdatedEvent
+description		The ContactAppController provides a overall management of the 
+ Contact application.
 
 WebApplication
 appName			ContactApp

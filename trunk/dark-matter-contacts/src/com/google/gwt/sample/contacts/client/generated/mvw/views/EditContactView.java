@@ -1,18 +1,20 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:68)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:319)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:68)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:368)
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // View import
 
 public interface EditContactView {
 
-    public interface Presenter {
+    public interface EditContactViewPresenter {
 
         public void onContactUpdatedEvent(ContactDMO updatedContact);
 
     }
 
-    public void setPresenter(Presenter presenter);
+    public void setPresenter(EditContactViewPresenter presenter);
+
+    public void setContact(ContactDMO contact);
 
 }
 
