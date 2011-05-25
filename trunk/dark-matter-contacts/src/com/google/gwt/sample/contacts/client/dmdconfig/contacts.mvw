@@ -46,13 +46,22 @@ viewName        ContactListView
 broadcastOnly	AddContactEvent
 broadcastOnly	EditContactEvent
 local			DeleteContactsEvent
-local			ContactUpdatedEvent
 viewMethod		void displayContacts(List<ContactDMO> contacts)
-viewMethod		void deleteContact(ContactDMO contact)
+//viewMethod		void deleteContact(ContactDMO contact)
+viewMethod		void addContact(ContactDMO contact)
+viewMethod		void updateContact(ContactDMO contact)
 viewImport		java.util.List
 viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
 description		The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
+ 
+Presenter
+presenterName	ContactListPresenter
+managesView		ContactListView
+description		This presenter takes care of retrieving the summary information
+ for our Contacts and populates the ContactListView. It takes care of deletion
+ requests from the view and listens for Contact create events and updates the 
+ view accordingly.
 
 View
 viewName		EditContactView
@@ -69,7 +78,7 @@ controllerName	ContactAppController
 handlesEvent	AddContactEvent
 handlesEvent	EditContactEvent
 handlesEvent	EditContactCancelledEvent
-handlesEvent	ContactUpdatedEvent
+//handlesEvent	ContactUpdatedEvent
 description		The ContactAppController provides a overall management of the 
  Contact application.
 
