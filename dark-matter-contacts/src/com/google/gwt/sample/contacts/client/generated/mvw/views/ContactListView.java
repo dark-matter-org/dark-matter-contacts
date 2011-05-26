@@ -17,7 +17,9 @@ public interface ContactListView {
 
     public void displayContacts(List<ContactDMO> contacts);
 
-    public void deleteContact(ContactDMO contact);
+    public void addContact(ContactDMO contact);
+
+    public void updateContact(ContactDMO contact);
 
 }
 
