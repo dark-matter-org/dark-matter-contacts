@@ -43,44 +43,55 @@ description     Fired when a single Contact is clicked by the user. When this is
 // VIEWS
  
 View
-viewName        ContactListView
-broadcastOnly	AddContactEvent
-broadcastOnly	EditContactEvent
-local			DeleteContactsEvent
-viewMethod		void displayContacts(List<ContactDMO> contacts)
-//viewMethod		void deleteContact(ContactDMO contact)
-viewMethod		void addContact(ContactDMO contact)
-viewMethod		void updateContact(ContactDMO contact)
-viewImport		java.util.List
-viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
-description		The ContactListView displays a list of Contacts and shows the first
+viewName        	ContactListView
+broadcastOnly		AddContactEvent
+broadcastOnly		EditContactEvent
+local				DeleteContactsEvent
+viewMethod			void displayContacts(List<ContactDMO> contacts)
+viewMethod			void deleteContact(ContactDMO contact)
+viewMethod			void addContact(ContactDMO contact)
+viewMethod			void updateContact(ContactDMO contact)
+viewImport			java.util.List
+viewImport			com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description			The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
  
 Presenter
-presenterName	ContactListPresenter
-managesView		ContactListView
-description		This presenter takes care of retrieving the summary information
+presenterName		ContactListPresenter
+managesView			ContactListView
+sendsGetRequest		contact CENTRALERRORS DMPERRORS RPCERRORS CREATED DELETED MODIFIED
+sendsDeleteRequest	contact CENTRALERRORS
+description			This presenter takes care of retrieving the summary information
  for our Contacts and populates the ContactListView. It takes care of deletion
  requests from the view and listens for Contact create events and updates the 
  view accordingly.
 
 View
-viewName		EditContactView
-local			ContactUpdatedEvent
-broadcastOnly	EditContactCancelledEvent
-viewMethod		void setContact(ContactDMO contact)
-viewImport		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
-description		The EditContactView displays a single Contact. 
+viewName			EditContactView
+local				ContactUpdatedEvent
+broadcastOnly		EditContactCancelledEvent
+viewMethod			void setContact(ContactDMO contact)
+viewImport			com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+description			The EditContactView displays a single Contact. 
  If the Save button is clicked, a ContactUpdatedEvent is sent with the recorded
  modifications. If cancel is clicked, we revert to the ContactListView.
 
+Presenter
+presenterName		EditContactPresenter
+managesView			EditContactView
+sendsGetRequest		contact CENTRALERRORS
+sendsSetRequest		contact CENTRALERRORS
+description			The EditContactPresenter retrieves a complete Contact or creates
+ a new Contact and populates the EditContactView. If the user hits the Save button,
+ we send a Set or Create request to the server depending on the circumstances.
+
 Controller
-controllerName	ContactAppController
-handlesEvent	AddContactEvent
-handlesEvent	EditContactEvent
-handlesEvent	EditContactCancelledEvent
+controllerName		ContactAppController
+handlesEvent		AddContactEvent
+handlesEvent		EditContactEvent
+handlesEvent		EditContactCancelledEvent
 //handlesEvent	ContactUpdatedEvent
-description		The ContactAppController provides a overall management of the 
+description			The ContactAppController provides a overall management of the 
  Contact application.
 
 WebApplication
