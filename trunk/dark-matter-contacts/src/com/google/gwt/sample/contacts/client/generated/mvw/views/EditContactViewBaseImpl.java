@@ -11,7 +11,7 @@ abstract public class EditContactViewBaseImpl implements EditContactView {
 
     EditContactViewPresenter presenter;
 
-    private final EventBus eventBus;
+    protected final EventBus eventBus;
 
     protected EditContactViewBaseImpl(MvwRunContextIF rc){
         presenter = null;

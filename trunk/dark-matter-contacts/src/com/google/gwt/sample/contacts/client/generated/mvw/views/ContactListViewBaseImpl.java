@@ -13,7 +13,7 @@ abstract public class ContactListViewBaseImpl implements ContactListView {
 
     ContactListViewPresenter presenter;
 
-    private final EventBus eventBus;
+    protected final EventBus eventBus;
 
     protected ContactListViewBaseImpl(MvwRunContextIF rc){
         presenter = null;
