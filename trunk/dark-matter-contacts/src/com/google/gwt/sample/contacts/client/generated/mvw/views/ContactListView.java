@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:74)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:374)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:369)
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // View import
 import java.util.List;                                                         // View import
 
