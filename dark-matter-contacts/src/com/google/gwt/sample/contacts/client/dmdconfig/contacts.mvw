@@ -86,10 +86,12 @@ description			The EditContactPresenter retrieves a complete Contact or creates
  we send a Set or Create request to the server depending on the circumstances.
 
 Controller
-controllerName		ContactAppController
-handlesEvent		AddContactEvent
-handlesEvent		EditContactEvent
-handlesEvent		EditContactCancelledEvent
+controllerName			ContactAppController
+handlesEvent			AddContactEvent
+handlesEvent			EditContactEvent
+handlesEvent			EditContactCancelledEvent
+centralDMPErrorHandler	true
+centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
 description			The ContactAppController provides a overall management of the 
  Contact application.
