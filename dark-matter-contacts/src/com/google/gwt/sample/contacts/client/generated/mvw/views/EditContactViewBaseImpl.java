@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:381)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:381)
 import com.google.gwt.sample.contacts.client.generated.mvw.events.EditContactCancelledEvent;                // Required by EditContactCancelledEvent
 import com.google.gwt.sample.contacts.client.generated.mvw.events.EditContactCancelledEventHandler;         // Required by EditContactCancelledEvent
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                      // View import

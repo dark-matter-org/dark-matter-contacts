@@ -76,14 +76,14 @@ description			The EditContactView displays a single Contact.
  If the Save button is clicked, a ContactUpdatedEvent is sent with the recorded
  modifications. If cancel is clicked, we revert to the ContactListView.
 
-Presenter
-presenterName		EditContactPresenter
-managesView			EditContactView
-sendsGetRequest		contact CENTRALERRORS
-sendsSetRequest		contact CENTRALERRORS
-description			The EditContactPresenter retrieves a complete Contact or creates
- a new Contact and populates the EditContactView. If the user hits the Save button,
- we send a Set or Create request to the server depending on the circumstances.
+//Presenter
+//presenterName		EditContactPresenter
+//managesView			EditContactView
+//sendsGetRequest		contact CENTRALERRORS
+//sendsSetRequest		contact CENTRALERRORS
+//description			The EditContactPresenter retrieves a complete Contact or creates
+// a new Contact and populates the EditContactView. If the user hits the Save button,
+// we send a Set or Create request to the server depending on the circumstances.
 
 Controller
 controllerName			ContactAppController
@@ -99,18 +99,49 @@ description			The ContactAppController provides a overall management of the
 ///////////////////////////////////////////////////////////////////////////////
 //PLACES & ACTIVITIES
 
-DefaultPlace
-placeName		list
-placePrefix		list
-runsActivity	listContacts
-description		When the ContactApp is started, this is the default place.
+Place
+placeName			LoginPlace
+placePrefix			login
+runsActivity		PerformLoginActivity
+description			When the ContactApp is started, this is the default place.
 
 Activity
-activityName	listContacts
-description		The listContacts activity will retrieve the summary information about our contacts
+activityName		PerformLoginActivity
+description			The PerformLoginActivity prompts for a valid user name and password.
+ If login is successful, we go to the listContacts activity.
+
+Place
+placeName			ListPlace
+placePrefix			list
+runsActivity		ListContactsActivity
+description			The place where we list the available contacts.
+
+Activity
+activityName		ListContactsActivity
+description			The ListContactsActivity will retrieve the summary information about our contacts
  and display them in a ContactListView.
 
+Place
+placeName			EditPlace
+placePrefix			edit
+runsActivity		EditContactActivity
+description			The place where we edit or add a Contact.
+
+Activity
+activityName		EditContactActivity
+abstractActivity	true
+sendsGetRequest		contact CENTRALERRORS
+sendsSetRequest		contact CENTRALERRORS
+managesView			EditContactView
+description			The EditContactActivity will retrieve the Contact details if a 
+ Contact uuid was specified as part of the edit place URL. If not, we are assumed
+ to be creating a new Contact. If the user hits OK, we send a Set or Create request
+ to the server. If the user hits cancel, we go to the contacts list.
+
+///////////////////////////////////////////////////////////////////////////////
+// The application
+
 WebApplication
-appName			ContactApp
-usesController	CommsController
-defaultPlace	list
+appName				ContactApp
+usesController		CommsController
+defaultPlace		LoginPlace

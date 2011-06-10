@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
 import com.google.gwt.core.client.GWT;                                         // Used by dmpConnection
 import com.google.gwt.place.shared.PlaceController;                            // Used by placeController
 import com.google.web.bindery.event.shared.EventBus;                           // Used by eventBus
