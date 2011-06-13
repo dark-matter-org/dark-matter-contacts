@@ -4,15 +4,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.google.gwt.sample.contacts.client.MainDisplay;
-import com.google.gwt.sample.contacts.client.MainDisplay2;
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppBaseImpl;
 import com.google.gwt.sample.contacts.client.generated.mvw.places.LoginPlace;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 public class ContactApp extends ContactAppBaseImpl {
 	
+	MainDisplay display;
+	
 	public ContactApp(){
 		super();
+		display = new MainDisplay();
 	}
 
 	@Override
@@ -22,7 +24,7 @@ public class ContactApp extends ContactAppBaseImpl {
 
 	@Override
 	public AcceptsOneWidget getInitialWidget() {
-		return(new MainDisplay2());
+		return(display);
 	}
 
 	@Override

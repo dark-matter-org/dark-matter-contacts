@@ -11,62 +11,30 @@ import com.extjs.gxt.ui.client.widget.layout.VBoxLayout;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class MainDisplay2 extends Viewport implements AcceptsOneWidget {
-	
-	ContentPanel	mainPanel;
+public class MainDisplay2 extends ContentPanel implements AcceptsOneWidget {
 	
 	public MainDisplay2(){
 		setLayout(new FitLayout());
 		setSize(300, 300);
 		
-		mainPanel = new ContentPanel();
-		mainPanel.setSize(300, 300);
-		mainPanel.setLayout(new FitLayout());
-		mainPanel.setBodyBorder(true);
-		add(mainPanel);
-		
-		
-		ContentPanel panel = new ContentPanel();
-		panel.setWidth(300);
-		panel.setHeight(200);
-		panel.setLayout(new VBoxLayout());
-		
 		Text	someText = new Text("Initial text");
 		
-		panel.add(someText);
+		add(someText);
 		
-		mainPanel.add(panel);
-		
-		ContentPanel secondPanel = new ContentPanel();
-		secondPanel.setWidth(300);
-		secondPanel.setHeight(200);
-		secondPanel.setLayout(new VBoxLayout());
-		
-		Text	otherText = new Text("Secondary text");
-		
-		secondPanel.add(otherText);
-		
-		mainPanel.removeAll();
-		
-		mainPanel.add(secondPanel);
+		System.out.println("ID = " + java.lang.System.identityHashCode(this));
 	}
 
 	@Override
 	public void setWidget(IsWidget w) {
 		Logger logger = Logger.getLogger("dmcontacts");
 		logger.log(Level.INFO, "MainDisplay.setWidget() has been called with widget " + w.getClass().getName());
+		System.out.println("ID = " + java.lang.System.identityHashCode(this));
 
-		if (mainPanel.removeAll()){
+		if (removeAll()){
 			logger.log(Level.INFO, "MainDisplay.setWidget() all widgets removed");
-			ContentPanel thirdPanel = new ContentPanel();
-			thirdPanel.setWidth(300);
-			thirdPanel.setHeight(200);
-			thirdPanel.setLayout(new VBoxLayout());
 			
-			Text	otherText = new Text("Tertiary text");
-			
-			thirdPanel.add(otherText);
-			mainPanel.add(thirdPanel);
+			Text	otherText = new Text("Secondary text");
+			add(otherText);
 			
 			doLayout();
 		}
