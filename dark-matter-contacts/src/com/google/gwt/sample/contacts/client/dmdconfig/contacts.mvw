@@ -51,6 +51,7 @@ View
 viewName			LoginView
 viewMethod			void setUserName(String un)
 viewMethod			void setPassword(String pw)
+viewMethod			void setFeedback(String info)
 local				LoginEvent
 
 View
@@ -70,8 +71,8 @@ description			The ContactListView displays a list of Contacts and shows the firs
 Presenter
 presenterName		ContactListPresenter
 managesView			ContactListView
-sendsGetRequest		contact CENTRALERRORS DMPERRORS RPCERRORS CREATED DELETED MODIFIED
-sendsDeleteRequest	contact CENTRALERRORS
+sendsGetRequest		getContact CENTRALERRORS DMPERRORS RPCERRORS CREATED DELETED MODIFIED
+sendsDeleteRequest	deleteContact CENTRALERRORS
 description			This presenter takes care of retrieving the summary information
  for our Contacts and populates the ContactListView. It takes care of deletion
  requests from the view and listens for Contact create events and updates the 
@@ -120,7 +121,7 @@ Activity
 activityName		PerformLoginActivity
 subpackage			activities
 abstractActivity	true
-sendsLoginRequest	login CENTRALERRORS
+sendsLoginRequest	login DMPERRORS
 managesView			LoginView
 description			The PerformLoginActivity prompts for a valid user name and password.
  If login is successful, we go to the ListContactsPlace activity.
@@ -148,8 +149,8 @@ Activity
 activityName		EditContactActivity
 subpackage			activities
 abstractActivity	true
-sendsGetRequest		contact CENTRALERRORS
-sendsSetRequest		contact CENTRALERRORS
+sendsGetRequest		getContact CENTRALERRORS
+sendsSetRequest		setContact CENTRALERRORS
 managesView			EditContactView
 description			The EditContactActivity will retrieve the Contact details if a 
  Contact uuid was specified as part of the edit place URL. If not, we are assumed

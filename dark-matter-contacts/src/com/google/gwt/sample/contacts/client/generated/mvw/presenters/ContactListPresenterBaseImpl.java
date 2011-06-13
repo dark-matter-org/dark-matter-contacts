@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.presenters;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
 import com.google.gwt.event.shared.EventBus;                                                                       // Used by eventBus
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListView.ContactListViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
@@ -21,38 +21,50 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     protected final CommsController commsController;
     protected final EventBus eventBus;
 
-    private final int CONTACTDELETECALLBACK = 0;
-    private final int CONTACTGETCALLBACK = 1;
+    private final int DELETECONTACTDELETECALLBACK = 0;
+    private final int GETCONTACTGETCALLBACK = 1;
 
     public ContactListPresenterBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
         eventBus = ((MvwRunContextIF)rc).getEventBus();
     }
 
-    protected void sendContactDeleteRequest(DeleteRequestDMO request){
+    protected void sendDeleteContactRequest(DeleteRequestDMO request){
         commsController.sendRequest(request,this);
     }
 
-    protected void sendContactGetRequest(GetRequestDMO request){
+    protected DeleteRequestDMO getDeleteContactRequest(){
+        DeleteRequestDMO request = commsController.getDeleteRequest();
+        request.setHandlerID(DELETECONTACTDELETECALLBACK);
+        return(request);
+    }
+
+    protected void sendGetContactRequest(GetRequestDMO request){
         commsController.sendRequest(request,this);
+    }
+
+    protected GetRequestDMO getGetContactRequest(){
+        GetRequestDMO request = commsController.getGetRequest();
+        request.setHandlerID(GETCONTACTGETCALLBACK);
+        return(request);
     }
 
     @Override
     public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
-            case CONTACTGETCALLBACK:
-                handleContactResponseError((GetResponseDMO)response);
+            case GETCONTACTGETCALLBACK:
+                handleGetContactResponseError((GetResponseDMO)response);
                 break;
             }
         }
         else{
             switch(response.getHandlerID()){
-            case CONTACTDELETECALLBACK:
-                handleContactResponse((DeleteResponseDMO)response);
+            case DELETECONTACTDELETECALLBACK:
+                handleDeleteContactResponse((DeleteResponseDMO)response);
                 break;
-            case CONTACTGETCALLBACK:
-                handleContactResponse((GetResponseDMO)response);
+            case GETCONTACTGETCALLBACK:
+                handleGetContactResponse((GetResponseDMO)response);
                 break;
             }
         }
@@ -61,19 +73,19 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     @Override
     public void handleRPCFailure(Throwable caught, RequestDMO request){
             switch(request.getHandlerID()){
-            case CONTACTGETCALLBACK:
-                handleContactResponseRPCError(caught,(GetRequestDMO)request);
+            case GETCONTACTGETCALLBACK:
+                handleGetContactResponseRPCError(caught,(GetRequestDMO)request);
                 break;
             }
     }
 
-    abstract protected void handleContactResponse(DeleteResponseDMO response);
+    abstract protected void handleDeleteContactResponse(DeleteResponseDMO response);
 
-    abstract protected void handleContactResponseError(GetResponseDMO response);
+    abstract protected void handleGetContactResponseError(GetResponseDMO response);
 
-    abstract protected void handleContactResponseRPCError(Throwable caught, GetRequestDMO request);
+    abstract protected void handleGetContactResponseRPCError(Throwable caught, GetRequestDMO request);
 
-    abstract protected void handleContactResponse(GetResponseDMO response);
+    abstract protected void handleGetContactResponse(GetResponseDMO response);
 
 }
 

@@ -1,11 +1,8 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.places;
 
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Place.getImports(Place.java:35)
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Place.getImports(Place.java:35)
 import com.google.gwt.place.shared.PlaceTokenizer;                                             // Tokenizer interface
 import com.google.gwt.sample.contacts.client.extended.activities.PerformLoginActivity;         // Runs this activity
 import org.dmd.mvw.client.mvw.MvwPlace;                                                        // Our base class
@@ -31,9 +28,6 @@ public class LoginPlace extends MvwPlace {
     }
 
     public PerformLoginActivity getActivity(MvwRunContextIF context){
-		Logger logger = Logger.getLogger("dmcontacts");
-		logger.log(Level.INFO, "Initialize has been called.");
-
         return( new PerformLoginActivity(context));
     }
 
