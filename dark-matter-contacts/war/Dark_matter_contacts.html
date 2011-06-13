@@ -12,12 +12,57 @@
     <!--                                                               -->
     <!-- Consider inlining CSS to reduce the number of requested files -->
     <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="gxt224/css/gxt-all.css"> 
+    <link type="text/css" rel="stylesheet" href="gxt224/css/gxt-gray.css"> 
+
     <link type="text/css" rel="stylesheet" href="Dark_matter_contacts.css">
+
+    <!-- CSS to display the GXT Loading Display -->
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #loading {
+        position: absolute;
+        left: 45%;
+        top: 40%;
+        margin-left: -45px;
+        padding: 2px;
+        z-index: 20001;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+
+    #loading a {
+        color: #225588;
+    }
+
+    #loading .loading-indicator {
+        background: white;
+        color: #444;
+        font: bold 13px tahoma, arial, helvetica;
+        padding: 10px;
+        margin: 0;
+        height: auto;
+    }
+
+    #loading .loading-indicator img {
+        margin-right:8px;
+        float:left;
+        vertical-align:top;
+    }
+
+    #loading-msg {
+        font: normal 10px arial, tahoma, sans-serif;
+    }
+    </style>
 
     <!--                                           -->
     <!-- Any title is fine                         -->
     <!--                                           -->
-    <title>Web Application Starter Project</title>
+    <title>Dark Matter Contacts</title>
     
     <!--                                           -->
     <!-- This script loads your compiled module.   -->
@@ -45,19 +90,5 @@
       </div>
     </noscript>
 
-    <h1>Web Application Starter Project</h1>
-
-    <table align="center">
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Please enter your name:</td>        
-      </tr>
-      <tr>
-        <td id="nameFieldContainer"></td>
-        <td id="sendButtonContainer"></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
-      </tr>
-    </table>
   </body>
 </html>

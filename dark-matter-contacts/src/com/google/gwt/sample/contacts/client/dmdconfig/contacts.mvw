@@ -9,6 +9,11 @@ description     The contacts module defines components that let us manage a set 
 //EVENTS
 
 Event
+eventName       LoginEvent
+argVector		(String username, String password)
+description     Fired when the login button is clicked.
+ 
+Event
 eventName       AddContactEvent
 description     Fired when the Add button is clicked.
  
@@ -42,6 +47,12 @@ description     Fired when a single Contact is clicked by the user. When this is
 ///////////////////////////////////////////////////////////////////////////////
 // VIEWS
  
+View
+viewName			LoginView
+viewMethod			void setUserName(String un)
+viewMethod			void setPassword(String pw)
+local				LoginEvent
+
 View
 viewName        	ContactListView
 broadcastOnly		AddContactEvent
@@ -107,17 +118,23 @@ description			When the ContactApp is started, this is the default place.
 
 Activity
 activityName		PerformLoginActivity
+subpackage			activities
+abstractActivity	true
+sendsLoginRequest	login CENTRALERRORS
+managesView			LoginView
 description			The PerformLoginActivity prompts for a valid user name and password.
- If login is successful, we go to the listContacts activity.
+ If login is successful, we go to the ListContactsPlace activity.
 
 Place
-placeName			ListPlace
+placeName			ListContactsPlace
 placePrefix			list
 runsActivity		ListContactsActivity
 description			The place where we list the available contacts.
 
 Activity
 activityName		ListContactsActivity
+subpackage			activities
+abstractActivity	true
 description			The ListContactsActivity will retrieve the summary information about our contacts
  and display them in a ContactListView.
 
@@ -129,6 +146,7 @@ description			The place where we edit or add a Contact.
 
 Activity
 activityName		EditContactActivity
+subpackage			activities
 abstractActivity	true
 sendsGetRequest		contact CENTRALERRORS
 sendsSetRequest		contact CENTRALERRORS

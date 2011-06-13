@@ -1,9 +1,9 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.presenters;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+import com.google.gwt.event.shared.EventBus;                                                                       // Used by eventBus
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListView.ContactListViewPresenter;         // Presenter interface
-import com.google.web.bindery.event.shared.EventBus;                                                               // Used by eventBus
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
 import org.dmd.dmp.shared.generated.dmo.DeleteRequestDMO;                                                          // Component sends delete requests
 import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;                                                         // Component sends delete requests
@@ -42,17 +42,17 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case CONTACTGETCALLBACK:
-                handleContactGetResponseError((GetResponseDMO)response);
+                handleContactResponseError((GetResponseDMO)response);
                 break;
             }
         }
         else{
             switch(response.getHandlerID()){
             case CONTACTDELETECALLBACK:
-                handleContactDeleteResponse((DeleteResponseDMO)response);
+                handleContactResponse((DeleteResponseDMO)response);
                 break;
             case CONTACTGETCALLBACK:
-                handleContactGetResponse((GetResponseDMO)response);
+                handleContactResponse((GetResponseDMO)response);
                 break;
             }
         }
@@ -62,18 +62,18 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     public void handleRPCFailure(Throwable caught, RequestDMO request){
             switch(request.getHandlerID()){
             case CONTACTGETCALLBACK:
-                handleContactGetResponseRPCError(caught,(GetRequestDMO)request);
+                handleContactResponseRPCError(caught,(GetRequestDMO)request);
                 break;
             }
     }
 
-    abstract protected void handleContactDeleteResponse(DeleteResponseDMO response);
+    abstract protected void handleContactResponse(DeleteResponseDMO response);
 
-    abstract protected void handleContactGetResponseError(GetResponseDMO response);
+    abstract protected void handleContactResponseError(GetResponseDMO response);
 
-    abstract protected void handleContactGetResponseRPCError(Throwable caught, GetRequestDMO request);
+    abstract protected void handleContactResponseRPCError(Throwable caught, GetRequestDMO request);
 
-    abstract protected void handleContactGetResponse(GetResponseDMO response);
+    abstract protected void handleContactResponse(GetResponseDMO response);
 
 }
 

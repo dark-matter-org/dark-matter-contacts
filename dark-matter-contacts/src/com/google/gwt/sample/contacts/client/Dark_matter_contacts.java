@@ -1,20 +1,22 @@
 package com.google.gwt.sample.contacts.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppRunContext;
+import com.google.gwt.sample.contacts.client.extended.ContactApp;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class Dark_matter_contacts implements EntryPoint {
-
-	ContactAppRunContext	runContext;
+	
+	ContactApp	app;
 	
 	/**
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		runContext = new ContactAppRunContext();
 		
+		app = new ContactApp();
+		
+		app.run();
 	}
 }
