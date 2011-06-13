@@ -1,0 +1,2 @@
+# Module dark_matter_contacts
+# RPC service class, partial path of RPC policy file

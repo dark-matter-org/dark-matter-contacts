@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
 import com.google.gwt.activity.shared.AbstractActivity;                                                            // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactView.EditContactViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
@@ -20,19 +20,31 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     protected final CommsController commsController;
 
-    private final int CONTACTGETCALLBACK = 0;
-    private final int CONTACTSETCALLBACK = 1;
+    private final int GETCONTACTGETCALLBACK = 0;
+    private final int SETCONTACTSETCALLBACK = 1;
 
     public EditContactActivityBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
     }
 
-    protected void sendContactGetRequest(GetRequestDMO request){
+    protected void sendGetContactRequest(GetRequestDMO request){
         commsController.sendRequest(request,this);
     }
 
-    protected void sendContactSetRequest(SetRequestDMO request){
+    protected GetRequestDMO getGetContactRequest(){
+        GetRequestDMO request = commsController.getGetRequest();
+        request.setHandlerID(GETCONTACTGETCALLBACK);
+        return(request);
+    }
+
+    protected void sendSetContactRequest(SetRequestDMO request){
         commsController.sendRequest(request,this);
+    }
+
+    protected SetRequestDMO getSetContactRequest(){
+        SetRequestDMO request = commsController.getSetRequest();
+        request.setHandlerID(SETCONTACTSETCALLBACK);
+        return(request);
     }
 
     @Override
@@ -42,11 +54,11 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         }
         else{
             switch(response.getHandlerID()){
-            case CONTACTGETCALLBACK:
-                handleContactResponse((GetResponseDMO)response);
+            case GETCONTACTGETCALLBACK:
+                handleGetContactResponse((GetResponseDMO)response);
                 break;
-            case CONTACTSETCALLBACK:
-                handleContactResponse((SetResponseDMO)response);
+            case SETCONTACTSETCALLBACK:
+                handleSetContactResponse((SetResponseDMO)response);
                 break;
             }
         }
@@ -57,9 +69,9 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         throw(new IllegalStateException("RPC errors are supposed to be centrally handled!"));
     }
 
-    abstract protected void handleContactResponse(GetResponseDMO response);
+    abstract protected void handleGetContactResponse(GetResponseDMO response);
 
-    abstract protected void handleContactResponse(SetResponseDMO response);
+    abstract protected void handleSetContactResponse(SetResponseDMO response);
 
 }
 

@@ -3,6 +3,7 @@ package com.google.gwt.sample.contacts.client.extended.activities;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;
 import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 
@@ -30,6 +31,7 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 			loginView.setPresenter(this);
 		}
 		
+		loginView.setFeedback("Please enter your user name and password");
 		panel.setWidget(loginView);
 	}
 
@@ -41,8 +43,13 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 
 	@Override
 	public void onLoginEvent(String username, String password) {
-		// TODO Auto-generated method stub
+		loginView.setFeedback("Logging in...");
 		
+		LoginRequestDMO request = getLoginRequest();
+		request.setUserName(username);
+		request.setPassword(password);
+		
+		sendLoginRequest(request);
 	}
 
 

@@ -17,18 +17,6 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 	}
 
 	@Override
-	protected void handleContactResponse(GetResponseDMO response) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	protected void handleContactResponse(SetResponseDMO response) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void onContactUpdatedEvent(ContactDMO updatedContact) {
 		// TODO Auto-generated method stub
 		
@@ -36,6 +24,18 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 
 	@Override
 	public void start(AcceptsOneWidget panel, EventBus eventBus) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleGetContactResponse(GetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleSetContactResponse(SetResponseDMO response) {
 		// TODO Auto-generated method stub
 		
 	}

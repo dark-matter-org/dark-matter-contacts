@@ -1,0 +1,2 @@
+serviceClass: org.dmd.dmp.client.DMPService
+path: F435767CF8955340D16B45123BC8524F.gwt.rpc

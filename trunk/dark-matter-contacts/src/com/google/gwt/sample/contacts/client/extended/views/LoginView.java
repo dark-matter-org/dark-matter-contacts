@@ -1,108 +1,126 @@
 package com.google.gwt.sample.contacts.client.extended.views;
 
-import com.extjs.gxt.ui.client.event.Events;
-
 import com.extjs.gxt.ui.client.Style.HorizontalAlignment;
+import com.extjs.gxt.ui.client.event.ButtonEvent;
 import com.extjs.gxt.ui.client.event.ComponentEvent;
+import com.extjs.gxt.ui.client.event.Events;
 import com.extjs.gxt.ui.client.event.KeyListener;
+import com.extjs.gxt.ui.client.event.SelectionListener;
 import com.extjs.gxt.ui.client.event.WidgetListener;
 import com.extjs.gxt.ui.client.widget.ContentPanel;
-import com.extjs.gxt.ui.client.widget.Text;
-import com.extjs.gxt.ui.client.widget.Viewport;
 import com.extjs.gxt.ui.client.widget.button.Button;
 import com.extjs.gxt.ui.client.widget.form.TextField;
 import com.extjs.gxt.ui.client.widget.layout.CenterLayout;
 import com.extjs.gxt.ui.client.widget.layout.FormLayout;
-import com.extjs.gxt.ui.client.widget.layout.VBoxLayout;
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewBaseImpl;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * The LoginView displays fields for the username and password and a button
+ * to request login.
+ */
 public class LoginView extends LoginViewBaseImpl {
 	
-	Viewport 			viewport;
 	ContentPanel		panel;
+	
+	ContentPanel		loginForm;
 	TextField<String> 	userName;
 	TextField<String> 	password;
+	TextField<String>	feedback;
 	Button 				login;
 
 	public LoginView(){
 		super();
 		
+		// Listener to set focus on the user name field when we're displayed
 		WidgetListener widgetListener = new WidgetListener() {
 			@Override
 			public void handleEvent(ComponentEvent e) {
-				System.out.println("LoginView widget listener got: " + e.toString());
+				userName.focus();
 			}
 		};
-		
-		viewport = new Viewport();
-		viewport.addListener(Events.BeforeShow, widgetListener);
-		viewport.setWidth(300);
-		
-		viewport.setLayout(new CenterLayout());
-		
+				
 		panel = new ContentPanel();
+		panel.setHeaderVisible(false);
+		panel.setBodyBorder(false);
 		panel.setWidth(300);
 		panel.setHeight(200);
-		panel.setLayout(new VBoxLayout());
+		panel.setLayout(new CenterLayout());
+		panel.addListener(Events.AfterLayout, widgetListener);
 		
-		Text	someText = new Text("Login text");
+		loginForm = new ContentPanel();
+		loginForm.setHeaderVisible(false);
+		loginForm.setBodyBorder(false);
+		loginForm.setButtonAlign(HorizontalAlignment.CENTER);
 		
-		panel.add(someText);
-
-//		panel.setButtonAlign(HorizontalAlignment.LEFT);
+	  	FormLayout layout = new FormLayout();
+    	layout.setLabelWidth(90);
+    	layout.setDefaultWidth(180);
+    	loginForm.setLayout(layout);
 		
-//	  	FormLayout layout = new FormLayout();
-//    	layout.setLabelWidth(90);
-//    	layout.setDefaultWidth(180);
-//    	panel.setLayout(layout);
-//		
-//    	KeyListener keyListener = new KeyListener() {
-//    		public void componentKeyUp(ComponentEvent event) {
-//    			validate();
-//    		}
-//    	};
-//    	
-//    	userName = new TextField<String>();
-//    	userName.setMinLength(4);
-//    	userName.setFieldLabel("Username");
-//    	userName.addKeyListener(keyListener);
-//    	panel.add(userName);
-//
-//    	password = new TextField<String>();
-//    	password.setMinLength(4);
-//    	password.setPassword(true);
-//    	password.setFieldLabel("Password");
-//    	password.addKeyListener(keyListener);
-//    	panel.add(password);
-//    	
-//    	viewPanel.add(panel);
-
-//    	viewport.add(panel);
+    	KeyListener keyListener = new KeyListener() {
+    		public void componentKeyUp(ComponentEvent event) {
+    			validate();
+    		}
+    	};
     	
+    	userName = new TextField<String>();
+    	userName.setMinLength(4);
+    	userName.setFieldLabel("Username");
+    	userName.addKeyListener(keyListener);
+    	loginForm.add(userName);
+
+    	password = new TextField<String>();
+    	password.setMinLength(4);
+    	password.setPassword(true);
+    	password.setFieldLabel("Password");
+    	password.addKeyListener(keyListener);
+    	loginForm.add(password);
+    	
+    	feedback = new TextField<String>();
+    	loginForm.add(feedback);
+    	
+    	login = new Button("Login");
+    	login.disable();
+    	login.addSelectionListener(new SelectionListener<ButtonEvent>() {
+    		public void componentSelected(ButtonEvent ce) {
+    			fireLoginEvent(userName.getValue(), password.getValue());
+    		}
+    	});
+    	loginForm.addButton(login);
+    	
+    	panel.add(loginForm);
+
 	}
 
+	///////////////////////////////////////////////////////////////////////////
+	// LoginView implementation
+	
 	@Override
 	public void setPassword(String pw) {
-		// TODO Auto-generated method stub
-
+		password.setValue(pw);
 	}
 
 	@Override
 	public void setUserName(String un) {
-		// TODO Auto-generated method stub
-
+		userName.setValue(un);
 	}
 
+	@Override
+	public void setFeedback(String info) {
+		feedback.setValue(info);
+	}
+
+	///////////////////////////////////////////////////////////////////////////
+	// IsWidget implementation
 	@Override
 	public Widget asWidget() {
 		return(panel);
 	}
 
-
+	///////////////////////////////////////////////////////////////////////////
+	// Field validation
+	
   	protected boolean hasValue(TextField<String> field) {
   		return field.getValue() != null && field.getValue().length() > 0;
   	}
