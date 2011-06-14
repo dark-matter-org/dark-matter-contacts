@@ -51,7 +51,8 @@ View
 viewName			LoginView
 viewMethod			void setUserName(String un)
 viewMethod			void setPassword(String pw)
-viewMethod			void setFeedback(String info)
+viewMethod			void displayFeedback(String info)
+viewMethod			void displayError(String info)
 local				LoginEvent
 
 View
@@ -59,12 +60,12 @@ viewName        	ContactListView
 broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
-viewMethod			void displayContacts(List<ContactDMO> contacts)
-viewMethod			void deleteContact(ContactDMO contact)
-viewMethod			void addContact(ContactDMO contact)
-viewMethod			void updateContact(ContactDMO contact)
+viewMethod			void displayContacts(List<ContactDMW> contacts)
+viewMethod			void deleteContact(ContactDMW contact)
+viewMethod			void addContact(ContactDMW contact)
+viewMethod			void updateContact(ContactDMW contact)
 viewImport			java.util.List
-viewImport			com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
+viewImport			com.google.gwt.sample.contacts.client.generated.dmw.ContactDMW
 description			The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
  
