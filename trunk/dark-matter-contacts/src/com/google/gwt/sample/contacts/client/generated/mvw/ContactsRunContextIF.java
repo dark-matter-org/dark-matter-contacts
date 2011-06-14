@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatModuleRunContextInterface(RunContextFormatter.java:33)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatModuleRunContextInterface(RunContextFormatter.java:33)
 import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppController
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlaceHistoryMapper;         // Used by historyMapper
 

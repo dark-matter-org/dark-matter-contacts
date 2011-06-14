@@ -1,0 +1,5 @@
+DmgConfig
+genPackage      com.google.gwt.sample.contacts.client
+schemaToLoad    contacts
+generator       org.dmd.features.extgwt.generators.ExtGWTWrapperGenerator
+description     We generate the ExtGWT wrappers for use with the contacts.

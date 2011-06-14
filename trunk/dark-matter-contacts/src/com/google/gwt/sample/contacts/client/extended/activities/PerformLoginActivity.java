@@ -31,25 +31,30 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 			loginView.setPresenter(this);
 		}
 		
-		loginView.setFeedback("Please enter your user name and password");
+		loginView.displayFeedback("Please enter your user name and password");
 		panel.setWidget(loginView);
 	}
 
 	@Override
 	protected void handleLoginResponse(LoginResponseDMO response) {
-		// TODO Auto-generated method stub
-		
+		loginView.displayFeedback("Login succeeded");
 	}
 
 	@Override
 	public void onLoginEvent(String username, String password) {
-		loginView.setFeedback("Logging in...");
+		loginView.displayFeedback("Logging in...");
 		
 		LoginRequestDMO request = getLoginRequest();
 		request.setUserName(username);
 		request.setPassword(password);
 		
 		sendLoginRequest(request);
+	}
+
+	@Override
+	protected void handleLoginResponseError(LoginResponseDMO response) {
+		loginView.setPassword("");
+		loginView.displayError("Login failed");
 	}
 
 
