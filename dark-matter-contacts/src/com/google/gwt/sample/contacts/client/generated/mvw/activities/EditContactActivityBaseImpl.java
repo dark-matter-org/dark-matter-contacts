@@ -1,9 +1,10 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.activity.shared.AbstractActivity;                                                            // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactView.EditContactViewPresenter;         // Presenter interface
+import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
 import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;                                                             // Component sends get requests
 import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;                                                            // Component sends get requests
@@ -28,7 +29,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
     }
 
     protected void sendGetContactRequest(GetRequestDMO request){
-        commsController.sendRequest(request,this);
+        commsController.sendGetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
     }
 
     protected GetRequestDMO getGetContactRequest(){
@@ -38,7 +39,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
     }
 
     protected void sendSetContactRequest(SetRequestDMO request){
-        commsController.sendRequest(request,this);
+        commsController.sendSetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
     }
 
     protected SetRequestDMO getSetContactRequest(){

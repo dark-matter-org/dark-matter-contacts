@@ -1,9 +1,10 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.presenters;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.event.shared.EventBus;                                                                       // Used by eventBus
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListView.ContactListViewPresenter;         // Presenter interface
+import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
 import org.dmd.dmp.shared.generated.dmo.DeleteRequestDMO;                                                          // Component sends delete requests
 import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;                                                         // Component sends delete requests
@@ -30,7 +31,7 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     }
 
     protected void sendDeleteContactRequest(DeleteRequestDMO request){
-        commsController.sendRequest(request,this);
+        commsController.sendDeleteRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
     }
 
     protected DeleteRequestDMO getDeleteContactRequest(){
@@ -40,7 +41,7 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     }
 
     protected void sendGetContactRequest(GetRequestDMO request){
-        commsController.sendRequest(request,this);
+        commsController.sendGetRequest(request,this,ErrorOptionsEnum.CENTRALANDLOCAL,ErrorOptionsEnum.CENTRALANDLOCAL);
     }
 
     protected GetRequestDMO getGetContactRequest(){

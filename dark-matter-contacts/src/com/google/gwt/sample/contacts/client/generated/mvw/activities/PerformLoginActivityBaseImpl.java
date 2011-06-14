@@ -1,9 +1,10 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:70)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.activity.shared.AbstractActivity;                                                // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginView.LoginViewPresenter;         // Presenter interface
+import org.dmd.dmp.client.ErrorOptionsEnum;                                                            // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                           // DMP communications
 import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;                                               // Component sends login requests
 import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                                              // Component sends login requests
@@ -25,7 +26,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
     }
 
     protected void sendLoginRequest(LoginRequestDMO request){
-        commsController.sendRequest(request,this);
+        commsController.sendLoginRequest(request,this,ErrorOptionsEnum.LOCAL,ErrorOptionsEnum.LOCAL);
     }
 
     protected LoginRequestDMO getLoginRequest(){
