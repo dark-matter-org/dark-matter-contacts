@@ -30,9 +30,8 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		contacts 		= new TreeMap<DmcObjectName, ContactGXT>();
 		haveContacts 	= false;
 		
-		contactsPresenter = getContactListPresenterRCI();
-//		contactsView = new ContactListView(rc)
-		
+		contactsPresenter = getContactListPresenter();
+		contactsView = getContactListView(contactsPresenter);
 	}
 	
 	/**
