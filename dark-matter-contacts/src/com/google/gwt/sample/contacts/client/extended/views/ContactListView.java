@@ -12,7 +12,7 @@ import com.extjs.gxt.ui.client.widget.grid.ColumnModel;
 import com.extjs.gxt.ui.client.widget.grid.Grid;
 import com.extjs.gxt.ui.client.widget.grid.GridView;
 import com.extjs.gxt.ui.client.widget.layout.CenterLayout;
-import com.google.gwt.sample.contacts.client.generated.dmw.ContactDMW;
+import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewBaseImpl;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -24,10 +24,10 @@ public class ContactListView extends ContactListViewBaseImpl {
 	ContentPanel			gridPanel;
 	
 	// The backing store for our grid display
-	ListStore<ContactDMW>	store;
+	ListStore<ContactGXT>	store;
 	
 	// Our table of contacts
-	Grid<ContactDMW>		grid;
+	Grid<ContactGXT>		grid;
 	
 	// Our columns
 	ColumnConfig			firstNameCol;
@@ -69,12 +69,12 @@ public class ContactListView extends ContactListViewBaseImpl {
 		
 		columnModel = new ColumnModel(config);
 		
-		store = new ListStore<ContactDMW>();
+		store = new ListStore<ContactGXT>();
 		
 		GridView view = new GridView();
 		view.setForceFit(true);
 		
-		grid = new Grid<ContactDMW>(store, columnModel);
+		grid = new Grid<ContactGXT>(store, columnModel);
 		grid.setView(view);
 		grid.setBorders(true);
 		
@@ -83,24 +83,24 @@ public class ContactListView extends ContactListViewBaseImpl {
 	}
 
 	@Override
-	public void addContact(ContactDMW contact) {
+	public void addContact(ContactGXT contact) {
 		store.add(contact);
 	}
 
 	@Override
-	public void deleteContact(ContactDMW contact) {
+	public void deleteContact(ContactGXT contact) {
 		
 		
 	}
 
 	@Override
-	public void displayContacts(List<ContactDMW> contacts) {
+	public void displayContacts(List<ContactGXT> contacts) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void updateContact(ContactDMW contact) {
+	public void updateContact(ContactGXT contact) {
 		// TODO Auto-generated method stub
 		
 	}
