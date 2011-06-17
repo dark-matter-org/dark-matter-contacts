@@ -7,17 +7,13 @@ import com.extjs.gxt.ui.client.event.Events;
 import com.extjs.gxt.ui.client.event.KeyListener;
 import com.extjs.gxt.ui.client.event.SelectionListener;
 import com.extjs.gxt.ui.client.event.WidgetListener;
-import com.extjs.gxt.ui.client.util.Margins;
-import com.extjs.gxt.ui.client.util.Padding;
 import com.extjs.gxt.ui.client.widget.ContentPanel;
+import com.extjs.gxt.ui.client.widget.LayoutContainer;
 import com.extjs.gxt.ui.client.widget.Text;
 import com.extjs.gxt.ui.client.widget.button.Button;
 import com.extjs.gxt.ui.client.widget.form.TextField;
 import com.extjs.gxt.ui.client.widget.layout.CenterLayout;
 import com.extjs.gxt.ui.client.widget.layout.FormLayout;
-import com.extjs.gxt.ui.client.widget.layout.VBoxLayout;
-import com.extjs.gxt.ui.client.widget.layout.VBoxLayoutData;
-import com.extjs.gxt.ui.client.widget.layout.VBoxLayout.VBoxLayoutAlign;
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewBaseImpl;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -27,11 +23,11 @@ import com.google.gwt.user.client.ui.Widget;
  */
 public class LoginView extends LoginViewBaseImpl {
 	
-	ContentPanel		panel;
+	LayoutContainer		panel;
 	
 	ContentPanel		loginForm;
 	
-	ContentPanel		loginFields;
+	LayoutContainer		loginFields;
 	TextField<String> 	userName;
 	TextField<String> 	password;
 	
@@ -50,28 +46,20 @@ public class LoginView extends LoginViewBaseImpl {
 			}
 		};
 				
-		panel = new ContentPanel();
-		panel.setHeaderVisible(false);
-		panel.setBodyBorder(false);
-		panel.setWidth(300);
-		panel.setHeight(200);
+		panel = new LayoutContainer();
+		panel.setSize(300,200);
 		panel.setLayout(new CenterLayout());
 		panel.addListener(Events.AfterLayout, widgetListener);
 		
 		loginForm = new ContentPanel();
-//		VBoxLayout vblayout = new VBoxLayout();
-//		vblayout.setVBoxLayoutAlign(VBoxLayoutAlign.CENTER);
-//		loginForm.setLayout(new CenterLayout());
 		loginForm.setHeaderVisible(false);
 		loginForm.setBodyBorder(false);
 		loginForm.setButtonAlign(HorizontalAlignment.CENTER);
 		
-		loginFields = new ContentPanel();
+		loginFields = new LayoutContainer();
 		loginFields.setWidth(280);
-		loginFields.setHeaderVisible(false);
-		loginFields.setBodyBorder(false);
 	  	FormLayout layout = new FormLayout();
-    	layout.setLabelWidth(90);
+    	layout.setLabelWidth(80);
     	layout.setDefaultWidth(180);
     	loginFields.setLayout(layout);
 		
@@ -82,19 +70,18 @@ public class LoginView extends LoginViewBaseImpl {
     	};
     	
     	userName = new TextField<String>();
-    	userName.setMinLength(4);
+    	userName.setMinLength(10);
     	userName.setFieldLabel("Username");
     	userName.addKeyListener(keyListener);
     	loginFields.add(userName);
 
     	password = new TextField<String>();
-    	password.setMinLength(4);
+    	password.setMinLength(10);
     	password.setPassword(true);
     	password.setFieldLabel("Password");
     	password.addKeyListener(keyListener);
     	loginFields.add(password);
     	
-//    	loginForm.add(loginFields, new VBoxLayoutData(new Margins(0,0,5,0)));
     	loginForm.add(loginFields);
     	
     	feedback = new Text();
@@ -102,7 +89,6 @@ public class LoginView extends LoginViewBaseImpl {
     	feedback.setBorders(false);
     	feedback.addStyleName("feedback");
     	
-//    	loginForm.add(feedback, new VBoxLayoutData(new Margins(0,0,5,0)));
     	loginForm.add(feedback);
     	
     	login = new Button("Login");
@@ -142,11 +128,6 @@ public class LoginView extends LoginViewBaseImpl {
 		feedback.removeStyleName("feedback-error");
 		feedback.setText(info);
 	}
-
-//	@Override
-//	public void setFeedback(String info) {
-//		feedback.setText(info);
-//	}
 
 	///////////////////////////////////////////////////////////////////////////
 	// IsWidget implementation

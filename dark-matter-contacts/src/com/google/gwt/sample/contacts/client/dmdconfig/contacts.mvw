@@ -71,6 +71,7 @@ description			The ContactListView displays a list of Contacts and shows the firs
  
 Presenter
 presenterName		ContactListPresenter
+subpackage			presenters
 managesView			ContactListView
 sendsGetRequest		getContact CENTRALERRORS DMPERRORS RPCERRORS CREATED DELETED MODIFIED
 sendsDeleteRequest	deleteContact CENTRALERRORS
@@ -103,11 +104,20 @@ controllerName			ContactAppController
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
+usesPresenter			ContactListPresenter
+usesRunContextItem		placeController		
 centralDMPErrorHandler	true
 centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
-description			The ContactAppController provides a overall management of the 
- Contact application.
+description			The ContactAppController provides an overall control point
+ for the Contacts application. It's role is to facilitate the operations against
+ the collection of contacts being managed. When the ListContactsActivity is started,
+ it informs the ContactAppController that it wants the ContactListView. If the 
+ ContactListView has already been created/populated, it's returned and is displayed.
+ Otherwise, the controller will retrieve the contacts, create ContactListPresenter and
+ the ContactListView and pass the view to the ListContactsActivity.
+ <p />
+ 
 
 ///////////////////////////////////////////////////////////////////////////////
 //PLACES & ACTIVITIES
@@ -124,6 +134,7 @@ subpackage			activities
 abstractActivity	true
 sendsLoginRequest	login DMPERRORS
 managesView			LoginView
+usesRunContextItem	placeController		
 description			The PerformLoginActivity prompts for a valid user name and password.
  If login is successful, we go to the ListContactsPlace activity.
 
@@ -137,6 +148,7 @@ Activity
 activityName		ListContactsActivity
 subpackage			activities
 abstractActivity	true
+usesController		ContactAppController
 description			The ListContactsActivity will retrieve the summary information about our contacts
  and display them in a ContactListView.
 

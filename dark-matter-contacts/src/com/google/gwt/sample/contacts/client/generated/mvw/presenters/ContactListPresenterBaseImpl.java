@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.presenters;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.event.shared.EventBus;                                                                       // Used by eventBus
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListView.ContactListViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
@@ -76,11 +76,11 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     @Override
     public void handleRPCFailure(Throwable caught, RequestDMO request){
             switch(request.getHandlerID()){
-            case DELETECONTACTDELETECALLBACK:
-                throw(new IllegalStateException("RPC errors for DeleteContact are supposed to be centrally handled!"));
-            case GETCONTACTGETCALLBACK:
-                handleGetContactResponseRPCError(caught,(GetRequestDMO)request);
-                break;
+        case DELETECONTACTDELETECALLBACK:
+            throw(new IllegalStateException("RPC errors for DeleteContact are supposed to be centrally handled!"));
+        case GETCONTACTGETCALLBACK:
+            handleGetContactResponseRPCError(caught,(GetRequestDMO)request);
+            break;
             }
     }
 

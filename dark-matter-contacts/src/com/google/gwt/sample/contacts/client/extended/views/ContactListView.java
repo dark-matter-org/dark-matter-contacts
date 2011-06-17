@@ -35,7 +35,7 @@ public class ContactListView extends ContactListViewBaseImpl {
 	ColumnConfig			emailCol;
 	ColumnModel				columnModel;
 	
-	protected ContactListView(MvwRunContextIF rc) {
+	public ContactListView(MvwRunContextIF rc) {
 		super(rc);
 		
 		panel = new ContentPanel();

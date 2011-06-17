@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.activity.shared.AbstractActivity;                                                            // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactView.EditContactViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
@@ -73,10 +73,10 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
     @Override
     public void handleRPCFailure(Throwable caught, RequestDMO request){
             switch(request.getHandlerID()){
-            case GETCONTACTGETCALLBACK:
-                throw(new IllegalStateException("RPC errors for GetContact are supposed to be centrally handled!"));
-            case SETCONTACTSETCALLBACK:
-                throw(new IllegalStateException("RPC errors for SetContact are supposed to be centrally handled!"));
+        case GETCONTACTGETCALLBACK:
+            throw(new IllegalStateException("RPC errors for GetContact are supposed to be centrally handled!"));
+        case SETCONTACTSETCALLBACK:
+            throw(new IllegalStateException("RPC errors for SetContact are supposed to be centrally handled!"));
             }
     }
 
