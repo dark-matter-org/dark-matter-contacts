@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
+// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from:  org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
 import com.google.gwt.core.client.GWT;                                                                  // Used by historyMapper
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus
@@ -10,6 +10,9 @@ import com.google.gwt.place.shared.PlaceController;                             
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                 // Used by historyHandler
 import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppControllerRCI
 import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                  // Used by ContactListPresenterRCI
+import com.google.gwt.sample.contacts.client.extended.views.ContactListView;                            // Used by ContactListViewRCI
+import com.google.gwt.sample.contacts.client.extended.views.EditContactView;                            // Used by EditContactViewRCI
+import com.google.gwt.sample.contacts.client.extended.views.LoginView;                                  // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactsRunContextIF;                        // Contacts run context
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlaceHistoryMapper;         // Used by historyMapper
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
@@ -56,6 +59,27 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
     @Override
     public ContactListPresenter getContactListPresenterRCI(){
         return(new ContactListPresenter(this));
+    }
+
+    @Override
+    public ContactListView getContactListViewRCI(ContactListView.ContactListViewPresenter presenter){
+        ContactListView view = new ContactListView(this);
+        view.setPresenter(presenter);
+        return(view);
+    }
+
+    @Override
+    public EditContactView getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter){
+        EditContactView view = new EditContactView(this);
+        view.setPresenter(presenter);
+        return(view);
+    }
+
+    @Override
+    public LoginView getLoginViewRCI(LoginView.LoginViewPresenter presenter){
+        LoginView view = new LoginView();
+        view.setPresenter(presenter);
+        return(view);
     }
 
     @Override

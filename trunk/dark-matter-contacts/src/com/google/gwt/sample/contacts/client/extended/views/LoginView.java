@@ -70,13 +70,13 @@ public class LoginView extends LoginViewBaseImpl {
     	};
     	
     	userName = new TextField<String>();
-    	userName.setMinLength(10);
+    	userName.setMinLength(1);
     	userName.setFieldLabel("Username");
     	userName.addKeyListener(keyListener);
     	loginFields.add(userName);
 
     	password = new TextField<String>();
-    	password.setMinLength(10);
+    	password.setMinLength(1);
     	password.setPassword(true);
     	password.setFieldLabel("Password");
     	password.addKeyListener(keyListener);

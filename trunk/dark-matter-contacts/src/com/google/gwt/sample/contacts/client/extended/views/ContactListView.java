@@ -107,8 +107,7 @@ public class ContactListView extends ContactListViewBaseImpl {
 
 	@Override
 	public Widget asWidget() {
-		// TODO Auto-generated method stub
-		return null;
+		return(panel);
 	}
 
 
