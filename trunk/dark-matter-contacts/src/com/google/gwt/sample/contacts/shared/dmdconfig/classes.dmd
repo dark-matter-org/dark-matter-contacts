@@ -1,6 +1,7 @@
 ClassDefinition
 name       	Contact
 classType	STRUCTURAL
+dmdID		1
 isNamedBy  	uuidName
 must		uuidName
 must       	firstName

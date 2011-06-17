@@ -1,14 +1,15 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:87)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
 import com.google.gwt.core.client.GWT;                                                                  // Used by historyMapper
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus
 import com.google.gwt.event.shared.SimpleEventBus;                                                      // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                     // Used by placeController
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                 // Used by historyHandler
-import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppController
+import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppControllerRCI
+import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                  // Used by ContactListPresenterRCI
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactsRunContextIF;                        // Contacts run context
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlaceHistoryMapper;         // Used by historyMapper
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
@@ -31,7 +32,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
     private final ActivityManager activityManager;
     private final ContactAppPlaceHistoryMapper historyMapper;
     private final PlaceHistoryHandler historyHandler;
-    private final ContactAppController ContactAppController;
+    private final ContactAppController ContactAppControllerRCI;
 
     public ContactAppRunContext(){
 
@@ -44,12 +45,17 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         activityManager = new ActivityManager(activityMapper, eventBus);
         historyMapper = GWT.create(ContactAppPlaceHistoryMapper.class);
         historyHandler = new PlaceHistoryHandler(historyMapper);
-        ContactAppController = new ContactAppController(this);
+        ContactAppControllerRCI = new ContactAppController(this);
     }
 
     @Override
-    public ContactAppController getContactAppController(){
-        return(ContactAppController);
+    public ContactAppController getContactAppControllerRCI(){
+        return(ContactAppControllerRCI);
+    }
+
+    @Override
+    public ContactListPresenter getContactListPresenterRCI(){
+        return(new ContactListPresenter(this));
     }
 
     @Override

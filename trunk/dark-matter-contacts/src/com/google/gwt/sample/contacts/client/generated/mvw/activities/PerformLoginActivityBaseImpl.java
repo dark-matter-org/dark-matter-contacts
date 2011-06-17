@@ -1,8 +1,9 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:76)
 import com.google.gwt.activity.shared.AbstractActivity;                                                // Is abstract activity
+import com.google.gwt.place.shared.PlaceController;                                                    // Used by placeController
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginView.LoginViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                            // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                           // DMP communications
@@ -18,11 +19,13 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;          
 abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  implements LoginViewPresenter, ResponseHandlerIF{
 
     protected final CommsController commsController;
+    protected final PlaceController placeController;
 
     private final int LOGINLOGINCALLBACK = 0;
 
     public PerformLoginActivityBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
+        placeController = ((MvwRunContextIF)rc).getPlaceController();
     }
 
     protected void sendLoginRequest(LoginRequestDMO request){
@@ -56,8 +59,8 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
     @Override
     public void handleRPCFailure(Throwable caught, RequestDMO request){
             switch(request.getHandlerID()){
-            case LOGINLOGINCALLBACK:
-                throw(new IllegalStateException("RPC errors for Login are supposed to be centrally handled!"));
+        case LOGINLOGINCALLBACK:
+            throw(new IllegalStateException("RPC errors for Login are supposed to be centrally handled!"));
             }
     }
 
