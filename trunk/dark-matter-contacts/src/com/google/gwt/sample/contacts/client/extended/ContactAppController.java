@@ -49,10 +49,10 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	 */
 	public ContactListView getContactsListView(ListContactsActivity activty){
 		if (!haveContacts){
+			contactsView.displayFeedback("Retrieving contacts...");
 			GetRequestDMO request = getGetContactRequest();
-			request.setRegisterForEvents(true);
 			request.setClassFilter(new ClassFilter(ContactsDMSAG.__Contact));
-//			request.setFilterByClass(value);
+			sendGetContactRequest(request);
 		}
 		return(contactsView);
 	}
