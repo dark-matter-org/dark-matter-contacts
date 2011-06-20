@@ -107,7 +107,7 @@ controllerName			ContactAppController
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
-sendsGetRequest			getContact CENTRALERRORS DMPERRORS CREATED DELETED MODIFIED
+sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
 sendsDeleteRequest		deleteContact CENTRALERRORS
 usesPresenter			ContactListPresenter
 usesRunContextItem		placeController

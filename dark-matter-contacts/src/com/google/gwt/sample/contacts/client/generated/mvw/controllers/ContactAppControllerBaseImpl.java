@@ -96,6 +96,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     protected GetRequestDMO getGetContactRequest(){
         GetRequestDMO request = commsController.getGetRequest();
+        request.setRegisterForEvents(true);
         request.setHandlerID(GETCONTACTGETCALLBACK);
         return(request);
     }
