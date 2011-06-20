@@ -66,6 +66,8 @@ viewMethod			void displayContacts(List<ContactGXT> contacts)
 viewMethod			void deleteContact(ContactGXT contact)
 viewMethod			void addContact(ContactGXT contact)
 viewMethod			void updateContact(ContactGXT contact)
+viewMethod			void displayFeedback(String info)
+viewMethod			void displayError(String info)
 viewImport			java.util.List
 viewImport			com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
 description			The ContactListView displays a list of Contacts and shows the first
@@ -75,8 +77,6 @@ Presenter
 presenterName		ContactListPresenter
 subpackage			presenters
 managesView			ContactListView
-sendsGetRequest		getContact CENTRALERRORS DMPERRORS RPCERRORS CREATED DELETED MODIFIED
-sendsDeleteRequest	deleteContact CENTRALERRORS
 description			This presenter takes care of retrieving the summary information
  for our Contacts and populates the ContactListView. It takes care of deletion
  requests from the view and listens for Contact create events and updates the 
@@ -107,6 +107,8 @@ controllerName			ContactAppController
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
+sendsGetRequest			getContact CENTRALERRORS DMPERRORS CREATED DELETED MODIFIED
+sendsDeleteRequest		deleteContact CENTRALERRORS
 usesPresenter			ContactListPresenter
 usesRunContextItem		placeController
 instantiatesView		ContactListView

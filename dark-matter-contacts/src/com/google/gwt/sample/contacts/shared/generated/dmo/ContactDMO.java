@@ -1,6 +1,6 @@
 package com.google.gwt.sample.contacts.shared.generated.dmo;
 
-// Generated from: org.dmd.dms.util.GenUtility.formatImports(GenUtility.java:282)
+// Generated from: org.dmd.dms.util.GenUtility.formatImports(GenUtility.java:287)
 import java.io.Serializable;                                  // Always required
 import java.util.*;                                           // Always required
 import java.util.Date;                                        // Primitive type and !auxiliary class
@@ -105,11 +105,6 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
         super(oc);
     }
 
-    @Override
-    public boolean supportsBackrefTracking(){
-        return(false);
-    }
-
     public Map<Integer,DmcAttributeInfo> getIdToAttrInfo(){
         return(_ImAp);
     }
@@ -152,7 +147,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
         return(rc);
     }
 
-    // org.dmd.dms.util.DmoFormatter.getAccessFunctions(DmoFormatter.java:733)
+    // org.dmd.dms.util.DmoFormatter.getAccessFunctions(DmoFormatter.java:738)
     public UUIDName getObjectName(){
         DmcAttribute<?> name = get(__uuidName);
         if (name != null)
@@ -173,7 +168,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
         return(false);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getMiddleName(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__middleName);
         if (attr == null)
@@ -186,7 +181,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets middleName to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setMiddleName(String value) {
         DmcAttribute<?> attr = get(__middleName);
         if (attr == null)
@@ -205,7 +200,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets middleName to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setMiddleName(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__middleName);
         if (attr == null)
@@ -218,12 +213,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the middleName attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remMiddleName(){
          rem(__middleName);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getPrefixCE(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__prefixCE);
         if (attr == null)
@@ -236,7 +231,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets prefixCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setPrefixCE(String value) {
         DmcAttribute<?> attr = get(__prefixCE);
         if (attr == null)
@@ -255,7 +250,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets prefixCE to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setPrefixCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__prefixCE);
         if (attr == null)
@@ -268,12 +263,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the prefixCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remPrefixCE(){
          rem(__prefixCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getSuffixCE(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__suffixCE);
         if (attr == null)
@@ -286,7 +281,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets suffixCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setSuffixCE(String value) {
         DmcAttribute<?> attr = get(__suffixCE);
         if (attr == null)
@@ -305,7 +300,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets suffixCE to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setSuffixCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__suffixCE);
         if (attr == null)
@@ -318,12 +313,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the suffixCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remSuffixCE(){
          rem(__suffixCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getNickName(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__nickName);
         if (attr == null)
@@ -336,7 +331,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets nickName to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setNickName(String value) {
         DmcAttribute<?> attr = get(__nickName);
         if (attr == null)
@@ -355,7 +350,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets nickName to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setNickName(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__nickName);
         if (attr == null)
@@ -368,12 +363,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the nickName attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remNickName(){
          rem(__nickName);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getTitleAndCompany(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__titleAndCompany);
         if (attr == null)
@@ -386,7 +381,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets titleAndCompany to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setTitleAndCompany(String value) {
         DmcAttribute<?> attr = get(__titleAndCompany);
         if (attr == null)
@@ -405,7 +400,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets titleAndCompany to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setTitleAndCompany(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__titleAndCompany);
         if (attr == null)
@@ -418,12 +413,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the titleAndCompany attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remTitleAndCompany(){
          rem(__titleAndCompany);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getPhoneNumberCE(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__phoneNumberCE);
         if (attr == null)
@@ -436,7 +431,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets phoneNumberCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setPhoneNumberCE(String value) {
         DmcAttribute<?> attr = get(__phoneNumberCE);
         if (attr == null)
@@ -455,7 +450,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets phoneNumberCE to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setPhoneNumberCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__phoneNumberCE);
         if (attr == null)
@@ -468,12 +463,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the phoneNumberCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remPhoneNumberCE(){
          rem(__phoneNumberCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getEmailCE(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__emailCE);
         if (attr == null)
@@ -486,7 +481,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets emailCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setEmailCE(String value) {
         DmcAttribute<?> attr = get(__emailCE);
         if (attr == null)
@@ -505,7 +500,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets emailCE to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setEmailCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__emailCE);
         if (attr == null)
@@ -518,12 +513,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the emailCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remEmailCE(){
          rem(__emailCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public Date getBirthdayCE(){
         DmcTypeDateSV attr = (DmcTypeDateSV) get(__birthdayCE);
         if (attr == null)
@@ -536,7 +531,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets birthdayCE to the specified value.
      * @param value Date
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setBirthdayCE(Date value) {
         DmcAttribute<?> attr = get(__birthdayCE);
         if (attr == null)
@@ -555,7 +550,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets birthdayCE to the specified value.
      * @param value A value compatible with DmcTypeDateSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setBirthdayCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__birthdayCE);
         if (attr == null)
@@ -568,7 +563,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the birthdayCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remBirthdayCE(){
          rem(__birthdayCE);
     }
@@ -577,7 +572,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * @return An Iterator of String objects.
      */
     @SuppressWarnings("unchecked")
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:804)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:824)
     public Iterator<String> getUrlCE(){
         DmcTypeStringMV attr = (DmcTypeStringMV) get(__urlCE);
         if (attr == null)
@@ -589,7 +584,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * @return The nth String value.
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:816)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:836)
     public String getNthUrlCE(int i){
         DmcTypeStringMV attr = (DmcTypeStringMV) get(__urlCE);
         if (attr == null)
@@ -602,7 +597,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Adds another urlCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:829)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:849)
     public DmcAttribute<?> addUrlCE(String value) {
         DmcAttribute<?> attr = get(__urlCE);
         if (attr == null)
@@ -622,7 +617,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Returns true if we contain a valued keyed by the specified String.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:871)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:891)
     public boolean urlCEContains(String value) {
         DmcAttribute<?> attr = get(__urlCE);
         if (attr == null)
@@ -634,7 +629,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Adds another urlCE value.
      * @param value A value compatible with String
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:903)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:923)
     public DmcAttribute<?> addUrlCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__urlCE);
         if (attr == null)
@@ -648,7 +643,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Returns the number of values in urlCE
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:920)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:940)
     public int getUrlCESize(){
         DmcAttribute<?> attr = get(__urlCE);
         if (attr == null)
@@ -661,7 +656,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Deletes a urlCE value.
      * @param value The String to be deleted from set of attribute values.
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:962)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:982)
     public DmcAttribute<?> delUrlCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__urlCE);
         
@@ -677,7 +672,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Deletes a urlCE from the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:978)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:998)
     public DmcAttribute<?> delUrlCE(String value) {
         DmcAttribute<?> attr = get(__urlCE);
         
@@ -692,12 +687,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the urlCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:997)
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1017)
     public void remUrlCE(){
          rem(__urlCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getNotesCE(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__notesCE);
         if (attr == null)
@@ -710,7 +705,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets notesCE to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setNotesCE(String value) {
         DmcAttribute<?> attr = get(__notesCE);
         if (attr == null)
@@ -729,7 +724,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets notesCE to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setNotesCE(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__notesCE);
         if (attr == null)
@@ -742,12 +737,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the notesCE attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remNotesCE(){
          rem(__notesCE);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public UUIDName getUuidName(){
         DmcTypeUUIDNameSV attr = (DmcTypeUUIDNameSV) get(__uuidName);
         if (attr == null)
@@ -760,7 +755,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets uuidName to the specified value.
      * @param value UUIDName
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setUuidName(UUIDName value) {
         DmcAttribute<?> attr = get(__uuidName);
         if (attr == null)
@@ -779,7 +774,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets uuidName to the specified value.
      * @param value A value compatible with DmcTypeUUIDNameSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setUuidName(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__uuidName);
         if (attr == null)
@@ -792,12 +787,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the uuidName attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remUuidName(){
          rem(__uuidName);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getFirstName(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__firstName);
         if (attr == null)
@@ -810,7 +805,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets firstName to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setFirstName(String value) {
         DmcAttribute<?> attr = get(__firstName);
         if (attr == null)
@@ -829,7 +824,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets firstName to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setFirstName(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__firstName);
         if (attr == null)
@@ -842,12 +837,12 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the firstName attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remFirstName(){
          rem(__firstName);
     }
 
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:585)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:605)
     public String getLastName(){
         DmcTypeStringSV attr = (DmcTypeStringSV) get(__lastName);
         if (attr == null)
@@ -860,7 +855,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets lastName to the specified value.
      * @param value String
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:622)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:642)
     public void setLastName(String value) {
         DmcAttribute<?> attr = get(__lastName);
         if (attr == null)
@@ -879,7 +874,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
      * Sets lastName to the specified value.
      * @param value A value compatible with DmcTypeStringSV
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:670)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:690)
     public void setLastName(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(__lastName);
         if (attr == null)
@@ -892,7 +887,7 @@ public class ContactDMO  extends DmcObject  implements DmcNamedObjectIF, Seriali
     /**
      * Removes the lastName attribute value.
      */
-    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:685)
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:705)
     public void remLastName(){
          rem(__lastName);
     }

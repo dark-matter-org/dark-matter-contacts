@@ -3,10 +3,12 @@ package com.google.gwt.sample.contacts.client.extended.views;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.dmd.mvw.client.gxt.store.NamedObjectListStore;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 
-import com.extjs.gxt.ui.client.store.ListStore;
 import com.extjs.gxt.ui.client.widget.ContentPanel;
+import com.extjs.gxt.ui.client.widget.LayoutContainer;
+import com.extjs.gxt.ui.client.widget.Text;
 import com.extjs.gxt.ui.client.widget.grid.ColumnConfig;
 import com.extjs.gxt.ui.client.widget.grid.ColumnModel;
 import com.extjs.gxt.ui.client.widget.grid.Grid;
@@ -19,35 +21,37 @@ import com.google.gwt.user.client.ui.Widget;
 public class ContactListView extends ContactListViewBaseImpl {
 	
 	// Our widget
-	ContentPanel			panel;
+	LayoutContainer						panel;
 	
-	ContentPanel			gridPanel;
+	ContentPanel						gridPanel;
 	
 	// The backing store for our grid display
-	ListStore<ContactGXT>	store;
+	NamedObjectListStore<ContactGXT>	store;
 	
 	// Our table of contacts
-	Grid<ContactGXT>		grid;
+	Grid<ContactGXT>					grid;
 	
 	// Our columns
-	ColumnConfig			firstNameCol;
-	ColumnConfig			lastNameCol;
-	ColumnConfig			emailCol;
-	ColumnModel				columnModel;
+	ColumnConfig						firstNameCol;
+	ColumnConfig						lastNameCol;
+	ColumnConfig						emailCol;
+	ColumnModel							columnModel;
+	
+	// A place to display feedback and errors
+	Text								feedback;
+	
 	
 	public ContactListView(MvwRunContextIF rc) {
 		super(rc);
 		
-		panel = new ContentPanel();
+		panel = new LayoutContainer();
 		panel.setSize(500, 300);
-		panel.setHeaderVisible(false);
-		panel.setBodyBorder(false);
 		panel.setLayout(new CenterLayout());
 		
 		gridPanel = new ContentPanel();
 		gridPanel.setHeaderVisible(false);
 		gridPanel.setBodyBorder(false);
-		gridPanel.setSize(400, 200);
+		gridPanel.setSize(500, 200);
 		
 		initGrid();
 		
@@ -55,12 +59,18 @@ public class ContactListView extends ContactListViewBaseImpl {
 		
 		panel.add(gridPanel);
 		
+    	feedback = new Text();
+    	feedback.setWidth(300);
+    	feedback.setBorders(false);
+    	feedback.addStyleName("feedback");
+    	
+    	panel.add(feedback);
 	}
 	
 	void initGrid(){
-		firstNameCol	= new ColumnConfig("firstName", "First Name", 50);
-		lastNameCol		= new ColumnConfig("lastName", "Last Name", 50);
-		emailCol		= new ColumnConfig("emailCE", "email", 50);
+		firstNameCol	= new ColumnConfig("firstName", "First Name", 100);
+		lastNameCol		= new ColumnConfig("lastName", "Last Name", 100);
+		emailCol		= new ColumnConfig("emailCE", "email", 200);
 		
 		List<ColumnConfig> config = new ArrayList<ColumnConfig>();
 		config.add(firstNameCol);
@@ -69,13 +79,14 @@ public class ContactListView extends ContactListViewBaseImpl {
 		
 		columnModel = new ColumnModel(config);
 		
-		store = new ListStore<ContactGXT>();
+		store = new NamedObjectListStore<ContactGXT>();
 		
-		GridView view = new GridView();
-		view.setForceFit(true);
+//		GridView view = new GridView();
+//		view.setForceFit(true);
+//		view.setAutoFill(true);
 		
 		grid = new Grid<ContactGXT>(store, columnModel);
-		grid.setView(view);
+//		grid.setView(view);
 		grid.setBorders(true);
 		
 		grid.setTitle("Contacts");
@@ -89,7 +100,6 @@ public class ContactListView extends ContactListViewBaseImpl {
 
 	@Override
 	public void deleteContact(ContactGXT contact) {
-		
 		
 	}
 
@@ -108,6 +118,18 @@ public class ContactListView extends ContactListViewBaseImpl {
 	@Override
 	public Widget asWidget() {
 		return(panel);
+	}
+
+	@Override
+	public void displayFeedback(String info) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayError(String info) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

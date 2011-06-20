@@ -3,6 +3,10 @@ package com.google.gwt.sample.contacts.client.extended;
 import java.util.TreeMap;
 
 import org.dmd.dmc.DmcObjectName;
+import org.dmd.dmc.types.ClassFilter;
+import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;
+import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;
+import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;
 
@@ -13,6 +17,7 @@ import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppRunContext;
 import com.google.gwt.sample.contacts.client.generated.mvw.controllers.ContactAppControllerBaseImpl;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
 
 public class ContactAppController extends ContactAppControllerBaseImpl {
 	
@@ -28,7 +33,9 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		super(rc);
 		
 		contacts 		= new TreeMap<DmcObjectName, ContactGXT>();
-		haveContacts 	= false;
+		
+		// JUST TEMPORARY
+		haveContacts 	= true;
 		
 		contactsPresenter = getContactListPresenter();
 		contactsView = getContactListView(contactsPresenter);
@@ -41,9 +48,13 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	 * @return
 	 */
 	public ContactListView getContactsListView(ListContactsActivity activty){
-		if (haveContacts)
-			return(contactsView);
-		return(null);
+		if (!haveContacts){
+			GetRequestDMO request = getGetContactRequest();
+			request.setRegisterForEvents(true);
+			request.setClassFilter(new ClassFilter(ContactsDMSAG.__Contact));
+//			request.setFilterByClass(value);
+		}
+		return(contactsView);
 	}
 
 	@Override
@@ -74,6 +85,30 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	public void handleRPCFailure(Throwable caught, RequestDMO request) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	protected void handleDeleteContactResponse(DeleteResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleGetContactResponse(GetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleGetContactResponseError(GetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void handleResponse(ResponseDMO response) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
