@@ -19,7 +19,15 @@ public class MainDisplay extends Viewport implements AcceptsOneWidget {
 	@Override
 	public void setWidget(IsWidget w) {
 		Logger logger = Logger.getLogger("dmcontacts");
+
+		if (w == null){
+			logger.log(Level.INFO, "MainDisplay.setWidget() has been called with null widget ");
+			removeAll();
+			return;
+		}
 		logger.log(Level.INFO, "MainDisplay.setWidget() has been called with widget " + w.getClass().getName());
+		
+		
 
 		removeAll();
 

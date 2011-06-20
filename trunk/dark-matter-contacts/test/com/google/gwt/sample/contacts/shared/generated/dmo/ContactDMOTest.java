@@ -63,7 +63,7 @@ public class ContactDMOTest extends ContactsTest {
 
 		System.out.println(heavy);
 
-		ContactDMO light = heavy.getSlice(ContactsASAG.__lightContact);
+		ContactDMO light = heavy.getSlice(ContactsDMSAG.__lightContact);
 		
 		System.out.println(light);
 	}

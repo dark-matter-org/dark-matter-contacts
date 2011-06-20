@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from:  org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from:  org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:61)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:61)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                     // Used by placeController
