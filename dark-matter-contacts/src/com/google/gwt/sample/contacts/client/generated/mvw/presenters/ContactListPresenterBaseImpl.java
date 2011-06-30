@@ -6,6 +6,7 @@ import com.google.gwt.event.shared.EventBus;                                    
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListView.ContactListViewPresenter;         // Presenter interface
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                       // Mvw run context
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PresenterFormatter.formatPresenterBaseImpl(PresenterFormatter.java:25)
 abstract public class ContactListPresenterBaseImpl implements ContactListViewPresenter {
 
     protected final EventBus eventBus;

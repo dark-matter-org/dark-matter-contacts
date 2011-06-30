@@ -37,8 +37,8 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		// JUST TEMPORARY
 		haveContacts 	= true;
 		
-		contactsPresenter = getContactListPresenter();
-		contactsView = getContactListView(contactsPresenter);
+		contactsPresenter = getNewContactListPresenter();
+		contactsView = getNewContactListView(contactsPresenter);
 	}
 	
 	/**
