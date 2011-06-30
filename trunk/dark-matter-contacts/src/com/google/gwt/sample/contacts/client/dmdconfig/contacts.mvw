@@ -74,10 +74,12 @@ description			The ContactListView displays a list of Contacts and shows the firs
  and last names and the email address of the contact.
  
 Presenter
-presenterName		ContactListPresenter
-subpackage			presenters
-managesView			ContactListView
-description			This presenter takes care of retrieving the summary information
+presenterName			ContactListPresenter
+subpackage				presenters
+managesView				ContactListView
+//instantiatesPresenter	EditContactPresenter
+//instantiatesView		EditContactView
+description				This presenter takes care of retrieving the summary information
  for our Contacts and populates the ContactListView. It takes care of deletion
  requests from the view and listens for Contact create events and updates the 
  view accordingly.
@@ -94,10 +96,11 @@ description			The EditContactView displays a single Contact.
  modifications. If cancel is clicked, we revert to the ContactListView.
 
 //Presenter
-//presenterName		EditContactPresenter
+//presenterName			EditContactPresenter
 //managesView			EditContactView
-//sendsGetRequest		contact CENTRALERRORS
-//sendsSetRequest		contact CENTRALERRORS
+//instantiatesView		EditContactView
+//sendsGetRequest		getContact CENTRALERRORS
+//sendsSetRequest		setContact CENTRALERRORS
 //description			The EditContactPresenter retrieves a complete Contact or creates
 // a new Contact and populates the EditContactView. If the user hits the Save button,
 // we send a Set or Create request to the server depending on the circumstances.
@@ -109,9 +112,9 @@ handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
 sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
 sendsDeleteRequest		deleteContact CENTRALERRORS
-usesPresenter			ContactListPresenter
-usesRunContextItem		placeController
+instantiatesPresenter	ContactListPresenter
 instantiatesView		ContactListView
+usesRunContextItem		placeController
 centralDMPErrorHandler	true
 centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
