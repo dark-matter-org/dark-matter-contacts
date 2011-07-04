@@ -3,30 +3,34 @@ package com.google.gwt.sample.contacts.shared.generated.dmo;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.dmd.dmc.*;
-import org.dmd.dms.generated.enums.ClassTypeEnum;
-import org.dmd.dms.generated.enums.ValueTypeEnum;
-import org.dmd.dms.generated.enums.DataTypeEnum;
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Called from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpHeaderDMSAG(DmoCompactSchemaFormatter.java:506)
+import org.dmd.dms.generated.dmo.MetaDMSAG;               // MetaDMSAG
+import org.dmd.dms.generated.enums.ClassTypeEnum;         // Have class definitions
+import org.dmd.dms.generated.enums.DataTypeEnum;          // Have class/attribute definitions
+import org.dmd.dms.generated.enums.ValueTypeEnum;         // Have attribute definitions
 
 
-// Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:92)
+
+// Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:95)
 public class ContactsDMSAG implements DmcCompactSchemaIF {
 
 
     static String schemaName = "contacts";
 
     public final static DmcClassInfo __Contact = new DmcClassInfo("Contact", 1001, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,null);
-    public final static DmcAttributeInfo __birthdayCE = new DmcAttributeInfo("birthdayCE", 1009, "Date", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __emailCE = new DmcAttributeInfo("emailCE", 1008, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __firstName = new DmcAttributeInfo("firstName", 1000, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __lastName = new DmcAttributeInfo("lastName", 1002, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __middleName = new DmcAttributeInfo("middleName", 1001, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __nickName = new DmcAttributeInfo("nickName", 1005, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __notesCE = new DmcAttributeInfo("notesCE", 1011, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __phoneNumberCE = new DmcAttributeInfo("phoneNumberCE", 1007, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __prefixCE = new DmcAttributeInfo("prefixCE", 1003, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __suffixCE = new DmcAttributeInfo("suffixCE", 1004, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __titleAndCompany = new DmcAttributeInfo("titleAndCompany", 1006, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, true);
-    public final static DmcAttributeInfo __urlCE = new DmcAttributeInfo("urlCE", 1010, "String", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT, true);
+    public final static DmcAttributeInfo __birthdayCE = new DmcAttributeInfo("birthdayCE", 1009, "Date", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __emailCE = new DmcAttributeInfo("emailCE", 1008, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __firstName = new DmcAttributeInfo("firstName", 1000, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __lastName = new DmcAttributeInfo("lastName", 1002, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __middleName = new DmcAttributeInfo("middleName", 1001, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __nickName = new DmcAttributeInfo("nickName", 1005, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __notesCE = new DmcAttributeInfo("notesCE", 1011, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __phoneNumberCE = new DmcAttributeInfo("phoneNumberCE", 1007, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __prefixCE = new DmcAttributeInfo("prefixCE", 1003, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __suffixCE = new DmcAttributeInfo("suffixCE", 1004, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __titleAndCompany = new DmcAttributeInfo("titleAndCompany", 1006, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __urlCE = new DmcAttributeInfo("urlCE", 1010, "String", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT);
 
     public final static DmcSliceInfo __lightContact = new DmcSliceInfo("lightContact");
 
@@ -63,11 +67,27 @@ public class ContactsDMSAG implements DmcCompactSchemaIF {
         _SmAp.put(__suffixCE.id,__suffixCE);
         _SmAp.put(__titleAndCompany.id,__titleAndCompany);
         _SmAp.put(__urlCE.id,__urlCE);
+        _CmAp.put(__Contact.id,__Contact);
 
         __lightContact.addAttributeID(1000);
         __lightContact.addAttributeID(1002);
         __lightContact.addAttributeID(1008);
         _SImAp.put("lightContact",__lightContact);
+
+        __Contact.addMust(MetaDMSAG.__uuidName);
+        __Contact.addMust(__firstName);
+        __Contact.addMust(__lastName);
+        __Contact.addMay(__middleName);
+        __Contact.addMay(__prefixCE);
+        __Contact.addMay(__suffixCE);
+        __Contact.addMay(__nickName);
+        __Contact.addMay(__titleAndCompany);
+        __Contact.addMay(__phoneNumberCE);
+        __Contact.addMay(__emailCE);
+        __Contact.addMay(__birthdayCE);
+        __Contact.addMay(__urlCE);
+        __Contact.addMay(__notesCE);
+
 
     }
 
@@ -76,9 +96,10 @@ public class ContactsDMSAG implements DmcCompactSchemaIF {
     protected ContactsDMSAG (){
     }
 
-    public static ContactsDMSAG instance(){
+    public synchronized static ContactsDMSAG instance(){
         if (instance == null)
             instance = new ContactsDMSAG();
+        
         return(instance);
     }
 

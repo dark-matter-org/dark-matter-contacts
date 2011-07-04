@@ -24,7 +24,7 @@ import org.dmd.dms.generated.enums.DataTypeEnum;
 @SuppressWarnings("serial")
 public class ContactREF extends DmcNamedObjectNontransportableREF<ContactDMO> {
 
-    public final static DmcAttributeInfo __uuidName = new DmcAttributeInfo("uuidName",101,"UUIDName",ValueTypeEnum.SINGLE,DataTypeEnum.PERSISTENT,false);
+    public final static DmcAttributeInfo __uuidName = new DmcAttributeInfo("uuidName",101,"UUIDName",ValueTypeEnum.SINGLE,DataTypeEnum.PERSISTENT);
     
     DmcTypeUUIDNameSV myName;    
     
