@@ -20,6 +20,7 @@ import de.novanic.eventservice.client.event.RemoteEventServiceFactory;          
 import org.dmd.dmp.client.DMPService;                                                                   // Used by dmpConnection
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
+import org.dmd.mvw.client.mvw.extended.controllers.MenuController;                                      // Used by MenuControllerRCI
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                            // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                            // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                  // Mvwcomms run context
@@ -36,6 +37,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
     private final ContactAppPlaceHistoryMapper historyMapper;
     private final PlaceHistoryHandler historyHandler;
     private final ContactAppController ContactAppControllerRCI;
+    private final MenuController MenuControllerRCI;
 
     public ContactAppRunContext(){
 
@@ -49,21 +51,22 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         historyMapper = GWT.create(ContactAppPlaceHistoryMapper.class);
         historyHandler = new PlaceHistoryHandler(historyMapper);
         ContactAppControllerRCI = new ContactAppController(this);
+        MenuControllerRCI = new MenuController(this);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public ContactAppController getContactAppControllerRCI(){
         return(ContactAppControllerRCI);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:136)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:141)
     @Override
     public ContactListPresenter getContactListPresenterRCI(){
         return(new ContactListPresenter(this));
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:158)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:163)
     @Override
     public ContactListView getContactListViewRCI(ContactListView.ContactListViewPresenter presenter){
         ContactListView view = new ContactListView(this);
@@ -71,7 +74,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:158)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:163)
     @Override
     public EditContactView getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter){
         EditContactView view = new EditContactView(this);
@@ -79,7 +82,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:158)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:163)
     @Override
     public LoginView getLoginViewRCI(LoginView.LoginViewPresenter presenter){
         LoginView view = new LoginView();
@@ -87,55 +90,61 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
+    @Override
+    public MenuController getMenuControllerRCI(){
+        return(MenuControllerRCI);
+    }
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public ActivityManager getActivityManager(){
         return(activityManager);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public MvwActivityMapper getActivityMapper(){
         return(activityMapper);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public CommsController getCommsController(){
         return(commsController);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public DMPServiceAsync getDmpConnection(){
         return(dmpConnection);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public EventBus getEventBus(){
         return(eventBus);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public RemoteEventService getEventService(){
         return(eventService);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public PlaceHistoryHandler getHistoryHandler(){
         return(historyHandler);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public ContactAppPlaceHistoryMapper getHistoryMapper(){
         return(historyMapper);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:177)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
     @Override
     public PlaceController getPlaceController(){
         return(placeController);
