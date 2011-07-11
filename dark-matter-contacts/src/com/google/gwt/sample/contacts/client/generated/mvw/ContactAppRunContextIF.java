@@ -16,6 +16,7 @@ import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlac
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
+import org.dmd.mvw.client.mvw.extended.controllers.MenuController;                                      // Used by MenuControllerRCI
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                            // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                            // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                  // Mvwcomms run context
@@ -27,6 +28,7 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, MvwRunCont
     public ContactListView getContactListViewRCI(ContactListView.ContactListViewPresenter presenter);
     public EditContactView getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter);
     public LoginView getLoginViewRCI(LoginView.LoginViewPresenter presenter);
+    public MenuController getMenuControllerRCI();
     public ActivityManager getActivityManager();
     public MvwActivityMapper getActivityMapper();
     public CommsController getCommsController();

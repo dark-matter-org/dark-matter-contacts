@@ -72,12 +72,12 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:95)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:100)
     public ContactListPresenter getNewContactListPresenter(){
         return( ((ContactsRunContextIF)runcontext).getContactListPresenterRCI());
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:102)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:107)
     public ContactListView getNewContactListView(ContactListView.ContactListViewPresenter presenter){
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }
