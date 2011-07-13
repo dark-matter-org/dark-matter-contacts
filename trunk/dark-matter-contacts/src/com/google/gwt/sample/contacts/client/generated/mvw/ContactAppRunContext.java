@@ -20,7 +20,6 @@ import de.novanic.eventservice.client.event.RemoteEventServiceFactory;          
 import org.dmd.dmp.client.DMPService;                                                                   // Used by dmpConnection
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
-import org.dmd.mvw.client.mvw.extended.controllers.MenuController;                                      // Used by MenuControllerRCI
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                            // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                            // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                  // Mvwcomms run context
@@ -37,7 +36,6 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
     private final ContactAppPlaceHistoryMapper historyMapper;
     private final PlaceHistoryHandler historyHandler;
     private final ContactAppController ContactAppControllerRCI;
-    private final MenuController MenuControllerRCI;
 
     public ContactAppRunContext(){
 
@@ -51,7 +49,6 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         historyMapper = GWT.create(ContactAppPlaceHistoryMapper.class);
         historyHandler = new PlaceHistoryHandler(historyMapper);
         ContactAppControllerRCI = new ContactAppController(this);
-        MenuControllerRCI = new MenuController(this);
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
@@ -88,12 +85,6 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         LoginView view = new LoginView();
         view.setPresenter(presenter);
         return(view);
-    }
-
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
-    @Override
-    public MenuController getMenuControllerRCI(){
-        return(MenuControllerRCI);
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:182)
