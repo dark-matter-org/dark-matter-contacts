@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:84)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:82)
 import com.google.gwt.activity.shared.AbstractActivity;                                                            // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactView.EditContactViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
@@ -17,6 +17,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                    
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                       // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                             // Mvwcomms run context
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ActivityFormatter.formatActivity(ActivityFormatter.java:23)
 abstract public class EditContactActivityBaseImpl extends AbstractActivity  implements EditContactViewPresenter, ResponseHandlerIF{
 
     protected final CommsController commsController;

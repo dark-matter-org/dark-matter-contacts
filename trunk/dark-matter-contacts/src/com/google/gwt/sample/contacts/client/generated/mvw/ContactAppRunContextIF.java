@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:61)
+// Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:68)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                     // Used by placeController
@@ -20,21 +20,22 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                    
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                            // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                  // Mvwcomms run context
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:70)
 public interface ContactAppRunContextIF extends ContactsRunContextIF, MvwRunContextIF, MvwcommsRunContextIF {
 
-    public ContactAppController getContactAppControllerRCI();
-    public ContactListPresenter getContactListPresenterRCI();
-    public ContactListView getContactListViewRCI(ContactListView.ContactListViewPresenter presenter);
-    public EditContactView getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter);
-    public LoginView getLoginViewRCI(LoginView.LoginViewPresenter presenter);
-    public ActivityManager getActivityManager();
-    public MvwActivityMapper getActivityMapper();
-    public CommsController getCommsController();
-    public DMPServiceAsync getDmpConnection();
-    public EventBus getEventBus();
-    public RemoteEventService getEventService();
-    public PlaceHistoryHandler getHistoryHandler();
+    public ContactAppController         getContactAppControllerRCI();
+    public ContactListPresenter         getContactListPresenterRCI();
+    public ContactListView              getContactListViewRCI(ContactListView.ContactListViewPresenter presenter);
+    public EditContactView              getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter);
+    public LoginView                    getLoginViewRCI(LoginView.LoginViewPresenter presenter);
+    public ActivityManager              getActivityManager();
+    public MvwActivityMapper            getActivityMapper();
+    public CommsController              getCommsController();
+    public DMPServiceAsync              getDmpConnection();
+    public EventBus                     getEventBus();
+    public RemoteEventService           getEventService();
+    public PlaceHistoryHandler          getHistoryHandler();
     public ContactAppPlaceHistoryMapper getHistoryMapper();
-    public PlaceController getPlaceController();
+    public PlaceController              getPlaceController();
 }
 

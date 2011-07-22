@@ -1,11 +1,12 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:210)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:211)
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // View import
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // Required by EditContactEvent
 import java.util.List;                                                         // View import
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:23)
 public interface ContactListView {
 
     public interface ContactListViewPresenter {

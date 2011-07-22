@@ -1,8 +1,9 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:210)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:211)
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:23)
 public interface LoginView {
 
     public interface LoginViewPresenter {
