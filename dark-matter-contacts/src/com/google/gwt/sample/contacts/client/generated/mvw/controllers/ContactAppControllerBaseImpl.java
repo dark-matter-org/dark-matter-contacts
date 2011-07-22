@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:84)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:82)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
 import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                      // Used by ContactListPresenterRCI
@@ -29,6 +29,7 @@ import org.dmd.mvw.client.mvwcomms.CentralRPCErrorHandlerIF;                    
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                      // Mvwcomms run context
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
 abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralDMPErrorHandlerIF, CentralRPCErrorHandlerIF {
 
     protected final CommsController commsController;
@@ -72,12 +73,12 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:100)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:101)
     public ContactListPresenter getNewContactListPresenter(){
         return( ((ContactsRunContextIF)runcontext).getContactListPresenterRCI());
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:107)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:108)
     public ContactListView getNewContactListView(ContactListView.ContactListViewPresenter presenter){
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }

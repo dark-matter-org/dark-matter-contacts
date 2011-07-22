@@ -9,6 +9,7 @@ import com.google.gwt.sample.contacts.client.extended.activities.PerformLoginAct
 import org.dmd.mvw.client.mvw.MvwPlace;                                                        // Our base class
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                   // Needed to construct activity
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PlaceFormatter.formatPlace(PlaceFormatter.java:26)
 public class LoginPlace extends MvwPlace {
 
     public LoginPlace(String t){
