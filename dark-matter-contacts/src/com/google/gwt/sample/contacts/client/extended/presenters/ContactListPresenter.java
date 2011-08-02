@@ -10,8 +10,9 @@ import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 
 public class ContactListPresenter extends ContactListPresenterBaseImpl {
 
-	public ContactListPresenter(MvwRunContextIF rc) {
-		super(rc);
+	public ContactListPresenter() {
+//		public ContactListPresenter(MvwRunContextIF rc) {
+//		super(rc);
 		
 //		EditContactPresenter p = getNewEditContactPresenter();
 //		getNewEditContactView(p);

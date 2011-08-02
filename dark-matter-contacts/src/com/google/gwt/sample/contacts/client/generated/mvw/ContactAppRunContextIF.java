@@ -1,6 +1,6 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:68)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus

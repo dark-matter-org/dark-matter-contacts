@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.places;
 
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Place.getImports(Place.java:36)
 import com.google.gwt.place.shared.PlaceTokenizer;                                             // Tokenizer interface
 import com.google.gwt.place.shared.Prefix;                                                     // Required for Prefix annotation
