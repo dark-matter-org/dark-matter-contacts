@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:82)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
 import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                      // Used by ContactListPresenterRCI
@@ -137,11 +137,14 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
             }
     }
 
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onAddContactEvent();
 
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onEditContactCancelledEvent();
 
-    abstract protected void onEditContactEvent(ContactDMO Contact);
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onEditContactEvent(ContactDMO contact);
 
     abstract protected void handleDeleteContactResponse(DeleteResponseDMO response);
 

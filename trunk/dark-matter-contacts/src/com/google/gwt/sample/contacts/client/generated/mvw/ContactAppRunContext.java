@@ -1,11 +1,10 @@
 package com.google.gwt.sample.contacts.client.generated.mvw;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:99)
 import com.google.gwt.activity.shared.ActivityManager;                                                  // Used by activityManager
-import com.google.gwt.core.client.GWT;                                                                  // Used by historyMapper
+import com.google.gwt.core.client.GWT;                                                                  // Used by dmpConnection
 import com.google.gwt.event.shared.EventBus;                                                            // Used by eventBus
-import com.google.gwt.event.shared.SimpleEventBus;                                                      // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                     // Used by placeController
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                 // Used by historyHandler
 import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppControllerRCI
@@ -20,6 +19,7 @@ import de.novanic.eventservice.client.event.RemoteEventServiceFactory;          
 import org.dmd.dmp.client.DMPService;                                                                   // Used by dmpConnection
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                              // Used by eventBus
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                            // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                            // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                  // Mvwcomms run context
@@ -40,7 +40,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
 
     public ContactAppRunContext(){
 
-        eventBus                = new SimpleEventBus();
+        eventBus                = new MvwEventBus();
         dmpConnection           = (DMPServiceAsync) GWT.create(DMPService.class);
         placeController         = new PlaceController((com.google.gwt.event.shared.EventBus) eventBus);
         eventService            = RemoteEventServiceFactory.getInstance().getRemoteEventService();
@@ -61,7 +61,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:142)
     @Override
     public ContactListPresenter getContactListPresenterRCI(){
-        return(new ContactListPresenter(this));
+        return(new ContactListPresenter());
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:164)

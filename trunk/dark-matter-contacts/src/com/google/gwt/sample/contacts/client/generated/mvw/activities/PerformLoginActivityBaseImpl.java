@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:82)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
 import com.google.gwt.activity.shared.AbstractActivity;                                                // Is abstract activity
 import com.google.gwt.place.shared.PlaceController;                                                    // Used by placeController
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginView.LoginViewPresenter;         // Presenter interface
@@ -12,7 +12,7 @@ import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                       
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                    // DMP communications
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                   // DMP communications
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                            // DMP communications
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                           // Always need context for Activities
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                           // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                           // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                 // Mvwcomms run context
 
@@ -27,6 +27,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
     public PerformLoginActivityBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
         placeController = ((MvwRunContextIF)rc).getPlaceController();
+
     }
 
     protected void sendLoginRequest(LoginRequestDMO request){
