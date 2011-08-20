@@ -1,14 +1,14 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:117)
 import com.google.gwt.activity.shared.AbstractActivity;                                                // Is abstract activity
 import com.google.gwt.place.shared.PlaceController;                                                    // Used by placeController
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginView.LoginViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                            // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                           // DMP communications
-import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;                                               // Component sends login requests
-import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                                              // Component sends login requests
+import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;                                               // Component sends LoginRequests
+import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                                              // Component receives LoginResponses
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                    // DMP communications
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                   // DMP communications
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                            // DMP communications

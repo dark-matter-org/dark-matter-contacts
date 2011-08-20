@@ -1,17 +1,17 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:117)
 import com.google.gwt.activity.shared.AbstractActivity;                                                            // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactView.EditContactViewPresenter;         // Presenter interface
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                        // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                       // DMP communications
-import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;                                                             // Component sends get requests
-import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;                                                            // Component sends get requests
+import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;                                                             // Component sends GetRequests
+import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;                                                            // Component receives GetResponses
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                // DMP communications
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                               // DMP communications
-import org.dmd.dmp.shared.generated.dmo.SetRequestDMO;                                                             // Component sends set requests
-import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;                                                            // Component sends set requests
+import org.dmd.dmp.shared.generated.dmo.SetRequestDMO;                                                             // Component sends SetRequests
+import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;                                                            // Component receives SetResponses
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                        // DMP communications
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                       // Need the run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                       // Used by commsController
