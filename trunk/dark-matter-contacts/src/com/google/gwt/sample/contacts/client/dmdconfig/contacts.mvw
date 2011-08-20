@@ -110,8 +110,10 @@ controllerName			ContactAppController
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
-sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
-sendsDeleteRequest		deleteContact CENTRALERRORS
+sendsRequest			GetRequest getContact CENTRALERRORS DMPERRORS EVENTS
+//sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
+//sendsDeleteRequest		deleteContact CENTRALERRORS
+sendsRequest			DeleteRequest deleteContact CENTRALERRORS
 instantiatesPresenter	ContactListPresenter
 instantiatesView		ContactListView
 usesRunContextItem		placeController
@@ -141,7 +143,8 @@ Activity
 activityName		PerformLoginActivity
 subpackage			activities
 abstractActivity	true
-sendsLoginRequest	login DMPERRORS
+//sendsLoginRequest	login DMPERRORS
+sendsRequest		LoginRequest login DMPERRORS
 managesView			LoginView
 usesRunContextItem	placeController	
 description			The PerformLoginActivity prompts for a valid user name and password.
@@ -171,8 +174,10 @@ Activity
 activityName		EditContactActivity
 subpackage			activities
 abstractActivity	true
-sendsGetRequest		getContact CENTRALERRORS
-sendsSetRequest		setContact CENTRALERRORS
+sendsRequest		GetRequest getContact CENTRALERRORS
+//sendsGetRequest		getContact CENTRALERRORS
+sendsRequest		SetRequest setContact CENTRALERRORS
+//sendsSetRequest		setContact CENTRALERRORS
 managesView			EditContactView
 description			The EditContactActivity will retrieve the Contact details if a 
  Contact uuid was specified as part of the edit place URL. If not, we are assumed

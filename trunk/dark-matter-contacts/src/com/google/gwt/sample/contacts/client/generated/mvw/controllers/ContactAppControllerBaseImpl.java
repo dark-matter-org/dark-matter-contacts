@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:117)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
 import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                      // Used by ContactListPresenterRCI
@@ -16,10 +16,10 @@ import com.google.gwt.sample.contacts.client.generated.mvw.events.EditContactEve
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                      // Required type
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                 // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                // DMP communications
-import org.dmd.dmp.shared.generated.dmo.DeleteRequestDMO;                                                   // Component sends delete requests
-import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;                                                  // Component sends delete requests
-import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;                                                      // Component sends get requests
-import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;                                                     // Component sends get requests
+import org.dmd.dmp.shared.generated.dmo.DeleteRequestDMO;                                                   // Component sends DeleteRequests
+import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;                                                  // Component receives DeleteResponses
+import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;                                                      // Component sends GetRequests
+import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;                                                     // Component receives GetResponses
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                         // DMP communications
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                        // DMP communications
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                 // DMP communications
@@ -38,8 +38,8 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     MvwRunContextIF runcontext;
 
-    private final int DELETECONTACTDELETECALLBACK = 0;
-    private final int GETCONTACTGETCALLBACK = 1;
+    private final int DELETECONTACTDELETECALLBACK = 1;
+    private final int GETCONTACTGETCALLBACK = 0;
 
     public ContactAppControllerBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
