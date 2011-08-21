@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:117)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
 import com.google.gwt.activity.shared.AbstractActivity;                                                // Is abstract activity
 import com.google.gwt.place.shared.PlaceController;                                                    // Used by placeController
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginView.LoginViewPresenter;         // Presenter interface
@@ -30,10 +30,12 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:403)
     protected void sendLoginRequest(LoginRequestDMO request){
         commsController.sendLoginRequest(request,this,ErrorOptionsEnum.LOCAL,ErrorOptionsEnum.LOCAL);
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:440)
     protected LoginRequestDMO getLoginRequest(){
         LoginRequestDMO request = commsController.getLoginRequest();
         request.setHandlerID(LOGINLOGINCALLBACK);

@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:117)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:114)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
 import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                      // Used by ContactListPresenterRCI
@@ -83,20 +83,24 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:403)
     protected void sendDeleteContactRequest(DeleteRequestDMO request){
         commsController.sendDeleteRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:440)
     protected DeleteRequestDMO getDeleteContactRequest(){
         DeleteRequestDMO request = commsController.getDeleteRequest();
         request.setHandlerID(DELETECONTACTDELETECALLBACK);
         return(request);
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:403)
     protected void sendGetContactRequest(GetRequestDMO request){
         commsController.sendGetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRALANDLOCAL);
     }
 
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:440)
     protected GetRequestDMO getGetContactRequest(){
         GetRequestDMO request = commsController.getGetRequest();
         request.setRegisterForEvents(true);
