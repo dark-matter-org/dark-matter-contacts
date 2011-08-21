@@ -1,5 +1,6 @@
 package com.google.gwt.sample.contacts.client.extended.activities;
 
+import org.dmd.dmp.shared.generated.dmo.CreateResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
@@ -19,7 +20,6 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 	@Override
 	public void onContactUpdatedEvent(ContactDMO updatedContact) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -36,6 +36,12 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 
 	@Override
 	protected void handleSetContactResponse(SetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleCreateContactResponse(CreateResponseDMO response) {
 		// TODO Auto-generated method stub
 		
 	}

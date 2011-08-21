@@ -176,7 +176,8 @@ subpackage			activities
 abstractActivity	true
 sendsRequest		GetRequest getContact CENTRALERRORS
 //sendsGetRequest		getContact CENTRALERRORS
-sendsRequest		SetRequest setContact CENTRALERRORS
+sendsRequest		SetRequest setContact Contact CENTRALERRORS
+sendsRequest		CreateRequest createContact Contact CENTRALERRORS
 //sendsSetRequest		setContact CENTRALERRORS
 managesView			EditContactView
 description			The EditContactActivity will retrieve the Contact details if a 

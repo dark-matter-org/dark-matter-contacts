@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:217)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:233)
 import com.google.gwt.event.shared.EventBus;                                                // Used by eventBus
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;                      // View import
 import com.google.gwt.sample.contacts.client.generated.mvw.events.AddContactEvent;          // Required by AddContactEvent
@@ -14,7 +14,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                    
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:53)
 abstract public class ContactListViewBaseImpl implements ContactListView, IsWidget {
 
-    ContactListViewPresenter presenter;
+    protected ContactListViewPresenter presenter;
 
     protected final EventBus eventBus;
 
