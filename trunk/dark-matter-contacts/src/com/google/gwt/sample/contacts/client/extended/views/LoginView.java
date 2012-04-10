@@ -35,8 +35,8 @@ public class LoginView extends LoginViewBaseImpl {
 	
 	Button 				login;
 
-	public LoginView(){
-		super();
+	public LoginView(LoginViewPresenterIF presenter){
+		super(presenter);
 		
 		// Listener to set focus on the user name field when we're displayed
 		WidgetListener widgetListener = new WidgetListener() {

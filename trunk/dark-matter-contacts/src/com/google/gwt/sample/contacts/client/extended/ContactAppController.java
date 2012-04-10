@@ -4,6 +4,7 @@ import java.util.TreeMap;
 
 import org.dmd.dmc.DmcObjectName;
 import org.dmd.dmc.types.ClassFilter;
+import org.dmd.dmp.shared.generated.dmo.DMPEventDMO;
 import org.dmd.dmp.shared.generated.dmo.DeleteResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.GetRequestDMO;
 import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;
@@ -107,6 +108,12 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 
 	@Override
 	public void handleResponse(ResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleEventFromGetContact(DMPEventDMO event) {
 		// TODO Auto-generated method stub
 		
 	}

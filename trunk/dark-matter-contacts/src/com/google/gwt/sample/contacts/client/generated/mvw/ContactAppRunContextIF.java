@@ -13,6 +13,9 @@ import com.google.gwt.sample.contacts.client.extended.views.EditContactView;    
 import com.google.gwt.sample.contacts.client.extended.views.LoginView;                                  // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactsRunContextIF;                        // Contacts run context
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlaceHistoryMapper;         // Used by historyMapper
+import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                     // The ContactListView
+import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF;                     // The EditContactView
+import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewIF;                           // The LoginView
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
@@ -25,9 +28,9 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, MvwRunCont
 
     public ContactAppController         getContactAppControllerRCI();
     public ContactListPresenter         getContactListPresenterRCI();
-    public ContactListView              getContactListViewRCI(ContactListView.ContactListViewPresenter presenter);
-    public EditContactView              getEditContactViewRCI(EditContactView.EditContactViewPresenter presenter);
-    public LoginView                    getLoginViewRCI(LoginView.LoginViewPresenter presenter);
+    public ContactListView              getContactListViewRCI(ContactListViewIF.ContactListViewPresenterIF presenter);
+    public EditContactView              getEditContactViewRCI(EditContactViewIF.EditContactViewPresenterIF presenter);
+    public LoginView                    getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter);
     public ActivityManager              getActivityManager();
     public MvwActivityMapper            getActivityMapper();
     public CommsController              getCommsController();
