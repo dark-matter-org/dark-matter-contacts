@@ -146,6 +146,7 @@ abstractActivity	true
 //sendsLoginRequest	login DMPERRORS
 sendsRequest		LoginRequest login DMPERRORS
 managesView			LoginView
+instantiatesView	LoginView
 usesRunContextItem	placeController	
 description			The PerformLoginActivity prompts for a valid user name and password.
  If login is successful, we go to the ListContactsPlace activity.

@@ -12,7 +12,6 @@ import com.extjs.gxt.ui.client.widget.Text;
 import com.extjs.gxt.ui.client.widget.grid.ColumnConfig;
 import com.extjs.gxt.ui.client.widget.grid.ColumnModel;
 import com.extjs.gxt.ui.client.widget.grid.Grid;
-import com.extjs.gxt.ui.client.widget.grid.GridView;
 import com.extjs.gxt.ui.client.widget.layout.CenterLayout;
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewBaseImpl;
@@ -41,8 +40,8 @@ public class ContactListView extends ContactListViewBaseImpl {
 	Text								feedback;
 	
 	
-	public ContactListView(MvwRunContextIF rc) {
-		super(rc);
+	public ContactListView(ContactListViewPresenterIF presenter, MvwRunContextIF rc) {
+		super(presenter, rc);
 		
 		panel = new LayoutContainer();
 		panel.setSize(500, 300);

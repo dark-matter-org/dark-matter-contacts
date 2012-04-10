@@ -8,8 +8,8 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class EditContactView extends EditContactViewBaseImpl {
 
-	public EditContactView(MvwRunContextIF rc) {
-		super(rc);
+	public EditContactView(EditContactViewPresenterIF presenter, MvwRunContextIF rc) {
+		super(presenter, rc);
 	}
 
 	@Override

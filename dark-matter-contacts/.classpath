@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="extjars/gwteventservice-1.1.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/dark-matter-data"/>
 	<classpathentry kind="lib" path="extjars/gxt-2.2.4-gwt22.jar"/>
-	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/gwt-2.2.0"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

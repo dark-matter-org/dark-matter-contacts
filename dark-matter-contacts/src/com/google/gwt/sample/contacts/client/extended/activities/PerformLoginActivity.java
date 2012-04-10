@@ -33,8 +33,7 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 		
 		if (loginView == null){
 			logger.log(Level.INFO, "Creating view.");
-			loginView = new LoginView();
-			loginView.setPresenter(this);
+			loginView = getNewLoginView(this);
 		}
 		
 		loginView.displayFeedback("Please enter your user name and password");
