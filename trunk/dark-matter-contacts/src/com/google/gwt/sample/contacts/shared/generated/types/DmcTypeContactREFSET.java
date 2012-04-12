@@ -13,13 +13,13 @@ import org.dmd.dms.generated.enums.ValueTypeEnum;
  * The DmcTypeContactREFSET provides storage for a set of ContactREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2268)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:495)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2456)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:532)
  */
 @SuppressWarnings("serial")
 public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializable {
     
-    Set<ContactREF> value;
+    protected Set<ContactREF> value;
     
     public DmcTypeContactREFSET(){
         value = null;
@@ -43,80 +43,105 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2493)
     public DmcAttribute<ContactREF> cloneIt(){
-        DmcTypeContactREFSET rc = getNew();
-        for(ContactREF val: value)
-        try {
-            rc.add(val);
-        } catch (DmcValueException e) {
-            throw(new IllegalStateException("typeCheck() should never fail here!",e));
-        }
-        return(rc);
+        synchronized(this){
+            DmcTypeContactREFSET rc = getNew();
+            for(ContactREF val: value)
+            try {
+                rc.add(val);
+            } catch (DmcValueException e) {
+                throw(new IllegalStateException("typeCheck() should never fail here!",e));
+            }
+            return(rc);
+       }
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2512)
     public ContactREF add(Object v) throws DmcValueException {
-        ContactREF rc = typeCheck(v);
-        if (value == null)
-            initValue();
-    
-        // If false is returned, we didn't modify the set, so return null
-        if (!value.add(rc))
-            rc = null;
-    
-        return(rc);
+        synchronized(this){
+            ContactREF rc = typeCheck(v);
+            if (value == null)
+                initValue();
+        
+            // If false is returned, we didn't modify the set, so return null
+            if (!value.add(rc))
+                rc = null;
+        
+            return(rc);
+        }
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2529)
     public ContactREF del(Object v){
-        ContactREF rc = null;
-        try {
-            rc = typeCheck(v);
-        } catch (DmcValueException e) {
-            throw(new IllegalStateException("Incompatible type passed to del():" + getName(),e));
+        synchronized(this){
+            ContactREF rc = null;
+            if (value == null)
+                return(rc);
+            
+            try {
+                rc = typeCheck(v);
+            } catch (DmcValueException e) {
+                throw(new IllegalStateException("Incompatible type passed to del():" + getName(),e));
+            }
+            if (value.contains(rc)){
+                value.remove(rc);
+                if (value.size() == 0)
+                    value = null;
+            }
+            else
+                rc = null;
+            return(rc);
         }
-        if (value.contains(rc))
-            value.remove(rc);
-        else
-            rc = null;
-        return(rc);
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2554)
     public Iterator<ContactREF> getMV(){
-        Set<ContactREF> clone = null;
-        if (attrInfo.valueType == ValueTypeEnum.HASHSET)
-            clone = new HashSet<ContactREF>(value);
-        else
-            clone = new TreeSet<ContactREF>(value);
-        return(clone.iterator());
-    }
-    
-    public Set<ContactREF> getMVCopy(){
-        Set<ContactREF> clone = null;
-        if (attrInfo.valueType == ValueTypeEnum.HASHSET)
-            clone = new HashSet<ContactREF>(value);
-        else
-            clone = new TreeSet<ContactREF>(value);
-        return(clone);
-    }
-    
-    @Override
-    public int getMVSize(){
-        if (value == null)
-            return(0);
-        return(value.size());
-    }
-    
-    @Override
-    public boolean contains(Object v){
-        boolean rc = false;
-        try {
-            ContactREF val = typeCheck(v);
-            rc = value.contains(val);
-        } catch (DmcValueException e) {
+        synchronized(this){
+            if (attrInfo.valueType == ValueTypeEnum.HASHSET)
+                return( (new HashSet<ContactREF>(value)).iterator() );
+            else
+                return( (new TreeSet<ContactREF>(value)).iterator() );
         }
-        return(rc);
+    }
+    
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2571)
+    public Set<ContactREF> getMVCopy(){
+        synchronized(this){
+            if (attrInfo.valueType == ValueTypeEnum.HASHSET)
+                return(new HashSet<ContactREF>(value));
+            else
+                return(new TreeSet<ContactREF>(value));
+        }
+    }
+    
+    @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2589)
+    public int getMVSize(){
+        synchronized(this){
+            if (value == null)
+                return(0);
+            return(value.size());
+        }
+    }
+    
+    @Override
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2600)
+    public boolean contains(Object v){
+        synchronized(this){
+            if (value == null)
+                return(false);
+            
+            try {
+                ContactREF val = typeCheck(v);
+                return(value.contains(val));
+            } catch (DmcValueException e) {
+                return(false);
+            }
+        }
     }
     
 }

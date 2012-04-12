@@ -3,8 +3,8 @@ package com.google.gwt.sample.contacts.shared.generated.dmo;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.dmd.dmc.*;
-// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:76)
-// Called from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpHeaderDMSAG(DmoCompactSchemaFormatter.java:510)
+// Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
+// Called from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpHeaderDMSAG(DmoCompactSchemaFormatter.java:561)
 import org.dmd.dms.generated.dmo.MetaDMSAG;               // MetaDMSAG
 import org.dmd.dms.generated.enums.ClassTypeEnum;         // Have class definitions
 import org.dmd.dms.generated.enums.DataTypeEnum;          // Have class/attribute definitions
@@ -18,7 +18,15 @@ public class ContactsDMSAG implements DmcCompactSchemaIF {
 
     static String schemaName = "contacts";
 
-    public final static DmcClassInfo __Contact = new DmcClassInfo("Contact", 1001, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,null,MetaDMSAG.__uuidName);
+
+    static int schemaBaseID = 1000;
+
+
+    static int schemaIDRange = 50;
+
+
+    static int schemaMaxID = 1050;
+
     public final static DmcAttributeInfo __birthdayCE = new DmcAttributeInfo("birthdayCE", 1009, "Date", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
     public final static DmcAttributeInfo __emailCE = new DmcAttributeInfo("emailCE", 1008, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
     public final static DmcAttributeInfo __firstName = new DmcAttributeInfo("firstName", 1000, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
@@ -31,8 +39,13 @@ public class ContactsDMSAG implements DmcCompactSchemaIF {
     public final static DmcAttributeInfo __suffixCE = new DmcAttributeInfo("suffixCE", 1004, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
     public final static DmcAttributeInfo __titleAndCompany = new DmcAttributeInfo("titleAndCompany", 1006, "String", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
     public final static DmcAttributeInfo __urlCE = new DmcAttributeInfo("urlCE", 1010, "String", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT);
+    public final static DmcClassInfo __Contact = new DmcClassInfo("Contact", 1001, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,null,MetaDMSAG.__uuidName);
 
     public final static DmcSliceInfo __lightContact = new DmcSliceInfo("lightContact");
+    // firstName
+    // lastName
+    // emailCE
+
 
     static  HashMap<Integer, DmcClassInfo> _CmAp;
 
@@ -141,6 +154,21 @@ public class ContactsDMSAG implements DmcCompactSchemaIF {
 
     public String getSchemaName(){
         return(schemaName);
+    }
+
+
+    public int getSchemaBaseID(){
+        return(schemaBaseID);
+    }
+
+
+    public int getSchemaIDRange(){
+        return(schemaIDRange);
+    }
+
+
+    public int getSchemaMaxID(){
+        return(schemaMaxID);
     }
 
 

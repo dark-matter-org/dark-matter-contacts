@@ -15,14 +15,14 @@ import org.dmd.dmc.types.UUIDName;    // key type import
  * The DmcTypeContactREFMAP provides storage for a map of ContactREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2473)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:503)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2682)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:540)
  */
 @SuppressWarnings("serial")
 // public class DmcTypeContactREFMAP extends DmcTypeContactREF<ContactREF,UUIDName> {
 public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializable {
     
-    Map<UUIDName,ContactREF> value;
+    protected Map<UUIDName,ContactREF> value;
     
     public DmcTypeContactREFMAP(){
         value = null;
@@ -40,99 +40,134 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
             value = new TreeMap<UUIDName,ContactREF>();
     }
     
+    public UUIDName firstKey(){
+        if (attrInfo.valueType == ValueTypeEnum.TREEMAPPED){
+            if (value == null)
+                return(null);
+            TreeMap<UUIDName,ContactREF> map = (TreeMap<UUIDName,ContactREF>)value;
+            return(map.firstKey());
+        }
+        throw(new IllegalStateException("Attribute " + attrInfo.name + " is HASHMAPPED and doesn't support firstKey()"));
+    }
+    
     @Override
     public DmcTypeContactREFMAP getNew(){
         return(new DmcTypeContactREFMAP(attrInfo));
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2736)
     public DmcAttribute<ContactREF> cloneIt(){
-        DmcTypeContactREFMAP rc = getNew();
-        for(ContactREF val: value.values())
-        try {
-            rc.add(val);
-        } catch (DmcValueException e) {
-            throw(new IllegalStateException("typeCheck() should never fail here!",e));
+        synchronized(this){
+            DmcTypeContactREFMAP rc = getNew();
+            for(ContactREF val: value.values())
+            try {
+                rc.add(val);
+            } catch (DmcValueException e) {
+                throw(new IllegalStateException("typeCheck() should never fail here!",e));
+            }
+            return(rc);
         }
-        return(rc);
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2752)
     public ContactREF add(Object v) throws DmcValueException {
-        ContactREF newval = typeCheck(v);
-        if (value == null)
-            initValue();
-        UUIDName key = (UUIDName)((DmcMappedAttributeIF)newval).getKey();
-        ContactREF oldval = value.put(key,newval);
-        
-        if (oldval != null){
-            // We had a value with this key, ensure that the value actually changed
-            if (oldval.valuesAreEqual(newval))
-                newval = null;
+        synchronized(this){
+            ContactREF newval = typeCheck(v);
+            if (value == null)
+                initValue();
+            UUIDName key = (UUIDName)((DmcMappedAttributeIF)newval).getKey();
+            ContactREF oldval = value.put(key,newval);
+            
+            if (oldval != null){
+                // We had a value with this key, ensure that the value actually changed
+                if (oldval.valuesAreEqual(newval))
+                    newval = null;
+            }
+            
+            return(newval);
         }
-        
-        return(newval);
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2773)
     public ContactREF del(Object key){
-        if (key instanceof UUIDName)
-            return(value.remove(key));
-        else
-            throw(new IllegalStateException("Incompatible key type: " + key.getClass().getName() + " passed to del():" + getName()));
+        synchronized(this){
+           if (key instanceof UUIDName)
+                return(value.remove(key));
+            else
+                throw(new IllegalStateException("Incompatible key type: " + key.getClass().getName() + " passed to del():" + getName()));
+        }
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2785)
     public Iterator<ContactREF> getMV(){
-        Map<UUIDName,ContactREF> clone = null;
-        if (attrInfo.valueType == ValueTypeEnum.HASHMAPPED)
-            clone = new HashMap<UUIDName,ContactREF>(value);
-        else
-            clone = new TreeMap<UUIDName,ContactREF>(value);
-        return(clone.values().iterator());
+        synchronized(this){
+            Map<UUIDName,ContactREF> clone = null;
+            if (attrInfo.valueType == ValueTypeEnum.HASHMAPPED)
+                clone = new HashMap<UUIDName,ContactREF>(value);
+            else
+                clone = new TreeMap<UUIDName,ContactREF>(value);
+            return(clone.values().iterator());
+        }
     }
     
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2798)
     public Map<UUIDName,ContactREF> getMVCopy(){
-        Map<UUIDName,ContactREF> clone = null;
-        if (attrInfo.valueType == ValueTypeEnum.HASHMAPPED)
-            clone = new HashMap<UUIDName,ContactREF>(value);
-        else
-            clone = new TreeMap<UUIDName,ContactREF>(value);
-        return(clone);
+        synchronized(this){
+            Map<UUIDName,ContactREF> clone = null;
+            if (attrInfo.valueType == ValueTypeEnum.HASHMAPPED)
+                clone = new HashMap<UUIDName,ContactREF>(value);
+            else
+                clone = new TreeMap<UUIDName,ContactREF>(value);
+            return(clone);
+        }
     }
     
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2811)
     @Override
     public int getMVSize(){
-        if (value == null)
-            return(0);
-        return(value.size());
-    }
-    
-    @Override
-    public ContactREF getByKey(Object key){
-        if (key instanceof UUIDName)
-            return(value.get(key));
-        else
-            throw(new IllegalStateException("Incompatible type: " + key.getClass().getName() + " passed to del():" + getName()));
-    }
-    
-    @Override
-    public boolean contains(Object v){
-        boolean rc = false;
-        try {
-            ContactREF val = typeCheck(v);
-            rc = value.containsValue(val);
-        } catch (DmcValueException e) {
+        synchronized(this){
+            if (value == null)
+                return(0);
+            return(value.size());
         }
-        return(rc);
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2823)
+    public ContactREF getByKey(Object key){
+        synchronized(this){
+            if (key instanceof UUIDName)
+                return(value.get((UUIDName) key));
+            else
+                throw(new IllegalStateException("Incompatible type: " + key.getClass().getName() + " passed to del():" + getName()));
+        }
+    }
+    
+    @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2835)
+    public boolean contains(Object v){
+        synchronized(this){
+            try {
+                ContactREF val = typeCheck(v);
+                return(value.containsValue(val));
+            } catch (DmcValueException e) {
+                return(false);
+            }
+        }
+    }
+    
+    @Override
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2856)
     public boolean containsKey(Object key){
-        boolean rc = false;
-        if (key instanceof UUIDName)
-            rc = value.containsKey(key);
-        return(rc);
+        synchronized(this){
+           if (key instanceof UUIDName)
+                return(value.containsKey(key));
+            return(false);
+        }
     }
     
 }
