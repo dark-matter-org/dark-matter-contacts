@@ -8,13 +8,13 @@ import org.dmd.dmc.DmcValueException;
  * The DmcTypeContactREFSV provides storage for a single-valued ContactREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpSVType(GenUtility.java:1690)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:493)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpSVType(GenUtility.java:1833)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:530)
  */
 @SuppressWarnings("serial")
 public class DmcTypeContactREFSV extends DmcTypeContactREF implements Serializable {
     
-    ContactREF value;
+    protected ContactREF value;
     
     public DmcTypeContactREFSV(){
     
@@ -33,13 +33,22 @@ public class DmcTypeContactREFSV extends DmcTypeContactREF implements Serializab
     }
     
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSVType(GenUtility.java:1865)
     public DmcAttribute<ContactREF> cloneIt(){
         DmcTypeContactREFSV rc = getNew();
         rc.value = value;
         return(rc);
     }
     
+    // org.dmd.dms.util.GenUtility.dumpSVType(GenUtility.java:1876)
+    public ContactREF getSVCopy(){
+        if (value == null)
+            return(null);
+        return(cloneValue(value));
+    }
+    
     @Override
+    // org.dmd.dms.util.GenUtility.dumpSVType(GenUtility.java:1888)
     public ContactREF set(Object v) throws DmcValueException {
         ContactREF rc = typeCheck(v);
         // We only return a value if the value actually changed. This supports
