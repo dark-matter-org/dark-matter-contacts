@@ -8,5 +8,6 @@ schemaIDRange   	50
 defFiles        	attributes.dmd
 defFiles        	classes.dmd
 defFiles			slices.dmd
+//defFiles			extrefs.dmd
 description     	The contacts schema defines objects associated with the contacts
  GWT application example.

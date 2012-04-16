@@ -68,6 +68,11 @@ type		String
 dmdID		11
 description Random notes about the contact.
 
+//AttributeDefinition
+//name		someRelation
+//type		SomeRelation
+//dmdID		12
+//description Testing extended references.
 
 
 
