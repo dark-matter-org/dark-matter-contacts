@@ -71,6 +71,8 @@ description Random notes about the contact.
 //AttributeDefinition
 //name		someRelation
 //type		SomeRelation
+//valueType       MULTI
+//indexSize       8
 //dmdID		12
 //description Testing extended references.
 
