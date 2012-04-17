@@ -1,6 +1,7 @@
 SchemaDefinition
 name            	contacts
 schemaPackage   	com.google.gwt.sample.contacts.shared
+dmwPackage    		com.google.gwt.sample.contacts.server
 dmwTypeToPackage	gxt com.google.gwt.sample.contacts.client
 schemaBaseID    	1000
 schemaIDRange   	50
