@@ -2,6 +2,7 @@ Module
 moduleName      contacts
 dependsOnSchema contacts
 dependsOnModule	mvwcomms
+dependsOnModule gxtforms
 genPackage      com.google.gwt.sample.contacts.client
 description     The contacts module defines components that let us manage a set of contacts.
 
@@ -94,6 +95,12 @@ viewImport			com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
 description			The EditContactView displays a single Contact. 
  If the Save button is clicked, a ContactUpdatedEvent is sent with the recorded
  modifications. If cancel is clicked, we revert to the ContactListView.
+ 
+//FormBindingDefinition
+//bindingName				ContactBinding
+//editObject				Contact
+//editField				someRelation GXTTextField MUST	: Some relation
+
 
 //Presenter
 //presenterName			EditContactPresenter
