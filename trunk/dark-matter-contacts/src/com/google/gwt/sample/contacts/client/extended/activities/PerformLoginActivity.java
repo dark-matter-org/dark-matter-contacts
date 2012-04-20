@@ -1,14 +1,11 @@
 package com.google.gwt.sample.contacts.client.extended.activities;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;
 import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
-import org.dmd.util.exceptions.DebugInfo;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.UmbrellaException;
@@ -75,6 +72,7 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 		LoginRequestDMO request = getLoginRequest();
 		request.setUserName(username);
 		request.setPassword(password);
+		request.setTrackingEnabled(true);
 		
 		sendLoginRequest(request);
 	}
