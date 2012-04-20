@@ -40,6 +40,10 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		
 		contactsPresenter = getNewContactListPresenter();
 		contactsView = getNewContactListView(contactsPresenter);
+		
+		// For the purposes of this example, we turn on message tracking throughout the system.
+		// All messages that are sent will be tracked via logging messages
+		commsController.setGlobalMessageTracking(true);
 	}
 	
 	/**
