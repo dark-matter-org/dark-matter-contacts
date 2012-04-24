@@ -31,6 +31,8 @@ import org.dmd.mvw.client.mvwcomms.CentralDMPErrorHandlerIF;                    
 import org.dmd.mvw.client.mvwcomms.CentralRPCErrorHandlerIF;                                                // Is the central RPC error handler
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                      // Mvwcomms run context
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEvent;                                 // Required by LoginCompleteEvent
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEventHandler;                          // Required by LoginCompleteEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
 abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, EventHandlerIF, CentralDMPErrorHandlerIF, CentralRPCErrorHandlerIF {
@@ -70,6 +72,13 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
             new EditContactEventHandler() {
                 public void handleEditContactEvent(EditContactEvent event) {
                     onEditContactEvent(event.getContact());
+                }
+            });
+
+        eventBus.addHandler(LoginCompleteEvent.TYPE,
+            new LoginCompleteEventHandler() {
+                public void handleLoginCompleteEvent(LoginCompleteEvent event) {
+                    onLoginCompleteEvent();
                 }
             });
 
@@ -176,6 +185,9 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onEditContactEvent(ContactDMO contact);
+
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onLoginCompleteEvent();
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
     abstract protected void handleDeleteContactResponse(DeleteResponseDMO response);

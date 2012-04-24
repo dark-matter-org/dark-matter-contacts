@@ -19,6 +19,8 @@ import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppRunContext;
 import com.google.gwt.sample.contacts.client.generated.mvw.controllers.ContactAppControllerBaseImpl;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ContactAppController extends ContactAppControllerBaseImpl {
 	
@@ -29,6 +31,7 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	ContactListPresenter				contactsPresenter;
 	ContactListView						contactsView;
 	
+	Logger logger = Logger.getLogger("dmcontacts");
 
 	public ContactAppController(ContactAppRunContext rc) {
 		super(rc);
@@ -36,7 +39,7 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		contacts 		= new TreeMap<DmcObjectName, ContactGXT>();
 		
 		// JUST TEMPORARY
-		haveContacts 	= true;
+		haveContacts 	= false;
 		
 		contactsPresenter = getNewContactListPresenter();
 		contactsView = getNewContactListView(contactsPresenter);
@@ -53,12 +56,12 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	 * @return
 	 */
 	public ContactListView getContactsListView(ListContactsActivity activty){
-		if (!haveContacts){
-			contactsView.displayFeedback("Retrieving contacts...");
-			GetRequestDMO request = getGetContactRequest();
-			request.setClassFilter(new ClassFilter(ContactsDMSAG.__Contact));
-			sendGetContactRequest(request);
-		}
+//		if (!haveContacts){
+//			contactsView.displayFeedback("Retrieving contacts...");
+//			GetRequestDMO request = getGetContactRequest();
+//			request.setClassFilter(new ClassFilter(ContactsDMSAG.__Contact));
+//			sendGetContactRequest(request);
+//		}
 		return(contactsView);
 	}
 
@@ -100,7 +103,7 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 
 	@Override
 	protected void handleGetContactResponse(GetResponseDMO response) {
-		// TODO Auto-generated method stub
+		logger.log(Level.INFO, response.toOIF());
 		
 	}
 
@@ -120,6 +123,14 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	protected void handleEventFromGetContact(DMPEventDMO event) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	protected void onLoginCompleteEvent() {
+		contactsView.displayFeedback("Retrieving contacts...");
+		GetRequestDMO request = getGetContactRequest();
+		request.setClassFilter(new ClassFilter(ContactsDMSAG.__Contact));
+		sendGetContactRequest(request);
 	}
 
 }
