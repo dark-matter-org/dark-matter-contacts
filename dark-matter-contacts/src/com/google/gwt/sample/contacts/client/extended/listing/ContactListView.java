@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.views;
+package com.google.gwt.sample.contacts.client.extended.listing;
 
 import java.util.HashMap;
 import java.util.List;

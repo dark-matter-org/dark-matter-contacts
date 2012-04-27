@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.presenters;
+package com.google.gwt.sample.contacts.client.extended.listing;
 
 import java.util.List;
 

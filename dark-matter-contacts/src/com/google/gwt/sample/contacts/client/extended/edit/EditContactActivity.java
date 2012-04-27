@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.activities;
+package com.google.gwt.sample.contacts.client.extended.edit;
 
 import org.dmd.dmp.shared.generated.dmo.CreateResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.GetResponseDMO;

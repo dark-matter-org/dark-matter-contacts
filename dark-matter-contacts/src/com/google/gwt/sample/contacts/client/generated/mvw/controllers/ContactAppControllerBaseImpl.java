@@ -4,8 +4,8 @@ package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:122)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
-import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                      // Used by ContactListPresenterRCI
-import com.google.gwt.sample.contacts.client.extended.views.ContactListView;                                // Used by ContactListViewRCI
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListPresenter;                         // Used by ContactListPresenterRCI
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListView;                              // Used by ContactListViewRCI
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactsRunContextIF;                            // Contacts run context
 import com.google.gwt.sample.contacts.client.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent
 import com.google.gwt.sample.contacts.client.generated.mvw.events.AddContactEventHandler;                   // Required by AddContactEvent

@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.activities;
+package com.google.gwt.sample.contacts.client.extended.listing;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.sample.contacts.client.extended.views.ContactListView;
 import com.google.gwt.sample.contacts.client.generated.mvw.activities.ListContactsActivityBaseImpl;
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ListContactsPlace;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;

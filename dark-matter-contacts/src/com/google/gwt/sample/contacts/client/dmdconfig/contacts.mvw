@@ -27,7 +27,7 @@ description			Image resources for the contact application. If you want to
  in the component where you wanted to access them. 
 
 ///////////////////////////////////////////////////////////////////////////////
-//EVENTS
+// EVENTS
 
 Event
 eventName       LoginEvent
@@ -66,20 +66,56 @@ description     Fired when a single Contact is clicked by the user. When this is
  done, we display the EditContactView.
 
 ///////////////////////////////////////////////////////////////////////////////
-// VIEWS
- 
+// LOGIN HANDLING
+
+Place
+placeName			LoginPlace
+placePrefix			login
+runsActivity		PerformLoginActivity
+description			When the ContactApp is started, this is the default place.
+
+Activity
+activityName		PerformLoginActivity
+subpackage			login
+abstractActivity	true
+//sendsLoginRequest	login DMPERRORS
+sendsRequest		LoginRequest login DMPERRORS
+managesView			LoginView
+instantiatesView	LoginView
+usesRunContextItem	placeController	
+description			The PerformLoginActivity prompts for a valid user name and password.
+ If login is successful, we go to the ListContactsPlace activity.
+
 View
 viewName			LoginView
-subpackage			views
+subpackage			login
 viewMethod			void setUserName(String un)
 viewMethod			void setPassword(String pw)
 viewMethod			void displayFeedback(String info)
 viewMethod			void displayError(String info)
 local				LoginEvent
 
+///////////////////////////////////////////////////////////////////////////////
+// CONTACT LIST
+
+Place
+placeName			ListContactsPlace
+placePrefix			list
+runsActivity		ListContactsActivity
+description			The place where we list the available contacts.
+
+Activity
+activityName		ListContactsActivity
+subpackage			listing
+abstractActivity	true
+usesController		ContactAppController
+usesRunContextItem	placeController	
+description			The ListContactsActivity will retrieve the summary information about our contacts
+ and display them in a ContactListView.
+
 View
 viewName        	ContactListView
-subpackage			views
+subpackage			listing
 broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
@@ -100,7 +136,7 @@ description			The ContactListView displays a list of Contacts and shows the firs
  
 Presenter
 presenterName			ContactListPresenter
-subpackage				presenters
+subpackage				listing
 managesView				ContactListView
 //instantiatesPresenter	EditContactPresenter
 //instantiatesView		EditContactView
@@ -109,9 +145,34 @@ description				This presenter takes care of retrieving the summary information
  requests from the view and listens for Contact create events and updates the 
  view accordingly.
 
+///////////////////////////////////////////////////////////////////////////////
+// EDIT CONTACT
+
+Place
+placeName			EditPlace
+placePrefix			edit
+runsActivity		EditContactActivity
+description			The place where we edit or add a Contact.
+
+Activity
+activityName		EditContactActivity
+subpackage			edit
+abstractActivity	true
+sendsRequest		GetRequest getContact CENTRALERRORS
+//sendsGetRequest		getContact CENTRALERRORS
+sendsRequest		SetRequest setContact Contact CENTRALERRORS
+sendsRequest		CreateRequest createContact Contact CENTRALERRORS
+//sendsSetRequest		setContact CENTRALERRORS
+managesView			EditContactView
+description			The EditContactActivity will retrieve the Contact details if a 
+ Contact uuid was specified as part of the edit place URL. If not, we are assumed
+ to be creating a new Contact. If the user hits OK, we send a Set or Create request
+ to the server. If the user hits cancel, we go to the contacts list.
+
+
 View
 viewName			EditContactView
-subpackage			views
+subpackage			edit
 local				ContactUpdatedEvent
 broadcastOnly		EditContactCancelledEvent
 viewMethod			void setContact(ContactDMO contact)
@@ -164,60 +225,6 @@ description			The ContactAppController provides an overall control point
 
 ///////////////////////////////////////////////////////////////////////////////
 //PLACES & ACTIVITIES
-
-Place
-placeName			LoginPlace
-placePrefix			login
-runsActivity		PerformLoginActivity
-description			When the ContactApp is started, this is the default place.
-
-Activity
-activityName		PerformLoginActivity
-subpackage			activities
-abstractActivity	true
-//sendsLoginRequest	login DMPERRORS
-sendsRequest		LoginRequest login DMPERRORS
-managesView			LoginView
-instantiatesView	LoginView
-usesRunContextItem	placeController	
-description			The PerformLoginActivity prompts for a valid user name and password.
- If login is successful, we go to the ListContactsPlace activity.
-
-Place
-placeName			ListContactsPlace
-placePrefix			list
-runsActivity		ListContactsActivity
-description			The place where we list the available contacts.
-
-Activity
-activityName		ListContactsActivity
-subpackage			activities
-abstractActivity	true
-usesController		ContactAppController
-usesRunContextItem	placeController	
-description			The ListContactsActivity will retrieve the summary information about our contacts
- and display them in a ContactListView.
-
-Place
-placeName			EditPlace
-placePrefix			edit
-runsActivity		EditContactActivity
-description			The place where we edit or add a Contact.
-
-Activity
-activityName		EditContactActivity
-subpackage			activities
-abstractActivity	true
-sendsRequest		GetRequest getContact CENTRALERRORS
-//sendsGetRequest		getContact CENTRALERRORS
-sendsRequest		SetRequest setContact Contact CENTRALERRORS
-sendsRequest		CreateRequest createContact Contact CENTRALERRORS
-//sendsSetRequest		setContact CENTRALERRORS
-managesView			EditContactView
-description			The EditContactActivity will retrieve the Contact details if a 
- Contact uuid was specified as part of the edit place URL. If not, we are assumed
- to be creating a new Contact. If the user hits OK, we send a Set or Create request
- to the server. If the user hits cancel, we go to the contacts list.
 
 ///////////////////////////////////////////////////////////////////////////////
 // The application

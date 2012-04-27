@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.views;
+package com.google.gwt.sample.contacts.client.extended.login;
 
 import com.extjs.gxt.ui.client.Style.HorizontalAlignment;
 import com.extjs.gxt.ui.client.event.ButtonEvent;
