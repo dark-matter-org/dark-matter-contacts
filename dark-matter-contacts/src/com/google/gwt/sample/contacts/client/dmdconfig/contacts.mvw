@@ -5,6 +5,26 @@ dependsOnModule	mvwcomms
 dependsOnModule gxtforms
 genPackage      com.google.gwt.sample.contacts.client
 description     The contacts module defines components that let us manage a set of contacts.
+ The module depends on the contacts schema which is defined in the shared package of our
+ GWT application (since it used on both the web client and the server side).
+ <p/>
+ We also depend on the base modules mvscomms and gxtforms. These modules are defined
+ as part of the dark-matter project and provide the basic infrastructure for communications
+ via the Dark Matter Protocol (DMP) and the display of Dark Matter Objects (DMOs) in
+ forms that are built using Sencha's GXT toolkit.
+
+///////////////////////////////////////////////////////////////////////////////
+
+RunContextItem
+itemName			images
+useClass     		com.google.gwt.sample.contacts.client.resources.Images
+construction 		GWT.create(Images.class)
+description			Image resources for the contact application. If you want to
+ access these images, you would simply specify:<br/>
+ <pre>
+ usesRunContextItem	images
+ </pre>
+ in the component where you wanted to access them. 
 
 ///////////////////////////////////////////////////////////////////////////////
 //EVENTS
@@ -63,14 +83,18 @@ subpackage			views
 broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
-viewMethod			void displayContacts(List<ContactGXT> contacts)
+viewMethod			void displayContacts(HashMap<DmcObjectName, GxtWrapper> contacts)
 viewMethod			void deleteContact(ContactGXT contact)
 viewMethod			void addContact(ContactGXT contact)
 viewMethod			void updateContact(ContactGXT contact)
 viewMethod			void displayFeedback(String info)
 viewMethod			void displayError(String info)
 viewImport			java.util.List
+viewImport			java.util.HashMap
+viewImport			org.dmd.dmc.DmcObjectName
 viewImport			com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
+viewImport			org.dmd.mvw.client.gxt.dmw.GxtWrapper
+usesRunContextItem	images
 description			The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.
  
@@ -118,7 +142,7 @@ handlesEvent			LoginCompleteEvent
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
-sendsRequest			GetRequest getContact CENTRALERRORS DMPERRORS EVENTS
+sendsRequest			GetRequest getContact DMPERRORS EVENTS
 //sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
 //sendsDeleteRequest		deleteContact CENTRALERRORS
 sendsRequest			DeleteRequest deleteContact CENTRALERRORS
@@ -170,6 +194,7 @@ activityName		ListContactsActivity
 subpackage			activities
 abstractActivity	true
 usesController		ContactAppController
+usesRunContextItem	placeController	
 description			The ListContactsActivity will retrieve the summary information about our contacts
  and display them in a ContactListView.
 

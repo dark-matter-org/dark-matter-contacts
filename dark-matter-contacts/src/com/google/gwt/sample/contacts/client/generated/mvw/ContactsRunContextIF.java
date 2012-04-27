@@ -11,11 +11,13 @@ import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlac
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                     // The ContactListView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF;                     // The EditContactView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewIF;                           // The LoginView
+import com.google.gwt.sample.contacts.client.resources.Images;                                          // Used by images
 
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatModuleRunContextInterface(RunContextFormatter.java:40)
 public interface ContactsRunContextIF {
 
+    public Images                       getImages();
     public LoginView                    getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter);
     public ContactListView              getContactListViewRCI(ContactListViewIF.ContactListViewPresenterIF presenter);
     public ContactListPresenter         getContactListPresenterRCI();

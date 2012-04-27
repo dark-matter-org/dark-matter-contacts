@@ -43,7 +43,7 @@ public class PerformLoginActivity extends PerformLoginActivityBaseImpl {
 		
 		// Move on to display the contacts
 		try {
-			placeController.goTo(new ListContactsPlace(""));
+			placeController.goTo(new ListContactsPlace("moo"));
 		}
 		catch(UmbrellaException ex){
 			for(Throwable t: ex.getCauses()){

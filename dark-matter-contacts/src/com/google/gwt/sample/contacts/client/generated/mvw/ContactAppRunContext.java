@@ -17,6 +17,7 @@ import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlac
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                     // The ContactListView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF;                     // The EditContactView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewIF;                           // The LoginView
+import com.google.gwt.sample.contacts.client.resources.Images;                                          // Used by images
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
 import de.novanic.eventservice.client.event.RemoteEventServiceFactory;                                  // Used by eventService
 import org.dmd.dmp.client.DMPService;                                                                   // Used by dmpConnection
@@ -30,16 +31,39 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;          
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:101)
 public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContextIF, MvwcommsRunContextIF {
 
+    // Defined in module: mvw
     private final EventBus                     eventBus;
+
+    // Defined in module: mvwcomms
     private final DMPServiceAsync              dmpConnection;
+
+    // Defined in module: mvw
     private final PlaceController              placeController;
+
+    // Defined in module: mvwcomms
     private final RemoteEventService           eventService;
+
+    // Defined in module: mvwcomms
     private final CommsController              commsController;
+
+    // Defined in module: mvw
     private final MvwActivityMapper            activityMapper;
+
+    // Defined in module: mvw
     private final ActivityManager              activityManager;
+
+    // Defined in module: contacts
     private final ContactAppPlaceHistoryMapper historyMapper;
+
+    // Defined in module: mvw
     private final PlaceHistoryHandler          historyHandler;
+
+    // Defined in module: contacts
     private final ContactAppController         ContactAppControllerRCI;
+
+    // Defined in module: contacts
+    private final Images                       images;
+
 
     public ContactAppRunContext(){
 
@@ -53,90 +77,97 @@ public class ContactAppRunContext implements ContactsRunContextIF, MvwRunContext
         historyMapper           = GWT.create(ContactAppPlaceHistoryMapper.class);
         historyHandler          = new PlaceHistoryHandler(historyMapper);
         ContactAppControllerRCI = new ContactAppController(this);
+        images                  = GWT.create(Images.class);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public ContactAppController getContactAppControllerRCI(){
         return(ContactAppControllerRCI);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:142)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:146)
     @Override
     public ContactListPresenter getContactListPresenterRCI(){
         return(new ContactListPresenter());
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:165)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:169)
     @Override
     public ContactListView getContactListViewRCI(ContactListViewIF.ContactListViewPresenterIF presenter){
         ContactListView view = new ContactListView(presenter, this);
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:165)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:169)
     @Override
     public EditContactView getEditContactViewRCI(EditContactViewIF.EditContactViewPresenterIF presenter){
         EditContactView view = new EditContactView(presenter, this);
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:165)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:169)
     @Override
     public LoginView getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter){
         LoginView view = new LoginView(presenter);
         return(view);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public ActivityManager getActivityManager(){
         return(activityManager);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public MvwActivityMapper getActivityMapper(){
         return(activityMapper);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public CommsController getCommsController(){
         return(commsController);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public DMPServiceAsync getDmpConnection(){
         return(dmpConnection);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public EventBus getEventBus(){
         return(eventBus);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public RemoteEventService getEventService(){
         return(eventService);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public PlaceHistoryHandler getHistoryHandler(){
         return(historyHandler);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public ContactAppPlaceHistoryMapper getHistoryMapper(){
         return(historyMapper);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:185)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
+    @Override
+    public Images getImages(){
+        return(images);
+    }
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:189)
     @Override
     public PlaceController getPlaceController(){
         return(placeController);

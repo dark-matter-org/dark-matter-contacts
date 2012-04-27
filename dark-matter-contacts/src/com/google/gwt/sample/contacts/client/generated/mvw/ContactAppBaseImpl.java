@@ -6,6 +6,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.sample.contacts.client.generated.mvw.places.LoginPlace;
 
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.WebApplicationFormatter.formatApplication(WebApplicationFormatter.java:25)
 abstract public class ContactAppBaseImpl {
 
     protected ContactAppRunContext rc;
