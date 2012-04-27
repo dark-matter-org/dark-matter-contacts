@@ -19,9 +19,9 @@ import org.dmd.mvw.client.gxt.cache.GxtCache;
 import org.dmd.mvw.client.gxt.cache.GxtCacheIndexListenerIF;
 import org.dmd.mvw.client.gxt.dmw.GxtWrapper;
 
-import com.google.gwt.sample.contacts.client.extended.activities.ListContactsActivity;
-import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;
-import com.google.gwt.sample.contacts.client.extended.views.ContactListView;
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListPresenter;
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListView;
+import com.google.gwt.sample.contacts.client.extended.listing.ListContactsActivity;
 import com.google.gwt.sample.contacts.client.generated.ContactsGxtWrapperFactory;
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppRunContext;

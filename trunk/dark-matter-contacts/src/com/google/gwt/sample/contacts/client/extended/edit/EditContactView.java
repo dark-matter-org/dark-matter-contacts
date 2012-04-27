@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.extended.views;
+package com.google.gwt.sample.contacts.client.extended.edit;
 
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 

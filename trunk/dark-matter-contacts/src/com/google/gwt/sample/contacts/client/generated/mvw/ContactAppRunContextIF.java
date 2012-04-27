@@ -7,10 +7,10 @@ import com.google.gwt.event.shared.EventBus;                                    
 import com.google.gwt.place.shared.PlaceController;                                                     // Used by placeController
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                 // Used by historyHandler
 import com.google.gwt.sample.contacts.client.extended.ContactAppController;                             // Used by ContactAppControllerRCI
-import com.google.gwt.sample.contacts.client.extended.presenters.ContactListPresenter;                  // Used by ContactListPresenterRCI
-import com.google.gwt.sample.contacts.client.extended.views.ContactListView;                            // Used by ContactListViewRCI
-import com.google.gwt.sample.contacts.client.extended.views.EditContactView;                            // Used by EditContactViewRCI
-import com.google.gwt.sample.contacts.client.extended.views.LoginView;                                  // Used by LoginViewRCI
+import com.google.gwt.sample.contacts.client.extended.edit.EditContactView;                             // Used by EditContactViewRCI
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListPresenter;                     // Used by ContactListPresenterRCI
+import com.google.gwt.sample.contacts.client.extended.listing.ContactListView;                          // Used by ContactListViewRCI
+import com.google.gwt.sample.contacts.client.extended.login.LoginView;                                  // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactsRunContextIF;                        // Contacts run context
 import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlaceHistoryMapper;         // Used by historyMapper
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                     // The ContactListView
