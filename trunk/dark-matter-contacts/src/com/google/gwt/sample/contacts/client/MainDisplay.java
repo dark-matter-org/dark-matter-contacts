@@ -11,7 +11,11 @@ import com.google.gwt.user.client.ui.IsWidget;
 
 public class MainDisplay extends Viewport implements AcceptsOneWidget {
 	
+	static MainDisplay instance;
+	
 	public MainDisplay(){
+		instance = this;
+		
 		setLayout(new FitLayout());
 		setSize(300, 300);
 	}
@@ -39,6 +43,10 @@ public class MainDisplay extends Viewport implements AcceptsOneWidget {
 		else{
 			logger.log(Level.INFO, "MainDisplay.setWidget() will only work with com.extjs.gxt.ui.client.widget.Component derivatives");
 		}
+	}
+
+	static public MainDisplay instance(){
+		return(instance);
 	}
 
 }

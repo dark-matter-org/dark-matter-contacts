@@ -85,12 +85,12 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:101)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:105)
     public ContactListPresenter getNewContactListPresenter(){
         return( ((ContactsRunContextIF)runcontext).getContactListPresenterRCI());
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:108)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:112)
     public ContactListView getNewContactListView(ContactListViewIF.ContactListViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }
@@ -110,7 +110,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:439)
     protected void sendGetContactRequest(GetRequestDMO request){
-        commsController.sendGetRequest(request,this,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRALANDLOCAL);
+        commsController.sendGetRequest(request,this,this,ErrorOptionsEnum.LOCAL,ErrorOptionsEnum.LOCAL);
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:495)
@@ -134,7 +134,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:255)
     @Override
-    public void handleResponse(ResponseDMO response){
+    final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case DELETECONTACTDELETECALLBACK:
@@ -158,7 +158,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:279)
     @Override
-    public void handleEvent(DMPEventDMO event){
+    final public void handleEvent(DMPEventDMO event){
         switch(event.getHandlerID()){
         case GETCONTACTGETCALLBACK:
             handleEventFromGetContact(event);
@@ -168,7 +168,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:289)
     @Override
-    public void handleRPCFailure(Throwable caught, RequestDMO request){
+    final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
         case DELETECONTACTDELETECALLBACK:
             throw(new IllegalStateException("RPC errors for DeleteContact are supposed to be centrally handled!"));

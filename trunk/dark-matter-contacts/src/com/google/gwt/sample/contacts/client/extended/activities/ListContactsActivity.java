@@ -8,6 +8,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.sample.contacts.client.extended.views.ContactListView;
 import com.google.gwt.sample.contacts.client.generated.mvw.activities.ListContactsActivityBaseImpl;
+import com.google.gwt.sample.contacts.client.generated.mvw.places.ListContactsPlace;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 /**
@@ -27,7 +28,7 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 	@Override
 	public void start(AcceptsOneWidget p, EventBus eventBus) {
 		Logger logger = Logger.getLogger("dmcontacts");
-		logger.log(Level.INFO, "Login activity has been started.");
+		logger.log(Level.INFO, "List Contacts activity has been started.");
 		
 		panel = p;
 
@@ -35,6 +36,10 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 		if (view != null)
 			panel.setWidget(view);
 		// The controller will tell us when the view is ready
+		
+		ListContactsPlace place = (ListContactsPlace) placeController.getWhere();
+		
+		logger.log(Level.INFO, "ListContactsActivity running in place: " + place.getToken());
 	}
 	
 	public void viewReady(ContactListView view){

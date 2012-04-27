@@ -4,7 +4,10 @@ package com.google.gwt.sample.contacts.client.generated.mvw.views;
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:232)
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // View import
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // Required by DeleteContactsEvent
+import java.util.HashMap;                                                      // View import
 import java.util.List;                                                         // Required by DeleteContactsEvent
+import org.dmd.dmc.DmcObjectName;                                              // View import
+import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                  // View import
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:23)
 public interface ContactListViewIF {
@@ -15,7 +18,7 @@ public interface ContactListViewIF {
 
     }
 
-    public void displayContacts(List<ContactGXT> contacts);
+    public void displayContacts(HashMap<DmcObjectName, GxtWrapper> contacts);
 
     public void deleteContact(ContactGXT contact);
 

@@ -91,7 +91,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:255)
     @Override
-    public void handleResponse(ResponseDMO response){
+    final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case CREATECONTACTCREATECALLBACK:
@@ -119,7 +119,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:289)
     @Override
-    public void handleRPCFailure(Throwable caught, RequestDMO request){
+    final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
         case CREATECONTACTCREATECALLBACK:
             throw(new IllegalStateException("RPC errors for CreateContact are supposed to be centrally handled!"));

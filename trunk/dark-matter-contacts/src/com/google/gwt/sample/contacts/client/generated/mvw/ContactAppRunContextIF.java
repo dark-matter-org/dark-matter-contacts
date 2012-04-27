@@ -16,6 +16,7 @@ import com.google.gwt.sample.contacts.client.generated.mvw.places.ContactAppPlac
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                     // The ContactListView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF;                     // The EditContactView
 import com.google.gwt.sample.contacts.client.generated.mvw.views.LoginViewIF;                           // The LoginView
+import com.google.gwt.sample.contacts.client.resources.Images;                                          // Used by images
 import de.novanic.eventservice.client.event.RemoteEventService;                                         // Used by eventService
 import org.dmd.dmp.client.DMPServiceAsync;                                                              // Used by dmpConnection
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                        // Used by activityMapper
@@ -39,6 +40,7 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, MvwRunCont
     public RemoteEventService           getEventService();
     public PlaceHistoryHandler          getHistoryHandler();
     public ContactAppPlaceHistoryMapper getHistoryMapper();
+    public Images                       getImages();
     public PlaceController              getPlaceController();
 }
 

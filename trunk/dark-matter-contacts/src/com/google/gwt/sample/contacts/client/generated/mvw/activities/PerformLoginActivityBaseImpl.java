@@ -37,7 +37,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:108)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:112)
     public LoginView getNewLoginView(LoginViewIF.LoginViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getLoginViewRCI(presenter));
     }
@@ -57,7 +57,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:255)
     @Override
-    public void handleResponse(ResponseDMO response){
+    final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case LOGINLOGINCALLBACK:
@@ -76,7 +76,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:289)
     @Override
-    public void handleRPCFailure(Throwable caught, RequestDMO request){
+    final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
         case LOGINLOGINCALLBACK:
             throw(new IllegalStateException("RPC errors for Login are supposed to be centrally handled!"));

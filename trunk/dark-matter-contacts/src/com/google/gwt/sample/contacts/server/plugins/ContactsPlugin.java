@@ -2,6 +2,7 @@ package com.google.gwt.sample.contacts.server.plugins;
 
 import org.dmd.dmc.DmcValueException;
 import org.dmd.dmp.server.servlet.base.DmpServletPlugin;
+import org.dmd.dmw.DmwOmni;
 import org.dmd.util.exceptions.DebugInfo;
 import org.dmd.util.exceptions.ResultException;
 
@@ -23,7 +24,11 @@ public class ContactsPlugin extends DmpServletPlugin {
 		
 		// Add our schema
 		ContactsSchemaAG contacts = new ContactsSchemaAG();
-		pluginManager.getSchema().manageSchema(contacts);
+		DmwOmni.instance().addSchema(contacts);
+		
+//		pluginManager.getSchema().manageSchema(contacts);
+		
+//		DmwOmni.instance().addCompactSchema(ContactsDMSAG.instance());
 		
 		// Indicate that we need to index our Contact entries
 		cache.maintainIndex(ContactsDMSAG.__Contact);
