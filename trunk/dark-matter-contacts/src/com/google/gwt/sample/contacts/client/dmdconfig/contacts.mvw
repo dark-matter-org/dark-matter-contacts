@@ -169,7 +169,6 @@ description			The EditContactActivity will retrieve the Contact details if a
  to be creating a new Contact. If the user hits OK, we send a Set or Create request
  to the server. If the user hits cancel, we go to the contacts list.
 
-
 View
 viewName			EditContactView
 subpackage			edit
