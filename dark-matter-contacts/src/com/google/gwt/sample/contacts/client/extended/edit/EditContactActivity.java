@@ -46,5 +46,23 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 		
 	}
 
+	@Override
+	protected void handleCreateContactResponseError(CreateResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleGetContactResponseError(GetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleSetContactResponseError(SetResponseDMO response) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

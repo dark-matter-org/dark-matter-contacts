@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:122)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                // Is abstract activity
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF;                                    // View interface
 import com.google.gwt.sample.contacts.client.generated.mvw.views.EditContactViewIF.EditContactViewPresenterIF;         // Presenter interface
@@ -37,12 +37,12 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:445)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
     protected void sendCreateContactRequest(CreateRequestDMO request){
-        commsController.sendCreateRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
+        commsController.sendCreateRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:474)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:491)
     protected CreateRequestDMO getCreateContactRequest(ContactDMO newobj){
         CreateRequestDMO request = commsController.getCreateRequest();
         request.setHandlerID(CREATECONTACTCREATECALLBACK);
@@ -51,12 +51,12 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:445)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
     protected void sendGetContactRequest(GetRequestDMO request){
-        commsController.sendGetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
+        commsController.sendGetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:495)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:512)
     protected GetRequestDMO getGetContactRequest(){
         GetRequestDMO request = commsController.getGetRequest();
         request.setHandlerID(GETCONTACTGETCALLBACK);
@@ -64,12 +64,12 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:445)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
     protected void sendSetContactRequest(SetRequestDMO request){
-        commsController.sendSetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
+        commsController.sendSetRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:453)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:470)
     protected SetRequestDMO getSetContactRequest(ContactDMO modrec){
         if (modrec.getModifier() == null)
             throw(new IllegalStateException("The DMO passed here should have a modifier."));
@@ -89,17 +89,20 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:255)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:267)
     @Override
     final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case CREATECONTACTCREATECALLBACK:
-                throw(new IllegalStateException("DMP errors for CreateContact are supposed to be centrally handled!"));
+                handleCreateContactResponseError((CreateResponseDMO)response);
+                break;
             case GETCONTACTGETCALLBACK:
-                throw(new IllegalStateException("DMP errors for GetContact are supposed to be centrally handled!"));
+                handleGetContactResponseError((GetResponseDMO)response);
+                break;
             case SETCONTACTSETCALLBACK:
-                throw(new IllegalStateException("DMP errors for SetContact are supposed to be centrally handled!"));
+                handleSetContactResponseError((SetResponseDMO)response);
+                break;
             }
         }
         else{
@@ -117,7 +120,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:289)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:301)
     @Override
     final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
@@ -130,13 +133,19 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
+    abstract protected void handleCreateContactResponseError(CreateResponseDMO response);
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
     abstract protected void handleCreateContactResponse(CreateResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
+    abstract protected void handleGetContactResponseError(GetResponseDMO response);
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
     abstract protected void handleGetContactResponse(GetResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
+    abstract protected void handleSetContactResponseError(SetResponseDMO response);
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
     abstract protected void handleSetContactResponse(SetResponseDMO response);
 
 }

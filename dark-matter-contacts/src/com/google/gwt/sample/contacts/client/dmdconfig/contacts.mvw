@@ -158,10 +158,10 @@ Activity
 activityName		EditContactActivity
 subpackage			edit
 abstractActivity	true
-sendsRequest		GetRequest getContact CENTRALERRORS
+sendsRequest		GetRequest getContact
 //sendsGetRequest		getContact CENTRALERRORS
-sendsRequest		SetRequest setContact Contact CENTRALERRORS
-sendsRequest		CreateRequest createContact Contact CENTRALERRORS
+sendsRequest		SetRequest setContact Contact
+sendsRequest		CreateRequest createContact Contact
 //sendsSetRequest		setContact CENTRALERRORS
 managesView			EditContactView
 description			The EditContactActivity will retrieve the Contact details if a 
@@ -205,11 +205,11 @@ handlesEvent			EditContactCancelledEvent
 sendsRequest			GetRequest getContact DMPERRORS EVENTS
 //sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
 //sendsDeleteRequest		deleteContact CENTRALERRORS
-sendsRequest			DeleteRequest deleteContact CENTRALERRORS
+sendsRequest			DeleteRequest deleteContact
 instantiatesPresenter	ContactListPresenter
 instantiatesView		ContactListView
 usesRunContextItem		placeController
-centralDMPErrorHandler	true
+//centralDMPErrorHandler	true
 centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
 description			The ContactAppController provides an overall control point
