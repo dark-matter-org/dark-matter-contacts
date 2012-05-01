@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.generated.mvw.controllers;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:122)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
 import com.google.gwt.event.shared.EventBus;                                                                // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                         // Used by placeController
 import com.google.gwt.sample.contacts.client.extended.listing.ContactListPresenter;                         // Used by ContactListPresenterRCI
@@ -15,6 +15,7 @@ import com.google.gwt.sample.contacts.client.generated.mvw.events.EditContactEve
 import com.google.gwt.sample.contacts.client.generated.mvw.events.EditContactEventHandler;                  // Required by EditContactEvent
 import com.google.gwt.sample.contacts.client.generated.mvw.views.ContactListViewIF;                         // The ContactListView
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                      // Required type
+import org.dmd.dmp.client.CentralRPCErrorHandlerIF;                                                         // Is the central RPC error handler
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                 // DMP communications
 import org.dmd.dmp.client.EventHandlerIF;                                                                   // Handles events resulting from GetRequests
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                // DMP communications
@@ -27,15 +28,13 @@ import org.dmd.dmp.shared.generated.dmo.RequestDMO;                             
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                        // DMP communications
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                 // DMP communications
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                // Mvw run context
-import org.dmd.mvw.client.mvwcomms.CentralDMPErrorHandlerIF;                                                // Is the central DMP error handler
-import org.dmd.mvw.client.mvwcomms.CentralRPCErrorHandlerIF;                                                // Is the central RPC error handler
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                      // Mvwcomms run context
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEvent;                                 // Required by LoginCompleteEvent
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEventHandler;                          // Required by LoginCompleteEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
-abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, EventHandlerIF, CentralDMPErrorHandlerIF, CentralRPCErrorHandlerIF {
+abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, EventHandlerIF, CentralRPCErrorHandlerIF {
 
     protected final CommsController commsController;
     protected final EventBus eventBus;
@@ -95,12 +94,12 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:445)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
     protected void sendDeleteContactRequest(DeleteRequestDMO request){
-        commsController.sendDeleteRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.CENTRAL);
+        commsController.sendDeleteRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:495)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:512)
     protected DeleteRequestDMO getDeleteContactRequest(){
         DeleteRequestDMO request = commsController.getDeleteRequest();
         request.setHandlerID(DELETECONTACTDELETECALLBACK);
@@ -108,12 +107,12 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:439)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:456)
     protected void sendGetContactRequest(GetRequestDMO request){
-        commsController.sendGetRequest(request,this,this,ErrorOptionsEnum.LOCAL,ErrorOptionsEnum.LOCAL);
+        commsController.sendGetRequest(request,this,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:495)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:512)
     protected GetRequestDMO getGetContactRequest(){
         GetRequestDMO request = commsController.getGetRequest();
         request.setRegisterForEvents(true);
@@ -122,23 +121,24 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:509)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:526)
     protected void denotifyForGetContactEvents(){
         // TODO: fill in denotify request and send it
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:516)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:533)
     protected void handleGetContactEvent(){
         // TODO: fill in denotify request and send it
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:255)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:267)
     @Override
     final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
             switch(response.getHandlerID()){
             case DELETECONTACTDELETECALLBACK:
-                throw(new IllegalStateException("DMP errors for DeleteContact are supposed to be centrally handled!"));
+                handleDeleteContactResponseError((DeleteResponseDMO)response);
+                break;
             case GETCONTACTGETCALLBACK:
                 handleGetContactResponseError((GetResponseDMO)response);
                 break;
@@ -156,7 +156,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:279)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:291)
     @Override
     final public void handleEvent(DMPEventDMO event){
         switch(event.getHandlerID()){
@@ -166,7 +166,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:289)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:301)
     @Override
     final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
@@ -189,15 +189,17 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onLoginCompleteEvent();
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
+    abstract protected void handleDeleteContactResponseError(DeleteResponseDMO response);
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
     abstract protected void handleDeleteContactResponse(DeleteResponseDMO response);
 
     abstract protected void handleGetContactResponseError(GetResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:572)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
     abstract protected void handleGetContactResponse(GetResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:576)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:593)
     abstract protected void handleEventFromGetContact(DMPEventDMO event);
 
 }

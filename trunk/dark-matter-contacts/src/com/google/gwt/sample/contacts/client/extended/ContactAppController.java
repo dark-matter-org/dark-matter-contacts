@@ -99,11 +99,11 @@ public class ContactAppController extends ContactAppControllerBaseImpl implement
 
 	}
 
-	@Override
-	public void handleDMPError(ResponseDMO response) {
-		System.out.println("DMP error");
-
-	}
+//	@Override
+//	public void handleDMPError(ResponseDMO response) {
+//		System.out.println("DMP error");
+//
+//	}
 
 //	@Override
 //	public void handleRPCFailure(Throwable caught, RequestDMO request) {
@@ -205,6 +205,18 @@ public class ContactAppController extends ContactAppControllerBaseImpl implement
 
 	@Override
 	public void objectModified(DmcClassInfo index, GxtWrapper object, DMPEventDMO event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void handleRPCFailureCentrally(Throwable caught, RequestDMO request) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void handleDeleteContactResponseError(DeleteResponseDMO response) {
 		// TODO Auto-generated method stub
 		
 	}
