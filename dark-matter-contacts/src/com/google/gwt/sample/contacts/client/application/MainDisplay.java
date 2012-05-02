@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client;
+package com.google.gwt.sample.contacts.client.application;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

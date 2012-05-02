@@ -7,7 +7,7 @@ import org.dmd.dmc.DmcOmni;
 import org.dmd.dmp.shared.generated.dmo.DmpDMSAG;
 import org.dmd.dmr.shared.base.generated.dmo.DmrBaseDMSAG;
 
-import com.google.gwt.sample.contacts.client.MainDisplay;
+import com.google.gwt.sample.contacts.client.application.MainDisplay;
 import com.google.gwt.sample.contacts.client.generated.mvw.ContactAppBaseImpl;
 import com.google.gwt.sample.contacts.client.generated.mvw.places.LoginPlace;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
