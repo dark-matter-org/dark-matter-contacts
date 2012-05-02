@@ -8,7 +8,7 @@ description     The contacts module defines components that let us manage a set 
  The module depends on the contacts schema which is defined in the shared package of our
  GWT application (since it used on both the web client and the server side).
  <p/>
- We also depend on the base modules mvscomms and gxtforms. These modules are defined
+ We also depend on the base modules mvwcomms and gxtforms. These modules are defined
  as part of the dark-matter project and provide the basic infrastructure for communications
  via the Dark Matter Protocol (DMP) and the display of Dark Matter Objects (DMOs) in
  forms that are built using Sencha's GXT toolkit.

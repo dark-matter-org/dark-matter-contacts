@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.sample.contacts.client.extended.ContactApp;
+import com.google.gwt.sample.contacts.client.application.extended.ContactApp;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
