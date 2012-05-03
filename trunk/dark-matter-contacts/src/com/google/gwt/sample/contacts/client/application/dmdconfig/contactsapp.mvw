@@ -23,27 +23,26 @@ handlesEvent			LoginCompleteEvent
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
-sendsRequest			GetRequest getContact DMPERRORS EVENTS
-//sendsGetRequest			getContact CENTRALERRORS DMPERRORS EVENTS
-//sendsDeleteRequest		deleteContact CENTRALERRORS
-sendsRequest			DeleteRequest deleteContact
-instantiatesPresenter	ContactListPresenter
-instantiatesView		ContactListView
 usesRunContextItem		placeController
+usesRunContextItem		commsController
 //centralDMPErrorHandler	true
 centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
 description			The ContactAppController provides an overall control point
- for the Contact Management application. It's role is to facilitate the operations against
- the collection of contacts being managed. When the ListContactsActivity is started,
- it informs the ContactAppController that it wants the ContactListView. If the 
- ContactListView has already been created/populated, it's returned and is displayed.
- Otherwise, the controller will retrieve the contacts, create ContactListPresenter and
- the ContactListView and pass the view to the ListContactsActivity.
- <p />
+ for the Contact Management application. Primarily, its role to coordinate moving
+ from one Place to another based on events it receives. Controllers in general are
+ components that last throughout the lifetime of an application and provide functionality
+ that transcends any particular Place/Activity.
+ <p/>
+ Once login is complete, it moves us to the ListContactsPlace.
+ <p/>
+ When the add/edit contact events are received, it moves us to the EditPlace.
+ <p/>
+ If we logout or, if there is an unrecoverable RPC error, it moves us back to the LoginPlace.
+ <p/>
+ When a component indicates that it handles events, its generated base class will
+ automatically register for those events on the eventBus (see ContactAppControllerBaseImpl).
  
-
-
 WebApplication
 appName				ContactApp
 usesController		CommsController
