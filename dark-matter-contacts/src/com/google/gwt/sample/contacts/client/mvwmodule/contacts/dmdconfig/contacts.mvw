@@ -2,6 +2,7 @@ Module
 moduleName      contacts
 dependsOnSchema contacts
 dependsOnModule	mvwcomms
+dependsOnModule gxt
 dependsOnModule gxtforms
 genPackage      com.google.gwt.sample.contacts.client.mvwmodule.contacts
 description     The contacts module defines components that let us manage a set of contacts.
@@ -68,6 +69,7 @@ subpackage			listing
 abstractActivity	true
 //usesController		ContactAppController
 usesRunContextItem	placeController	
+usesRunContextItem	ContactListPresenterRCI
 description			The ListContactsActivity will retrieve the summary information about our contacts
  and display them in a ContactListView.
 
@@ -96,7 +98,12 @@ description			The ContactListView displays a list of Contacts and shows the firs
 Presenter
 presenterName			ContactListPresenter
 subpackage				listing
+singleton				true
 managesView				ContactListView
+instantiatesView		ContactListView
+usesRunContextItem		gxtCache
+sendsRequest			GetRequest getContact DMPERRORS EVENTS
+sendsRequest			DeleteRequest deleteContact
 //instantiatesPresenter	EditContactPresenter
 //instantiatesView		EditContactView
 description				This presenter takes care of retrieving the summary information

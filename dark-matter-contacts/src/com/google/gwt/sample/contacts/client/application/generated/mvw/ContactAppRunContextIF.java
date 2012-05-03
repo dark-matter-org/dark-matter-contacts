@@ -21,13 +21,15 @@ import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.Login
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                       // The LoginView
 import de.novanic.eventservice.client.event.RemoteEventService;                                                     // Used by eventService
 import org.dmd.dmp.client.DMPServiceAsync;                                                                          // Used by dmpConnection
+import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                       // Used by gxtCache
+import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                        // Gxt run context
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                    // Used by activityMapper
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                        // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                        // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                              // Mvwcomms run context
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:70)
-public interface ContactAppRunContextIF extends ContactsRunContextIF, ContactsappRunContextIF, LoginRunContextIF, MvwRunContextIF, MvwcommsRunContextIF {
+public interface ContactAppRunContextIF extends ContactsRunContextIF, ContactsappRunContextIF, GxtRunContextIF, LoginRunContextIF, MvwRunContextIF, MvwcommsRunContextIF {
 
     public ContactAppController         getContactAppControllerRCI();
     public ContactListPresenter         getContactListPresenterRCI();
@@ -40,6 +42,7 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, Contactsap
     public DMPServiceAsync              getDmpConnection();
     public EventBus                     getEventBus();
     public RemoteEventService           getEventService();
+    public GxtCache                     getGxtCache();
     public PlaceHistoryHandler          getHistoryHandler();
     public ContactAppPlaceHistoryMapper getHistoryMapper();
     public Images                       getImages();
