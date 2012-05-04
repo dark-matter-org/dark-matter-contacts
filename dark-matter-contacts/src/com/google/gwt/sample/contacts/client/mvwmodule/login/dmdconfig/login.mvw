@@ -30,7 +30,6 @@ description			Another component that wants to provide a login will specify
 
 Activity
 activityName		PerformLoginActivity
-subpackage			login
 abstractActivity	true
 sendsRequest		LoginRequest login
 managesView			LoginView
@@ -47,7 +46,6 @@ description			The PerformLoginActivity displays the LoginView that prompts for a
 
 View
 viewName			LoginView
-subpackage			login
 viewMethod			void setUserName(String un)
 viewMethod			void setPassword(String pw)
 viewMethod			void displayFeedback(String info)

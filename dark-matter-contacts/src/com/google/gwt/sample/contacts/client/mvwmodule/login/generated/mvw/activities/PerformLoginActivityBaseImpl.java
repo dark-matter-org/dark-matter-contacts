@@ -4,7 +4,7 @@ package com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.acti
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                    // Is abstract activity
 import com.google.gwt.place.shared.PlaceController;                                                                        // Used by placeController
-import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.login.LoginView;                                     // Used by LoginViewRCI
+import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                           // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.LoginRunContextIF;                              // Login run context
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                              // View interface
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF.LoginViewPresenterIF;         // Presenter interface

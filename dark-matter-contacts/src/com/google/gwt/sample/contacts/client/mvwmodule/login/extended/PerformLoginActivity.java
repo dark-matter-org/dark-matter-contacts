@@ -1,4 +1,4 @@
-package com.google.gwt.sample.contacts.client.mvwmodule.login.extended.login;
+package com.google.gwt.sample.contacts.client.mvwmodule.login.extended;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -8,7 +8,6 @@ import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.event.shared.UmbrellaException;
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.activities.PerformLoginActivityBaseImpl;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
