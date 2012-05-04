@@ -16,7 +16,7 @@ import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.Co
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF;              // The ContactListView
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;              // The EditContactView
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images;                                   // Used by images
-import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.login.LoginView;                              // Used by LoginViewRCI
+import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                    // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.LoginRunContextIF;                       // Login run context
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                       // The LoginView
 import de.novanic.eventservice.client.event.RemoteEventService;                                                     // Used by eventService
