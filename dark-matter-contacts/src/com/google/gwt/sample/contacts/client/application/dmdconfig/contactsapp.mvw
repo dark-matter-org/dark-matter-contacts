@@ -2,6 +2,7 @@ Module
 moduleName      contactsapp
 dependsOnSchema contacts
 dependsOnModule	mvwcomms
+dependsOnModule	gxt
 dependsOnModule	login
 dependsOnModule	contacts
 genPackage      com.google.gwt.sample.contacts.client.application
@@ -23,8 +24,13 @@ handlesEvent			LoginCompleteEvent
 handlesEvent			AddContactEvent
 handlesEvent			EditContactEvent
 handlesEvent			EditContactCancelledEvent
+handlesEvent			LogoutEvent
+handlesEvent			LogoutCompleteEvent
+firesEvent				ForceCommsReset
+sendsRequest			LogoutRequest logout
 usesRunContextItem		placeController
 usesRunContextItem		commsController
+usesRunContextItem		gxtCache
 //centralDMPErrorHandler	true
 centralRPCErrorHandler	true
 //handlesEvent	ContactUpdatedEvent

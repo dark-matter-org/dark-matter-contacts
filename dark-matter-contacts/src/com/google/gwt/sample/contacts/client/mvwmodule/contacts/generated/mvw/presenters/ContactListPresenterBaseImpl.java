@@ -2,6 +2,7 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.p
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
+import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListView;                                         // Used by ContactListViewRCI
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF;                                    // View interface
@@ -19,14 +20,19 @@ import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                            
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                               // DMP communications
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                             // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                              // Gxt run context
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Need the run context
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.CommsSessionReady;                                                                // Required by CommsSessionReady
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.CommsSessionReadyHandler;                                                         // Required by CommsSessionReady
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEvent;                                                              // Required by LogoutCompleteEvent
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandler;                                                       // Required by LogoutCompleteEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.PresenterFormatter.formatPresenterBaseImpl(PresenterFormatter.java:25)
 abstract public class ContactListPresenterBaseImpl implements ContactListViewPresenterIF, ResponseHandlerIF, EventHandlerIF {
 
     protected final CommsController commsController;
+    protected final EventBus eventBus;
     protected final GxtCache gxtCache;
 
     MvwRunContextIF runcontext;
@@ -36,9 +42,24 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
 
     public ContactListPresenterBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
+        eventBus = ((MvwRunContextIF)rc).getEventBus();
         gxtCache = ((GxtRunContextIF)rc).getGxtCache();
 
         runcontext = rc;
+        eventBus.addHandler(CommsSessionReady.TYPE,
+            new CommsSessionReadyHandler() {
+                public void handleCommsSessionReady(CommsSessionReady event) {
+                    onCommsSessionReady();
+                }
+            });
+
+        eventBus.addHandler(LogoutCompleteEvent.TYPE,
+            new LogoutCompleteEventHandler() {
+                public void handleLogoutCompleteEvent(LogoutCompleteEvent event) {
+                    onLogoutCompleteEvent();
+                }
+            });
+
 
     }
 
@@ -129,6 +150,12 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
             throw(new IllegalStateException("RPC errors for GetContact are supposed to be centrally handled!"));
         }
     }
+
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onCommsSessionReady();
+
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onLogoutCompleteEvent();
 
     abstract protected void handleDeleteContactResponseError(DeleteResponseDMO response);
 

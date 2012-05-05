@@ -79,6 +79,10 @@ public class ContactListPanel extends LayoutContainer {
 	public void deleteContact(ContactGXT contact){
 		store.remove(contact);
 	}
+	
+	public void resetToEmpty(){
+		store.removeAll();
+	}
 
 	void initColumns(){
 		List<ColumnConfig>	config = new ArrayList<ColumnConfig>();

@@ -24,6 +24,8 @@ public interface ContactListViewIF {
 
     public void addContact(ContactGXT contact);
 
+    public void resetToEmpty();
+
     public void contactsSelected(List<ContactGXT> contacts);
 
     public void displayFeedback(String info);

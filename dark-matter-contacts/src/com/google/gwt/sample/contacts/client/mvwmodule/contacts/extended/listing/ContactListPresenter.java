@@ -23,7 +23,6 @@ import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterBaseImpl;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
-import com.google.gwt.user.client.Timer;
 
 /**
  * The ContactListPresenter is designated as a singleton so that it will "live"
@@ -58,23 +57,48 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 		// we instantiate it and pass ourselves in as the presenter
 		view = getNewContactListView(this);
 		
-		Timer timer;
+		view.displayFeedback("Waiting for comms session...");
 		
-		timer = new Timer(){
-
-			@Override
-			public void run() {
-				logger.log(Level.INFO,"Timer triggered...");
-				retrieveContacts();
-			}
-			
-		};
-		
-		timer.schedule(1000);
+//		Timer timer;
+//		
+//		timer = new Timer(){
+//
+//			@Override
+//			public void run() {
+//				logger.log(Level.INFO,"Timer triggered...");
+//				retrieveContacts();
+//			}
+//			
+//		};
+//		
+//		timer.schedule(3000);
 
 	}
 	
-	private void retrieveContacts(){
+//	private void retrieveContacts(){
+//		view.displayFeedback("Retrieving contacts...");
+//		
+//		// The getGetContactRequest() is generated automatically in conjunction
+//		// with the following line on contacts.dmw:
+//		// sendsRequest			GetRequest getContact DMPERRORS EVENTS
+//		// This method makes use of the commsController to initialize the request
+//		// with information that allows the commsController to route responses
+//		// and, in this case, events back to this component.
+//		GetRequestDMO request = getGetContactRequest();
+//		request.setFilter(ContactsDMSAG.__Contact.name);
+//		sendGetContactRequest(request);
+//	}
+	
+	public ContactListView getView(){
+		return(view);
+	}
+
+	/**
+	 * We receive this event when the CommsController has established full asynchronous
+	 * communications with the server - we can now request the contacts.
+	 */
+	@Override
+	protected void onCommsSessionReady() {
 		view.displayFeedback("Retrieving contacts...");
 		
 		// The getGetContactRequest() is generated automatically in conjunction
@@ -86,10 +110,6 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 		GetRequestDMO request = getGetContactRequest();
 		request.setFilter(ContactsDMSAG.__Contact.name);
 		sendGetContactRequest(request);
-	}
-	
-	public ContactListView getView(){
-		return(view);
 	}
 
 	///////////////////////////////////////////////////////////////////////////
@@ -185,6 +205,12 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 		// We don't actually have to do anything with the response here.
 		// When the contact is deleted on the server, we'll receive an
 		// event that will be handled in handleEventFromGetContact().
+	}
+
+	@Override
+	protected void onLogoutCompleteEvent() {
+		
+		
 	}
 
 }

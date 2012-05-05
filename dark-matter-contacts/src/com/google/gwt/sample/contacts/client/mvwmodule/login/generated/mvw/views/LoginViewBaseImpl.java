@@ -14,7 +14,7 @@ abstract public class LoginViewBaseImpl implements LoginViewIF, IsWidget {
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:117)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:244)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:254)
     protected void fireLoginEvent(String username, String password){
         presenter.onLoginEvent(username, password);
     }
