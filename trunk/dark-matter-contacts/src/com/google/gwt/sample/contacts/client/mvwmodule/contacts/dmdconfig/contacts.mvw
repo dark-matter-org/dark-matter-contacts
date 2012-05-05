@@ -55,13 +55,18 @@ importThis		com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO
 description     Fired when a single Contact is clicked by the user. When this is
  done, we display the EditContactView.
 
+Event
+eventName       LogoutEvent
+description     Fired when the Logout button is clicked.
+
+
 ///////////////////////////////////////////////////////////////////////////////
  
 Place
 placeName			ListContactsPlace
 placePrefix			list
 runsActivity		ListContactsActivity
-description			The place where we list the available contacts.
+description			The place where we list the available contacts. The URL
 
 Activity
 activityName		ListContactsActivity
@@ -79,9 +84,11 @@ subpackage			listing
 broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
+broadcastOnly		LogoutEvent
 viewMethod			void displayContacts(HashMap<DmcObjectName, GxtWrapper> contacts)
 viewMethod			void deleteContact(ContactGXT contact)
 viewMethod			void addContact(ContactGXT contact)
+viewMethod			void resetToEmpty()
 //viewMethod			void updateContact(ContactGXT contact)
 viewMethod			void contactsSelected(List<ContactGXT> contacts)
 viewMethod			void displayFeedback(String info)
@@ -104,6 +111,8 @@ instantiatesView		ContactListView
 usesRunContextItem		gxtCache
 sendsRequest			GetRequest getContact DMPERRORS EVENTS
 sendsRequest			DeleteRequest deleteContact
+handlesEvent			CommsSessionReady
+handlesEvent			LogoutCompleteEvent
 //instantiatesPresenter	EditContactPresenter
 //instantiatesView		EditContactView
 description				This presenter takes care of retrieving the summary information

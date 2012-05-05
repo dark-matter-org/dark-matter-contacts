@@ -47,6 +47,9 @@ public class ContactListView extends ContactListViewBaseImpl {
 	Listener<ButtonEvent>		deleteListener;
 	Button						deleteButton;
 	
+	Listener<ButtonEvent>		logoutListener;
+	Button						logoutButton;
+	
 	Listener<MessageBoxEvent>	warningDialogListener;
 	
 	boolean 					proceed;
@@ -82,6 +85,22 @@ public class ContactListView extends ContactListViewBaseImpl {
     	
     	scrollPanel.add(panel);
     	
+		logoutListener = new Listener<ButtonEvent>() {
+			@Override
+			public void handleEvent(ButtonEvent be) {
+				if (be.getType() == Events.Select){
+					fireLogoutEvent();
+				}
+			}
+		};
+		
+		logoutButton = new Button("Logout");
+//		logoutButton.setIcon(AbstractImagePrototype.create(images.add()));
+		logoutButton.addListener(Events.Select, logoutListener);
+		scrollPanel.addButton(logoutButton);
+    	
+		///////////////////////////////////////////////////////////////////////
+		
 		addListener = new Listener<ButtonEvent>() {
 			@Override
 			public void handleEvent(ButtonEvent be) {
@@ -163,6 +182,11 @@ public class ContactListView extends ContactListViewBaseImpl {
 	public void contactsSelected(List<ContactGXT> contacts) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void resetToEmpty() {
+		contactList.resetToEmpty();
 	}
 
 

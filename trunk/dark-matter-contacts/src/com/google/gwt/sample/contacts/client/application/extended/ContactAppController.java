@@ -2,6 +2,8 @@ package com.google.gwt.sample.contacts.client.application.extended;
 
 import java.util.logging.Logger;
 
+import org.dmd.dmp.shared.generated.dmo.LogoutRequestDMO;
+import org.dmd.dmp.shared.generated.dmo.LogoutResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;
 
 import com.extjs.gxt.ui.client.widget.MessageBox;
@@ -47,7 +49,39 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	@Override
 	public void handleRPCFailureCentrally(Throwable caught, RequestDMO request) {
 		MessageBox.alert("GWT RPC Error","A GWT RPC error has occurred while handling this request: " + request.toOIF(), null);
+		fireForceCommsReset();
+		gxtCache.wipeData();
 		placeController.goTo(new LoginPlace(""));
+	}
+
+	@Override
+	protected void onLogoutCompleteEvent() {
+		gxtCache.wipeData();
+		placeController.goTo(new LoginPlace(""));
+	}
+
+	/**
+	 * We receive this when the user hits the Logout button on the ContactListView.
+	 */
+	@Override
+	protected void onLogoutEvent() {
+		LogoutRequestDMO request = getLogoutRequest();
+		sendLogoutRequest(request);
+	}
+
+	@Override
+	protected void handleLogoutResponseError(LogoutResponseDMO response) {
+		MessageBox.alert("Logout failure", "Logout failed (resetting communications):\n" + response.getResponseText(), null);
+		fireForceCommsReset();
+		gxtCache.wipeData();
+		placeController.goTo(new LoginPlace(""));
+	}
+
+	@Override
+	protected void handleLogoutResponse(LogoutResponseDMO response) {
+		// Nothing to do - the comms controller will fire the LogoutComplete event
+		// and we'll go to the login place from there. We could do it here - six
+		// of one, half a dozen of another.
 	}
 
 
