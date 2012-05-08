@@ -10,8 +10,6 @@ import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ev
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEventHandler;         // Required by EditContactCancelledEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEvent;                         // Required by EditContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEventHandler;                  // Required by EditContactEvent
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.LogoutEvent;                              // Required by LogoutEvent
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.LogoutEventHandler;                       // Required by LogoutEvent
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                         // Required type
 import org.dmd.dmp.client.CentralRPCErrorHandlerIF;                                                                            // Is the central RPC error handler
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                    // DMP communications
@@ -32,6 +30,8 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEvent;     
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEventHandler;                                             // Required by LoginCompleteEvent
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEvent;                                                   // Required by LogoutCompleteEvent
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandler;                                            // Required by LogoutCompleteEvent
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEvent;                                                           // Required by LogoutEvent
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEventHandler;                                                    // Required by LogoutEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
 abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralRPCErrorHandlerIF {

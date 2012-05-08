@@ -20,6 +20,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 import com.extjs.gxt.ui.client.widget.MessageBox;
 import com.google.gwt.sample.contacts.client.generated.ContactsGxtWrapperFactory;
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
+import com.google.gwt.sample.contacts.client.generated.mvw.places.ListContactsPlace;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterBaseImpl;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
@@ -59,35 +60,7 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 		
 		view.displayFeedback("Waiting for comms session...");
 		
-//		Timer timer;
-//		
-//		timer = new Timer(){
-//
-//			@Override
-//			public void run() {
-//				logger.log(Level.INFO,"Timer triggered...");
-//				retrieveContacts();
-//			}
-//			
-//		};
-//		
-//		timer.schedule(3000);
-
 	}
-	
-//	private void retrieveContacts(){
-//		view.displayFeedback("Retrieving contacts...");
-//		
-//		// The getGetContactRequest() is generated automatically in conjunction
-//		// with the following line on contacts.dmw:
-//		// sendsRequest			GetRequest getContact DMPERRORS EVENTS
-//		// This method makes use of the commsController to initialize the request
-//		// with information that allows the commsController to route responses
-//		// and, in this case, events back to this component.
-//		GetRequestDMO request = getGetContactRequest();
-//		request.setFilter(ContactsDMSAG.__Contact.name);
-//		sendGetContactRequest(request);
-//	}
 	
 	public ContactListView getView(){
 		return(view);
@@ -197,7 +170,7 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 
 	@Override
 	protected void handleDeleteContactResponseError(DeleteResponseDMO response) {
-		MessageBox.alert("Contact deletion failed ", "An error occurred while trying to a contact:\n" + response.getResponseText(), null);
+		MessageBox.alert("Contact deletion failed ", "An error occurred while trying to delete a contact:\n" + response.getResponseText(), null);
 	}
 
 	@Override
@@ -209,8 +182,26 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 
 	@Override
 	protected void onLogoutCompleteEvent() {
-		
-		
+		// Wipe the data from the view
+		view.resetToEmpty();
+	}
+
+	@Override
+	protected void onAddContactCompleteEvent(DmcObjectName name) {
+		ContactGXT contact = (ContactGXT) gxtCache.getObject(name);
+		if (contact != null){
+			view.displayFeedback(contact.getFirstName() + " " + contact.getLastName() + " has been added as a contact.");
+		}
+		placeController.goTo(new ListContactsPlace(""));
+	}
+
+	@Override
+	protected void onEditContactCompleteEvent(DmcObjectName name) {
+		ContactGXT contact = (ContactGXT) gxtCache.getObject(name);
+		if (contact != null){
+			view.displayFeedback(contact.getFirstName() + " " + contact.getLastName() + " has been updated.");
+		}
+		placeController.goTo(new ListContactsPlace(""));
 	}
 
 }

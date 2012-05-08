@@ -105,7 +105,7 @@ public class ContactListView extends ContactListViewBaseImpl {
 			@Override
 			public void handleEvent(ButtonEvent be) {
 				if (be.getType() == Events.Select){
-					
+					fireAddContactEvent();
 				}
 			}
 		};

@@ -9,7 +9,14 @@ public interface EditContactViewIF {
 
     public interface EditContactViewPresenterIF {
 
-        public void onContactUpdatedEvent(ContactDMO updatedContact);
+        public void onContactUpdatedEvent(ContactDMO modrec);
+
+        public void onNewContactEvent(ContactDMO contact);
+
+        /** 
+         * Called when the user clicks the Cancel button.
+         */ 
+        void cancelEdit();
 
     }
 

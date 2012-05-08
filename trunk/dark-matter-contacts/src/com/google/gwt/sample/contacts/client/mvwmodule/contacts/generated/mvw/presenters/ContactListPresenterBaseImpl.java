@@ -3,10 +3,16 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.p
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
 import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus
+import com.google.gwt.place.shared.PlaceController;                                                                                       // Used by placeController
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListView;                                         // Used by ContactListViewRCI
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEvent;                             // Required by AddContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEventHandler;                      // Required by AddContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCompleteEvent;                            // Required by EditContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCompleteEventHandler;                     // Required by EditContactCompleteEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF;                                    // View interface
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF.ContactListViewPresenterIF;         // Presenter interface
+import org.dmd.dmc.DmcObjectName;                                                                                                         // Required type
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                               // DMP communications
 import org.dmd.dmp.client.EventHandlerIF;                                                                                                 // Handles events resulting from GetRequests
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                                              // DMP communications
@@ -34,6 +40,7 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     protected final CommsController commsController;
     protected final EventBus eventBus;
     protected final GxtCache gxtCache;
+    protected final PlaceController placeController;
 
     MvwRunContextIF runcontext;
 
@@ -44,12 +51,27 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
         eventBus = ((MvwRunContextIF)rc).getEventBus();
         gxtCache = ((GxtRunContextIF)rc).getGxtCache();
+        placeController = ((MvwRunContextIF)rc).getPlaceController();
 
         runcontext = rc;
+        eventBus.addHandler(AddContactCompleteEvent.TYPE,
+            new AddContactCompleteEventHandler() {
+                public void handleAddContactCompleteEvent(AddContactCompleteEvent event) {
+                    onAddContactCompleteEvent(event.getName());
+                }
+            });
+
         eventBus.addHandler(CommsSessionReady.TYPE,
             new CommsSessionReadyHandler() {
                 public void handleCommsSessionReady(CommsSessionReady event) {
                     onCommsSessionReady();
+                }
+            });
+
+        eventBus.addHandler(EditContactCompleteEvent.TYPE,
+            new EditContactCompleteEventHandler() {
+                public void handleEditContactCompleteEvent(EditContactCompleteEvent event) {
+                    onEditContactCompleteEvent(event.getName());
                 }
             });
 
@@ -152,7 +174,13 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
     }
 
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onAddContactCompleteEvent(DmcObjectName name);
+
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onCommsSessionReady();
+
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    abstract protected void onEditContactCompleteEvent(DmcObjectName name);
 
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
     abstract protected void onLogoutCompleteEvent();
