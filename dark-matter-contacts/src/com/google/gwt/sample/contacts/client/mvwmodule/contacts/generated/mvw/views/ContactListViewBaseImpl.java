@@ -7,7 +7,6 @@ import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;          
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;            // Contacts run context
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;          // Required by AddContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEvent;         // Required by EditContactEvent
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.LogoutEvent;              // Required by LogoutEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images;                              // Used by images
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                         // Required by DeleteContactsEvent
 import com.google.gwt.user.client.ui.IsWidget;                                                                 // Implements IsWidget
@@ -16,6 +15,7 @@ import java.util.List;                                                          
 import org.dmd.dmc.DmcObjectName;                                                                              // View import
 import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                                                  // View import
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                   // Using run context items
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEvent;                                           // Required by LogoutEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:53)
 abstract public class ContactListViewBaseImpl implements ContactListViewIF, IsWidget {

@@ -5,8 +5,8 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.e
 import com.google.gwt.event.shared.EventHandler;         // The marker interface
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.GwtEventFormatter.dumpHandler(GwtEventFormatter.java:169)
-public interface LogoutEventHandler extends EventHandler {
+public interface EditContactCompleteEventHandler extends EventHandler {
 
-    void handleLogoutEvent(LogoutEvent event);
+    void handleEditContactCompleteEvent(EditContactCompleteEvent event);
 
 }

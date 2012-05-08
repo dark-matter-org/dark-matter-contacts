@@ -3,9 +3,20 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.a
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                                   // Is abstract activity
+import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus
+import com.google.gwt.place.shared.PlaceController;                                                                                       // Used by placeController
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                            // Used by EditContactViewRCI
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEvent;                             // Required by AddContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEventHandler;                      // Required by AddContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                           // Required by EditContactCancelledEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEventHandler;                    // Required by EditContactCancelledEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCompleteEvent;                            // Required by EditContactCompleteEvent
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCompleteEventHandler;                     // Required by EditContactCompleteEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;                                    // View interface
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF.EditContactViewPresenterIF;         // Presenter interface
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                                    // Component uses Contact objects
+import org.dmd.dmc.DmcObjectName;                                                                                                         // Required type
 import org.dmd.dmc.DmcValueException;                                                                                                     // Used when creating SetRequests
 import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                               // DMP communications
 import org.dmd.dmp.client.ResponseHandlerIF;                                                                                              // DMP communications
@@ -19,7 +30,7 @@ import org.dmd.dmp.shared.generated.dmo.SetRequestDMO;                          
 import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;                                                                                   // Component receives SetResponses
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                               // DMP communications
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                                                                               // Used when creating SetRequests
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Need the run context
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context
 
@@ -27,6 +38,10 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;          
 abstract public class EditContactActivityBaseImpl extends AbstractActivity  implements EditContactViewPresenterIF, ResponseHandlerIF {
 
     protected final CommsController commsController;
+    protected final EventBus eventBus;
+    protected final PlaceController placeController;
+
+    MvwRunContextIF runcontext;
 
     private final int CREATECONTACTCREATECALLBACK = 2;
     private final int GETCONTACTGETCALLBACK = 0;
@@ -34,7 +49,34 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     public EditContactActivityBaseImpl(MvwRunContextIF rc){
         commsController = ((MvwcommsRunContextIF)rc).getCommsController();
+        eventBus = ((MvwRunContextIF)rc).getEventBus();
+        placeController = ((MvwRunContextIF)rc).getPlaceController();
 
+        runcontext = rc;
+
+    }
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:127)
+    public EditContactView getNewEditContactView(EditContactViewIF.EditContactViewPresenterIF presenter){
+        return( ((ContactsRunContextIF)runcontext).getEditContactViewRCI(presenter));
+    }
+
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    protected void fireAddContactCompleteEvent(DmcObjectName name){
+        eventBus.fireEvent(new AddContactCompleteEvent(name));
+    }
+
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    protected void fireEditContactCancelledEvent(){
+        eventBus.fireEvent(new EditContactCancelledEvent());
+    }
+
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    protected void fireEditContactCompleteEvent(DmcObjectName name){
+        eventBus.fireEvent(new EditContactCompleteEvent(name));
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)

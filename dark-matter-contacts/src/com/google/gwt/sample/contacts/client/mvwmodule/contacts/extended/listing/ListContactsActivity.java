@@ -7,6 +7,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.activities.ListContactsActivityBaseImpl;
+import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.places.LoginPlace;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 public class ListContactsActivity extends ListContactsActivityBaseImpl {
@@ -22,19 +23,20 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 		Logger logger = Logger.getLogger("dmcontacts");
 		logger.log(Level.INFO, "List Contacts activity has been started.");
 		
-		panel = p;
+		logger.info("WHERE: ");
 		
-		panel.setWidget(getContactListPresenter().getView());
-
-//		ContactListView view = ContactAppControllerRCI.getContactsListView(this);
-//		
-//		if (view != null)
-//			panel.setWidget(view);
-		// The controller will tell us when the view is ready
-		
-//		ListContactsPlace place = (ListContactsPlace) placeController.getWhere();
-//		
-//		logger.log(Level.INFO, "ListContactsActivity running in place: " + place.getToken());
+		if (commsController.isLoggedIn()){
+			logger.log(Level.INFO, "We're logged in, displaying the ContactListView");
+			panel = p;
+			
+			panel.setWidget(getContactListPresenter().getView());			
+		}
+		else{
+			logger.log(Level.INFO, "We're not logged in, going to LoginPlace");
+			// We're not logged in, someone is trying to access us through the #list: URL
+			// without doing the login, so go to login first
+			placeController.goTo(new LoginPlace(""));
+		}
 	}
 
 }
