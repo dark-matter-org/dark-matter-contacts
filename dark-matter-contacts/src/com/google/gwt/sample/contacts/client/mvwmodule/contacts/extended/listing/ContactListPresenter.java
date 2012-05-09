@@ -20,7 +20,7 @@ import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;
 import com.extjs.gxt.ui.client.widget.MessageBox;
 import com.google.gwt.sample.contacts.client.generated.ContactsGxtWrapperFactory;
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
-import com.google.gwt.sample.contacts.client.generated.mvw.places.ListContactsPlace;
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.places.ListContactsPlace;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterBaseImpl;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
@@ -126,6 +126,8 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 	 */
 	@Override
 	protected void handleEventFromGetContact(DMPEventDMO event) {
+		logger.fine("Received Contact event:\n" + event.toOIF());
+		
 		// When contacts are added, deleted or modified, we get events to indicate this.
 		// Modification events are applied directly to our cached objects and will be
 		// automatically reflected in objects that are displayed in things like grids.

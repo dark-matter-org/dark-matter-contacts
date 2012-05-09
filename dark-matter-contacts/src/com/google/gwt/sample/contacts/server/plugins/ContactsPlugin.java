@@ -26,12 +26,11 @@ public class ContactsPlugin extends DmpServletPlugin {
 		ContactsSchemaAG contacts = new ContactsSchemaAG();
 		DmwOmni.instance().addSchema(contacts);
 		
-//		pluginManager.getSchema().manageSchema(contacts);
-		
-//		DmwOmni.instance().addCompactSchema(ContactsDMSAG.instance());
-		
 		// Indicate that we need to index our Contact entries
 		cache.maintainIndex(ContactsDMSAG.__Contact);
+		
+		// Add a name generator for Contact objects
+		cache.addNameGenerator(new ContactNameGenerator());
 	}
 	
 	@Override
