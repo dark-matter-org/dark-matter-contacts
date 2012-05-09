@@ -96,7 +96,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
     protected void fireForceCommsReset(){
         eventBus.fireEvent(new ForceCommsReset());
     }

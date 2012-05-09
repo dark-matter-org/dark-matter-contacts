@@ -22,7 +22,6 @@ import com.google.gwt.sample.contacts.client.generated.ContactsGxtWrapperFactory
 import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.places.ListContactsPlace;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterBaseImpl;
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;
 
 /**
@@ -155,10 +154,10 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 	// the ContactListViewPresenterIF
 	
 	@Override
-	public void onDeleteContactsEvent(List<ContactDMO> deletedContacts) {
+	public void onDeleteContactsEvent(List<ContactGXT> deletedContacts) {
 		DeleteRequestDMO request = getDeleteContactRequest();
 
-		for(ContactDMO contact: deletedContacts){
+		for(ContactGXT contact: deletedContacts){
 			request.addTargets(contact.getObjectName());
 		}
 

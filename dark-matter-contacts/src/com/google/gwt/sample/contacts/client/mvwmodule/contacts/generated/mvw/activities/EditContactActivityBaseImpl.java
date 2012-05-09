@@ -62,19 +62,19 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
     protected void fireAddContactCompleteEvent(DmcObjectName name){
         eventBus.fireEvent(new AddContactCompleteEvent(name));
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
     protected void fireEditContactCancelledEvent(){
         eventBus.fireEvent(new EditContactCancelledEvent());
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:344)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
     protected void fireEditContactCompleteEvent(DmcObjectName name){
         eventBus.fireEvent(new EditContactCompleteEvent(name));
     }

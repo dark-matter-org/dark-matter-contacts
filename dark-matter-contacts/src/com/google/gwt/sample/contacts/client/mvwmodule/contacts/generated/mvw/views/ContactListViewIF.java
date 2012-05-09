@@ -2,8 +2,8 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.v
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:232)
-import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // View import
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // Required by DeleteContactsEvent
+import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // Required by DeleteContactsEvent
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;         // Required by EditContactEvent
 import java.util.HashMap;                                                      // View import
 import java.util.List;                                                         // Required by DeleteContactsEvent
 import org.dmd.dmc.DmcObjectName;                                              // View import
@@ -14,7 +14,7 @@ public interface ContactListViewIF {
 
     public interface ContactListViewPresenterIF {
 
-        public void onDeleteContactsEvent(List<ContactDMO> deletedContacts);
+        public void onDeleteContactsEvent(List<ContactGXT> deletedContacts);
 
     }
 

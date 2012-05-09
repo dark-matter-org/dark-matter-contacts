@@ -137,6 +137,7 @@ public class ContactListView extends ContactListViewBaseImpl {
 			@Override
 			public void handleEvent(MessageBoxEvent be) {
 				if (be.getButtonClicked().getItemId().equals(Dialog.YES)){
+					fireDeleteContactsEvent(currentSelection);
 //					presenter.deleteProfile(currentSelection);
 				}
 			}
@@ -180,8 +181,12 @@ public class ContactListView extends ContactListViewBaseImpl {
 
 	@Override
 	public void contactsSelected(List<ContactGXT> contacts) {
-		// TODO Auto-generated method stub
+		if (contacts.size() > 0)
+			deleteButton.enable();
+		else
+			deleteButton.disable();
 		
+		currentSelection = contacts;
 	}
 
 	@Override
