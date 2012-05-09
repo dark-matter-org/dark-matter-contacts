@@ -94,8 +94,14 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 
 	@Override
 	protected void handleCreateContactResponse(CreateResponseDMO response) {
-		ContactDMO contact = (ContactDMO) response.getNthObjectList(0);
-		fireAddContactCompleteEvent(contact.getObjectName());
+		// The first response we receive will probably be the acknowledgement
+		// reponse which has lastResponse = false. We don't really do anything
+		// with that response. However, the last response will have the newly
+		// created contact in it.
+		if (response.isLastResponse()){
+			ContactDMO contact = (ContactDMO) response.getNthObjectList(0);
+			fireAddContactCompleteEvent(contact.getObjectName());
+		}
 	}
 	
 	//////////////////////////////////////////////////////////////////////////////
