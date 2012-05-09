@@ -3,12 +3,12 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.v
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:238)
 import com.google.gwt.event.shared.EventBus;                                                                   // Used by eventBus
-import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;                                         // View import
+import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;                                         // Required by DeleteContactsEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;            // Contacts run context
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;          // Required by AddContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEvent;         // Required by EditContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images;                              // Used by images
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                         // Required by DeleteContactsEvent
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                         // Required type
 import com.google.gwt.user.client.ui.IsWidget;                                                                 // Implements IsWidget
 import java.util.HashMap;                                                                                      // View import
 import java.util.List;                                                                                         // Required by DeleteContactsEvent
@@ -33,25 +33,25 @@ abstract public class ContactListViewBaseImpl implements ContactListViewIF, IsWi
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:117)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:254)
-    protected void fireDeleteContactsEvent(List<ContactDMO> deletedContacts){
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:255)
+    protected void fireDeleteContactsEvent(List<ContactGXT> deletedContacts){
         presenter.onDeleteContactsEvent(deletedContacts);
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:317)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
     protected void fireAddContactEvent(){
         eventBus.fireEvent(new AddContactEvent());
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:317)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
     protected void fireEditContactEvent(ContactDMO contact){
         eventBus.fireEvent(new EditContactEvent(contact));
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:317)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
     protected void fireLogoutEvent(){
         eventBus.fireEvent(new LogoutEvent());
     }

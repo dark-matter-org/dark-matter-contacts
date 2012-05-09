@@ -22,19 +22,19 @@ abstract public class EditContactViewBaseImpl implements EditContactViewIF, IsWi
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:117)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:254)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:255)
     protected void fireContactUpdatedEvent(ContactDMO modrec){
         presenter.onContactUpdatedEvent(modrec);
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:117)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:254)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:255)
     protected void fireNewContactEvent(ContactDMO contact){
         presenter.onNewContactEvent(contact);
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:317)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
     protected void fireEditContactCancelledEvent(){
         eventBus.fireEvent(new EditContactCancelledEvent());
     }
