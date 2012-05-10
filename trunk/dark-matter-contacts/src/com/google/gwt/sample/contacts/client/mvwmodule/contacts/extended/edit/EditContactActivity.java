@@ -74,8 +74,10 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 
 	@Override
 	protected void handleGetContactResponse(GetResponseDMO response) {
-		ContactDMO contact = (ContactDMO) response.getNthObjectList(0);
-		view.setContact(contact);
+		if (response.isLastResponse()){
+			ContactDMO contact = (ContactDMO) response.getNthObjectList(0);
+			view.setContact(contact);
+		}
 	}
 
 	///////////////////////////////////////////////////////////////////////////
