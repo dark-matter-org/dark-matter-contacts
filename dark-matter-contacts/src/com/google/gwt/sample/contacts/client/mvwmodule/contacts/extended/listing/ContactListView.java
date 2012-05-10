@@ -47,6 +47,9 @@ public class ContactListView extends ContactListViewBaseImpl {
 	Listener<ButtonEvent>		deleteListener;
 	Button						deleteButton;
 	
+	Listener<ButtonEvent>		editListener;
+	Button						editButton;
+	
 	Listener<ButtonEvent>		logoutListener;
 	Button						logoutButton;
 	
@@ -114,13 +117,34 @@ public class ContactListView extends ContactListViewBaseImpl {
 		addButton.setIcon(AbstractImagePrototype.create(images.add()));
 		addButton.addListener(Events.Select, addListener);
 		scrollPanel.addButton(addButton);
+		
+		///////////////////////////////////////////////////////////////////////
+		
+		editListener = new Listener<ButtonEvent>() {
+			@Override
+			public void handleEvent(ButtonEvent be) {
+				if (be.getType() == Events.Select){
+					fireEditContactEvent(currentSelection.get(0).getDMO());
+				}
+			}
+		};
+		
+		editButton = new Button("Edit");
+		editButton.setIcon(AbstractImagePrototype.create(images.documentEdit()));
+		editButton.addListener(Events.Select, editListener);
+		editButton.disable();
+		scrollPanel.addButton(editButton);
+		
+		///////////////////////////////////////////////////////////////////////
 
 		deleteListener = new Listener<ButtonEvent>() {
 			@Override
 			public void handleEvent(ButtonEvent be) {
 				if (be.getType() == Events.Select){
-//					proceedWarning("Warning", "Are you sure you want to delete " + currentSelection.getFirstName() + "?");
-					proceedWarning("Warning", "Are you sure you want to delete the selected contacts?");
+					if (currentSelection.size() > 1)
+						proceedWarning("Warning", "Are you sure you want to delete the selected contacts?");
+					else
+						proceedWarning("Warning", "Are you sure you want to delete the selected contact?");
 				}
 			}
 		};
@@ -138,7 +162,6 @@ public class ContactListView extends ContactListViewBaseImpl {
 			public void handleEvent(MessageBoxEvent be) {
 				if (be.getButtonClicked().getItemId().equals(Dialog.YES)){
 					fireDeleteContactsEvent(currentSelection);
-//					presenter.deleteProfile(currentSelection);
 				}
 			}
 		};
@@ -185,6 +208,11 @@ public class ContactListView extends ContactListViewBaseImpl {
 			deleteButton.enable();
 		else
 			deleteButton.disable();
+		
+		if (contacts.size() == 1)
+			editButton.enable();
+		else
+			editButton.disable();
 		
 		currentSelection = contacts;
 	}

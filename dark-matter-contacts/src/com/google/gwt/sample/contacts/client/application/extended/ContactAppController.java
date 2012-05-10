@@ -22,8 +22,13 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		super(rc);
 				
 		// For the purposes of this example, we turn on message tracking throughout the system.
-		// All messages that are sent will be tracked via logging messages
+		// All messages that are sent will be tracked via logging messages on the server.
+		// Loggin on the server must be at level TRACE.
 		commsController.setGlobalMessageTracking(true);
+		
+		// This turns on tracing of the messages and events as they pass through the comms controller
+		// The GWT logging level must be FINEST in order to see these logs.
+		commsController.setControllerTracing(true);
 	}
 	
 	@Override
