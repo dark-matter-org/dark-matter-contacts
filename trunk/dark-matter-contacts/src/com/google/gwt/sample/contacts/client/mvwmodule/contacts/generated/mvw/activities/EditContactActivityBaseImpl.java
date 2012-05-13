@@ -56,25 +56,25 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:127)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:137)
     public EditContactView getNewEditContactView(EditContactViewIF.EditContactViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getEditContactViewRCI(presenter));
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:384)
     protected void fireAddContactCompleteEvent(DmcObjectName name){
         eventBus.fireEvent(new AddContactCompleteEvent(name));
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:384)
     protected void fireEditContactCancelledEvent(){
         eventBus.fireEvent(new EditContactCancelledEvent());
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:384)
     protected void fireEditContactCompleteEvent(DmcObjectName name){
         eventBus.fireEvent(new EditContactCompleteEvent(name));
     }

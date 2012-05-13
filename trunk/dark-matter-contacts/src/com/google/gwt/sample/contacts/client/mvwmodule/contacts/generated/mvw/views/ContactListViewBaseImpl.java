@@ -33,25 +33,25 @@ abstract public class ContactListViewBaseImpl implements ContactListViewIF, IsWi
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:117)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:255)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:294)
     protected void fireDeleteContactsEvent(List<ContactGXT> deletedContacts){
         presenter.onDeleteContactsEvent(deletedContacts);
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:357)
     protected void fireAddContactEvent(){
         eventBus.fireEvent(new AddContactEvent());
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:357)
     protected void fireEditContactEvent(ContactDMO contact){
         eventBus.fireEvent(new EditContactEvent(contact));
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:152)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:318)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:357)
     protected void fireLogoutEvent(){
         eventBus.fireEvent(new LogoutEvent());
     }

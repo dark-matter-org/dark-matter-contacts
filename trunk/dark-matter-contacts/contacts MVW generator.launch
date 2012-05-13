@@ -11,5 +11,5 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.dmd.mvw.tools.mvwgenerator.MvwGeneratorMain"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-contacts/src dark-matter-data/src -autogen"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dark-matter-data"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dark-matter-contacts"/>
 </launchConfiguration>

@@ -96,7 +96,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
     }
 
     // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:345)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:384)
     protected void fireForceCommsReset(){
         eventBus.fireEvent(new ForceCommsReset());
     }
@@ -142,22 +142,22 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         }
     }
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onAddContactEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onEditContactCancelledEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onEditContactEvent(ContactDMO contact);
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onLoginCompleteEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onLogoutCompleteEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onLogoutEvent();
 
     abstract protected void handleLogoutResponseError(LogoutResponseDMO response);
