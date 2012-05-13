@@ -27,7 +27,7 @@ abstract public class ListContactsActivityBaseImpl extends AbstractActivity  {
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:113)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:123)
     public ContactListPresenter getContactListPresenter(){
         return( ((ContactsRunContextIF)runcontext).getContactListPresenterRCI());
     }

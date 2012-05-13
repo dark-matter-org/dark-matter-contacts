@@ -85,7 +85,7 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:127)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:137)
     public ContactListView getNewContactListView(ContactListViewIF.ContactListViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }
@@ -173,16 +173,16 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
         }
     }
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onAddContactCompleteEvent(DmcObjectName name);
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onCommsSessionReady();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onEditContactCompleteEvent(DmcObjectName name);
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:96)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
     abstract protected void onLogoutCompleteEvent();
 
     abstract protected void handleDeleteContactResponseError(DeleteResponseDMO response);
