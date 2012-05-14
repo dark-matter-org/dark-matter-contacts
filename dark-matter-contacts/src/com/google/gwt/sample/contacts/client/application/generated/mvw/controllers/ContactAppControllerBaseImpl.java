@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.application.generated.mvw.controllers;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus
 import com.google.gwt.place.shared.PlaceController;                                                                            // Used by placeController
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent
@@ -95,18 +95,18 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
 
     }
 
-    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:204)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:384)
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:224)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getFireMethod(Event.java:400)
     protected void fireForceCommsReset(){
         eventBus.fireEvent(new ForceCommsReset());
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:482)
     protected void sendLogoutRequest(LogoutRequestDMO request){
         commsController.sendLogoutRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:512)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:532)
     protected LogoutRequestDMO getLogoutRequest(){
         LogoutRequestDMO request = commsController.getLogoutRequest();
         request.setHandlerID(LOGOUTLOGOUTCALLBACK);
@@ -114,7 +114,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:267)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:287)
     @Override
     final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
@@ -133,7 +133,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:301)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:321)
     @Override
     final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
@@ -142,27 +142,27 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
         }
     }
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onAddContactEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onEditContactCancelledEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onEditContactEvent(ContactDMO contact);
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onLoginCompleteEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onLogoutCompleteEvent();
 
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initCodeGenInfo(Event.java:101)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.initialize(Event.java:105)
     abstract protected void onLogoutEvent();
 
     abstract protected void handleLogoutResponseError(LogoutResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:609)
     abstract protected void handleLogoutResponse(LogoutResponseDMO response);
 
 }
