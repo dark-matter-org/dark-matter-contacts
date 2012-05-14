@@ -14,13 +14,16 @@
 
     <div id="content">
 
+<h1> Event Summary </h1>
+
     <table>
 
         <tr>
             <td> <div class="eventName">AddContactCompleteEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when the user has successfully created a new contact.
+            <td colspan="2" class="description">            <div class="argvector">(DmcObjectName name) </div> <p/> 
+            Fired when the user has successfully created a new contact.
             </td>
         </tr>
         <tr>
@@ -28,14 +31,18 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>EditContactActivity                         </td>                    </tr>                    <tr>                        <td> Handled by:                        </td>                        <td>ContactListPresenter                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#EditContactActivity">EditContactActivity</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contacts.html#ContactListPresenter">ContactListPresenter</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">AddContactEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when the Add button is clicked.
+            <td colspan="2" class="description">            Fired when the Add button is clicked.
             </td>
         </tr>
         <tr>
@@ -43,14 +50,19 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>ContactListView                         </td>                    </tr>                    <tr>                        <td> Handled by:                        </td>                        <td>ContactAppController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#ContactListView">ContactListView</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">CommsSessionFailed</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">Fired if we cannot establish full asynchronous communications or if we have some other situation where communications fails.
+            <td colspan="2" class="description">            <div class="argvector">(String reason) </div> <p/> 
+            Fired if we cannot establish full asynchronous communications or if we have some other situation where communications fails.
             </td>
         </tr>
         <tr>
@@ -58,14 +70,18 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>CommsController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="mvwcomms.html#CommsController">CommsController</a>                         </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">CommsSessionReady</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">Fired when we've established full asynchronous communications with the server, in this case, the gwteventservice is up and running.
+            <td colspan="2" class="description">            Fired when we've established full asynchronous communications with the server, in this case, the gwteventservice is up and running.
             </td>
         </tr>
         <tr>
@@ -73,14 +89,19 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>CommsController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="mvwcomms.html#CommsController">CommsController</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contacts.html#ContactListPresenter">ContactListPresenter</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">ContactUpdatedEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when a contact has its information alterred. The modifications will have been recorded in the modrec. In the case of a newly added contact, the Contact will not have an object name; this must be generated on the server.
+            <td colspan="2" class="description">            <div class="argvector">(ContactDMO modrec) </div> <p/> 
+            Fired when a contact has its information alterred. The modifications will have been recorded in the modrec. In the case of a newly added contact, the Contact will not have an object name; this must be generated on the server.
             </td>
         </tr>
         <tr>
@@ -88,14 +109,22 @@
             </td>
             <td>
                 <table>
-                </table>
+                    <tr>
+                        <td> Fired locally by:                        </td>
+                        <td><a class="navLink" href="contacts.html#EditContactView">EditContactView</a>                         </td>
+                    </tr>
+                    <tr>
+                        <td> Handled by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#EditContactActivity">EditContactActivity</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">DeleteContactsEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Indicates one or more contacts to be deleted.
+            <td colspan="2" class="description">            <div class="argvector">(List<ContactGXT> deletedContacts) </div> <p/> 
+            Indicates one or more contacts to be deleted.
             </td>
         </tr>
         <tr>
@@ -103,14 +132,21 @@
             </td>
             <td>
                 <table>
-                </table>
+                    <tr>
+                        <td> Fired locally by:                        </td>
+                        <td><a class="navLink" href="contacts.html#ContactListView">ContactListView</a>                         </td>
+                    </tr>
+                    <tr>
+                        <td> Handled by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#ContactListPresenter">ContactListPresenter</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">EditContactCancelledEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when the user hits cancel when viewing or adding Contact. We revert back to the ContactListView.
+            <td colspan="2" class="description">            Fired when the user hits cancel when viewing or adding Contact. We revert back to the ContactListView.
             </td>
         </tr>
         <tr>
@@ -118,14 +154,19 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>EditContactActivity EditContactView                         </td>                    </tr>                    <tr>                        <td> Handled by:                        </td>                        <td>ContactAppController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#EditContactActivity">EditContactActivity</a> <a class="navLink" href="contacts.html#EditContactView">EditContactView</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">EditContactCompleteEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when the user's changes have been successfully applied to a contact.
+            <td colspan="2" class="description">            <div class="argvector">(DmcObjectName name) </div> <p/> 
+            Fired when the user's changes have been successfully applied to a contact.
             </td>
         </tr>
         <tr>
@@ -133,14 +174,19 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>EditContactActivity                         </td>                    </tr>                    <tr>                        <td> Handled by:                        </td>                        <td>ContactListPresenter                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#EditContactActivity">EditContactActivity</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contacts.html#ContactListPresenter">ContactListPresenter</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">EditContactEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when a single Contact is clicked by the user. When this is done, we display the EditContactView.
+            <td colspan="2" class="description">            <div class="argvector">(ContactDMO contact) </div> <p/> 
+            Fired when a single Contact is clicked by the user. When this is done, we display the EditContactView.
             </td>
         </tr>
         <tr>
@@ -148,14 +194,18 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>ContactListView                         </td>                    </tr>                    <tr>                        <td> Handled by:                        </td>                        <td>ContactAppController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#ContactListView">ContactListView</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">ForceCommsReset</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">When a logout is successfully executed, the CommsController resets itself in preparation for the next login. However, in circumstances where something goes wrong e.g. RPC errors, failed logout etc. An application can fire this event and forceably reset the communications controller.
+            <td colspan="2" class="description">            When a logout is successfully executed, the CommsController resets itself in preparation for the next login. However, in circumstances where something goes wrong e.g. RPC errors, failed logout etc. An application can fire this event and forceably reset the communications controller.
             </td>
         </tr>
         <tr>
@@ -163,14 +213,18 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Handled by:                        </td>                        <td>CommsController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="mvwcomms.html#CommsController">CommsController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">LoginCompleteEvent</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">Fired when we have sucessfully logged in. This indicates that we've successfully logged in, but we are not yet ready for full communications. Your application must wait for the CommsSessionReady event before commencing other DMP operations e.g. GetRequest, SetRequest, CreateRequest, DeleteRequest etc.
+            <td colspan="2" class="description">            Fired when we have sucessfully logged in. This indicates that we've successfully logged in, but we are not yet ready for full communications. Your application must wait for the CommsSessionReady event before commencing other DMP operations e.g. GetRequest, SetRequest, CreateRequest, DeleteRequest etc.
             </td>
         </tr>
         <tr>
@@ -178,14 +232,19 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>CommsController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="mvwcomms.html#CommsController">CommsController</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">LoginEvent</div>
             <a class="navLink" href="login.html">login</a>
             </td>
-            <td colspan="2" class="description">Fired when the login button is clicked.
+            <td colspan="2" class="description">            <div class="argvector">(String username, String password) </div> <p/> 
+            Fired when the login button is clicked.
             </td>
         </tr>
         <tr>
@@ -193,14 +252,21 @@
             </td>
             <td>
                 <table>
-                </table>
+                    <tr>
+                        <td> Fired locally by:                        </td>
+                        <td><a class="navLink" href="login.html#LoginView">LoginView</a>                         </td>
+                    </tr>
+                    <tr>
+                        <td> Handled by:                        </td>
+                        <td>
+<a class="navLink" href="login.html#PerformLoginActivity">PerformLoginActivity</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">LogoutCompleteEvent</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">Fired when we have sucessfully logged out.
+            <td colspan="2" class="description">            Fired when we have sucessfully logged out.
             </td>
         </tr>
         <tr>
@@ -208,14 +274,18 @@
             </td>
             <td>
                 <table>
-                    <tr>                        <td> Fired by:                        </td>                        <td>CommsController                         </td>                    </tr>                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="mvwcomms.html#CommsController">CommsController</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a> <a class="navLink" href="contacts.html#ContactListPresenter">ContactListPresenter</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">LogoutEvent</div>
             <a class="navLink" href="mvwcomms.html">mvwcomms</a>
             </td>
-            <td colspan="2" class="description">Fired by some component when an application user wants to logout. This is meant to be a reusable event across application.
+            <td colspan="2" class="description">            Fired by some component when an application user wants to logout. This is meant to be a reusable event across application.
             </td>
         </tr>
         <tr>
@@ -223,14 +293,19 @@
             </td>
             <td>
                 <table>
-                </table>
+                    <tr>                        <td> Fired by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#ContactListView">ContactListView</a>                         </td>
+                    </tr>
+                    <tr>                        <td> Handled by:                        </td>                        <td><a class="navLink" href="contactsapp.html#ContactAppController">ContactAppController</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
         <tr>
             <td> <div class="eventName">NewContactEvent</div>
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
-            <td colspan="2" class="description">Fired when a new contact has been created by the user and they've hit the Create button.
+            <td colspan="2" class="description">            <div class="argvector">(ContactDMO contact) </div> <p/> 
+            Fired when a new contact has been created by the user and they've hit the Create button.
             </td>
         </tr>
         <tr>
@@ -238,7 +313,14 @@
             </td>
             <td>
                 <table>
-                </table>
+                    <tr>
+                        <td> Fired locally by:                        </td>
+                        <td><a class="navLink" href="contacts.html#EditContactView">EditContactView</a>                         </td>
+                    </tr>
+                    <tr>
+                        <td> Handled by:                        </td>
+                        <td>
+<a class="navLink" href="contacts.html#EditContactActivity">EditContactActivity</a>                         </td>                    </tr>                </table>
             </td>
         </tr>
     </table>
@@ -246,6 +328,7 @@
     </div>
 
     <div id="sidebar">
+    <div class="sidebarTitle"> Modules </div>
         <a class="navLink" href="contacts.html"> contacts</a>
         <a class="navLink" href="contactsapp.html"> contactsapp</a>
         <a class="navLink" href="gxt.html"> gxt</a>
@@ -256,6 +339,10 @@
         <a class="navLink" href="mvwcomms.html"> mvwcomms</a>
         <a class="navLink" href="mvwmenus.html"> mvwmenus</a>
         <a class="navLink" href="selectionmanager.html"> selectionmanager</a>
+        <p/>
+    <div class="sidebarTitle"> Summaries </div>
+        <a class="navLink" href="EventSummary.html"> Events</a>
+        <a class="navLink" href="RCISummary.html"> Run Context Items</a>
     </div>
   </div> <!-- main -->
 

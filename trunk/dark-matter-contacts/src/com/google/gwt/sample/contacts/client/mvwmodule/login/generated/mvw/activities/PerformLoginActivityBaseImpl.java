@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:134)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                    // Is abstract activity
 import com.google.gwt.place.shared.PlaceController;                                                                        // Used by placeController
 import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                           // Used by LoginViewRCI
@@ -42,12 +42,12 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
         return( ((LoginRunContextIF)runcontext).getLoginViewRCI(presenter));
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:462)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:482)
     protected void sendLoginRequest(LoginRequestDMO request){
         commsController.sendLoginRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:512)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:532)
     protected LoginRequestDMO getLoginRequest(){
         LoginRequestDMO request = commsController.getLoginRequest();
         request.setHandlerID(LOGINLOGINCALLBACK);
@@ -55,7 +55,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:267)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:287)
     @Override
     final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
@@ -74,7 +74,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:301)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:321)
     @Override
     final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
@@ -85,7 +85,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     abstract protected void handleLoginResponseError(LoginResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:589)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:609)
     abstract protected void handleLoginResponse(LoginResponseDMO response);
 
 }
