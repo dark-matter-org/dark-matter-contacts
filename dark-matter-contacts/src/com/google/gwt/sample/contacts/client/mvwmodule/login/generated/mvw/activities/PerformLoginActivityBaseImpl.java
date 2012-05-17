@@ -3,7 +3,6 @@ package com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.acti
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                    // Is abstract activity
-import com.google.gwt.place.shared.PlaceController;                                                                        // Used by placeController
 import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                           // Used by LoginViewRCI
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.LoginRunContextIF;                              // Login run context
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                              // View interface
@@ -15,6 +14,7 @@ import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                       
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                        // DMP communications
 import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                                       // DMP communications
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                // DMP communications
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                     // Used by placeController
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                               // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                               // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                     // Mvwcomms run context
@@ -23,7 +23,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;          
 abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  implements LoginViewPresenterIF, ResponseHandlerIF {
 
     protected final CommsController commsController;
-    protected final PlaceController placeController;
+    protected final MvwAsyncPlaceController placeController;
 
     MvwRunContextIF runcontext;
 

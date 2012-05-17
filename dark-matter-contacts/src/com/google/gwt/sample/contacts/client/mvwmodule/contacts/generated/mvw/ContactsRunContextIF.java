@@ -13,9 +13,9 @@ import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatModuleRunContextInterface(RunContextFormatter.java:40)
 public interface ContactsRunContextIF {
 
-    public Images               getImages();
-    public ContactListView      getContactListViewRCI(ContactListViewIF.ContactListViewPresenterIF presenter);
-    public ContactListPresenter getContactListPresenterRCI();
-    public EditContactView      getEditContactViewRCI(EditContactViewIF.EditContactViewPresenterIF presenter);
+    public Images                  getImages();
+    public ContactListView         getContactListViewRCI(ContactListViewIF.ContactListViewPresenterIF presenter);
+    public ContactListPresenter    getContactListPresenterRCI();
+    public EditContactView         getEditContactViewRCI(EditContactViewIF.EditContactViewPresenterIF presenter);
 }
 
