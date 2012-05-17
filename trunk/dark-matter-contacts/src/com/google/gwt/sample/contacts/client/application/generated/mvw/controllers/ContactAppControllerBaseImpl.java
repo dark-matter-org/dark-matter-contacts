@@ -3,7 +3,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw.controll
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus
-import com.google.gwt.place.shared.PlaceController;                                                                            // Used by placeController
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEventHandler;                   // Required by AddContactEvent
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                // Required by EditContactCancelledEvent
@@ -21,6 +20,7 @@ import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                            
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                    // DMP communications
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                   // Gxt run context
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                         // Mvwcomms run context
@@ -39,7 +39,7 @@ abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF,
     protected final CommsController commsController;
     protected final EventBus eventBus;
     protected final GxtCache gxtCache;
-    protected final PlaceController placeController;
+    protected final MvwAsyncPlaceController placeController;
 
     private final int LOGOUTLOGOUTCALLBACK = 0;
 

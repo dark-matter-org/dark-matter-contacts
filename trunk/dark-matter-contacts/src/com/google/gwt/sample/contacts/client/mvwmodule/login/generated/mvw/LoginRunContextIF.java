@@ -9,6 +9,6 @@ import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatModuleRunContextInterface(RunContextFormatter.java:40)
 public interface LoginRunContextIF {
 
-    public LoginView           getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter);
+    public LoginView               getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter);
 }
 

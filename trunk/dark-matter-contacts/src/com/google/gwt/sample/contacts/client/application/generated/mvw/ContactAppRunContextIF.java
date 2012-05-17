@@ -4,7 +4,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw;
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:68)
 import com.google.gwt.activity.shared.ActivityManager;                                                              // Used by activityManager
 import com.google.gwt.event.shared.EventBus;                                                                        // Used by eventBus
-import com.google.gwt.place.shared.PlaceController;                                                                 // Used by placeController
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                             // Used by historyHandler
 import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                             // Used by ContactAppControllerRCI
 import com.google.gwt.sample.contacts.client.application.generated.mvw.ContactsappRunContextIF;                     // Contactsapp run context
@@ -24,6 +23,7 @@ import org.dmd.dmp.client.DMPServiceAsync;                                      
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                       // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                        // Gxt run context
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                    // Used by activityMapper
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                              // Used by placeController
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                        // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                        // Used by commsController
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                              // Mvwcomms run context
@@ -46,6 +46,6 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, Contactsap
     public PlaceHistoryHandler          getHistoryHandler();
     public ContactAppPlaceHistoryMapper getHistoryMapper();
     public Images                       getImages();
-    public PlaceController              getPlaceController();
+    public MvwAsyncPlaceController      getPlaceController();
 }
 

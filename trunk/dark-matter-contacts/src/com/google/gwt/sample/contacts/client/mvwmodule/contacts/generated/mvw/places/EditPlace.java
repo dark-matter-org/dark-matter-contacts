@@ -2,14 +2,14 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.p
 
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Place.getImports(Place.java:36)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Place.getImports(Place.java:45)
 import com.google.gwt.place.shared.PlaceTokenizer;                                                         // Tokenizer interface
 import com.google.gwt.place.shared.Prefix;                                                                 // Required for Prefix annotation
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactActivity;         // Runs this activity
 import org.dmd.mvw.client.mvw.MvwPlace;                                                                    // Our base class
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                               // Needed to construct activity
 
-// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PlaceFormatter.formatPlace(PlaceFormatter.java:26)
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PlaceFormatter.formatStandardPlace(PlaceFormatter.java:35)
 public class EditPlace extends MvwPlace {
 
     public EditPlace(String t){

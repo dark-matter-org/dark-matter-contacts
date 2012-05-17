@@ -91,6 +91,7 @@ description			The place where we list the available contacts. The URL
 Activity
 activityName		ListContactsActivity
 subpackage			listing
+//codeSplit			true
 abstractActivity	true
 //usesController		ContactAppController
 usesRunContextItem	placeController	

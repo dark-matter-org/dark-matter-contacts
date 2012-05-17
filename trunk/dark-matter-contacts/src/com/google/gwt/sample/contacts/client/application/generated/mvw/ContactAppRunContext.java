@@ -5,7 +5,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw;
 import com.google.gwt.activity.shared.ActivityManager;                                                              // Used by activityManager
 import com.google.gwt.core.client.GWT;                                                                              // Used by dmpConnection
 import com.google.gwt.event.shared.EventBus;                                                                        // Used by eventBus
-import com.google.gwt.place.shared.PlaceController;                                                                 // Used by placeController
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                             // Used by historyHandler
 import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                             // Used by ContactAppControllerRCI
 import com.google.gwt.sample.contacts.client.application.generated.mvw.ContactsappRunContextIF;                     // Contactsapp run context
@@ -27,6 +26,7 @@ import org.dmd.dmp.client.DMPServiceAsync;                                      
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                       // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                        // Gxt run context
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                    // Used by activityMapper
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                              // Used by placeController
 import org.dmd.mvw.client.mvw.MvwEventBus;                                                                          // Used by eventBus
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                        // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                        // Used by commsController
@@ -42,7 +42,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, ContactsappRu
     private final DMPServiceAsync              dmpConnection;
 
     // Defined in module: mvw
-    private final PlaceController              placeController;
+    private final MvwAsyncPlaceController      placeController;
 
     // Defined in module: mvwcomms
     private final RemoteEventService           eventService;
@@ -79,7 +79,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, ContactsappRu
 
         eventBus                = new MvwEventBus();
         dmpConnection           = (DMPServiceAsync) GWT.create(DMPService.class);
-        placeController         = new PlaceController((com.google.gwt.event.shared.EventBus) eventBus);
+        placeController         = new MvwAsyncPlaceController(this, (com.google.gwt.event.shared.EventBus) eventBus);
         eventService            = RemoteEventServiceFactory.getInstance().getRemoteEventService();
         commsController         = new CommsController(this);
         activityMapper          = new MvwActivityMapper(this);
@@ -188,7 +188,7 @@ public class ContactAppRunContext implements ContactsRunContextIF, ContactsappRu
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:214)
     @Override
-    public PlaceController getPlaceController(){
+    public MvwAsyncPlaceController getPlaceController(){
         return(placeController);
     }
 
