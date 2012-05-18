@@ -32,7 +32,8 @@ usesRunContextItem		placeController
 usesRunContextItem		commsController
 usesRunContextItem		gxtCache
 //centralDMPErrorHandler	true
-centralRPCErrorHandler	true
+centralRPCErrorHandler		true
+centralAsyncErrorHandler	true
 //handlesEvent	ContactUpdatedEvent
 description			The ContactAppController provides an overall control point
  for the Contact Management application. Primarily, its role to coordinate moving

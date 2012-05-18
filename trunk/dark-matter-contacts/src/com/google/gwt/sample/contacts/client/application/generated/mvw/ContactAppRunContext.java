@@ -26,6 +26,7 @@ import org.dmd.dmp.client.DMPServiceAsync;                                      
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                       // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                        // Gxt run context
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                    // Used by activityMapper
+import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                               // Used by centralAsyncErrorHandler
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                              // Used by placeController
 import org.dmd.mvw.client.mvw.MvwEventBus;                                                                          // Used by eventBus
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                        // Mvw run context
@@ -71,24 +72,28 @@ public class ContactAppRunContext implements ContactsRunContextIF, ContactsappRu
     // Defined in module: contacts
     private ContactListPresenter         ContactListPresenterRCI;
 
+    // Defined in module: mvw
+    private final MvwAsyncErrorHandlerIF       centralAsyncErrorHandler;
+
     // Defined in module: contacts
     private final Images                       images;
 
 
     public ContactAppRunContext(){
 
-        eventBus                = new MvwEventBus();
-        dmpConnection           = (DMPServiceAsync) GWT.create(DMPService.class);
-        placeController         = new MvwAsyncPlaceController(this, (com.google.gwt.event.shared.EventBus) eventBus);
-        eventService            = RemoteEventServiceFactory.getInstance().getRemoteEventService();
-        commsController         = new CommsController(this);
-        activityMapper          = new MvwActivityMapper(this);
-        activityManager         = new ActivityManager(activityMapper, eventBus);
-        historyMapper           = GWT.create(ContactAppPlaceHistoryMapper.class);
-        historyHandler          = new PlaceHistoryHandler(historyMapper);
-        gxtCache                = new GxtCache();
-        ContactAppControllerRCI = new ContactAppController(this);
-        images                  = GWT.create(Images.class);
+        eventBus                 = new MvwEventBus();
+        dmpConnection            = (DMPServiceAsync) GWT.create(DMPService.class);
+        placeController          = new MvwAsyncPlaceController(this, (com.google.gwt.event.shared.EventBus) eventBus);
+        eventService             = RemoteEventServiceFactory.getInstance().getRemoteEventService();
+        commsController          = new CommsController(this);
+        activityMapper           = new MvwActivityMapper(this);
+        activityManager          = new ActivityManager(activityMapper, eventBus);
+        historyMapper            = GWT.create(ContactAppPlaceHistoryMapper.class);
+        historyHandler           = new PlaceHistoryHandler(historyMapper);
+        gxtCache                 = new GxtCache();
+        ContactAppControllerRCI  = new ContactAppController(this);
+        centralAsyncErrorHandler = ContactAppControllerRCI;
+        images                   = GWT.create(Images.class);
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:214)
@@ -136,6 +141,12 @@ public class ContactAppRunContext implements ContactsRunContextIF, ContactsappRu
     @Override
     public MvwActivityMapper getActivityMapper(){
         return(activityMapper);
+    }
+
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:214)
+    @Override
+    public MvwAsyncErrorHandlerIF getCentralAsyncErrorHandler(){
+        return(centralAsyncErrorHandler);
     }
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:214)
