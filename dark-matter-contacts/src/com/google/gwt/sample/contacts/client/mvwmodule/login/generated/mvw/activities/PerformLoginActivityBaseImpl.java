@@ -37,7 +37,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:137)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:145)
     public LoginView getNewLoginView(LoginViewIF.LoginViewPresenterIF presenter){
         return( ((LoginRunContextIF)runcontext).getLoginViewRCI(presenter));
     }

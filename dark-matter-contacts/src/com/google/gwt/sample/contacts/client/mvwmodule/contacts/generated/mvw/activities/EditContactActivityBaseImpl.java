@@ -56,7 +56,7 @@ abstract public class EditContactActivityBaseImpl extends AbstractActivity  impl
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:137)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:145)
     public EditContactView getNewEditContactView(EditContactViewIF.EditContactViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getEditContactViewRCI(presenter));
     }
