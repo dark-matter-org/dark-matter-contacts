@@ -29,7 +29,12 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 			logger.log(Level.INFO, "We're logged in, displaying the ContactListView");
 			panel = p;
 			
-			panel.setWidget(getContactListPresenter().getView());			
+//			panel.setWidget(getContactListPresenter().getView());
+			
+			// This may look weird, but this allows us to instantiate the contact list
+			// presenter asynchronously using GWT's code splitting mechanisms. When the 
+			// presenter is ready we get called back at asyncContactListPresenterReady().
+			getContactListPresenterAsync();
 		}
 		else{
 			logger.log(Level.INFO, "We're not logged in, going to LoginPlace");
@@ -37,6 +42,11 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 			// without doing the login, so go to login first
 			placeController.goTo(new LoginPlace(""));
 		}
+	}
+
+//	@Override
+	public void asyncContactListPresenterReady(ContactListPresenter p) {
+		panel.setWidget(p.getView());
 	}
 
 }

@@ -34,7 +34,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.events.CommsSessionReadyHandler
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEvent;                                                              // Required by LogoutCompleteEvent
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandler;                                                       // Required by LogoutCompleteEvent
 
-// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PresenterFormatter.formatPresenterBaseImpl(PresenterFormatter.java:25)
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.PresenterFormatter.formatPresenterBaseImpl(PresenterFormatter.java:27)
 abstract public class ContactListPresenterBaseImpl implements ContactListViewPresenterIF, ResponseHandlerIF, EventHandlerIF {
 
     protected final CommsController commsController;
@@ -85,7 +85,7 @@ abstract public class ContactListPresenterBaseImpl implements ContactListViewPre
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:137)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:145)
     public ContactListView getNewContactListView(ContactListViewIF.ContactListViewPresenterIF presenter){
         return( ((ContactsRunContextIF)runcontext).getContactListViewRCI(presenter));
     }

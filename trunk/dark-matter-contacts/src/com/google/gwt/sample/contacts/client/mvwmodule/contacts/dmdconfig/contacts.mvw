@@ -129,6 +129,7 @@ Presenter
 presenterName			ContactListPresenter
 subpackage				listing
 singleton				true
+codeSplit				true
 managesView				ContactListView
 instantiatesView		ContactListView
 usesRunContextItem		gxtCache
@@ -145,6 +146,10 @@ description				This presenter takes care of retrieving the summary information
  for our Contacts and populates the ContactListView. It takes care of deletion
  requests from the view and listens for Contact create events and updates the 
  view accordingly.
+ <p/>
+ This presenter is created as a singleton so that it doesn't have to be recreated
+ each time we transition from the ListContactsActivity to the EditContactActivity and
+ back again.
 
 ///////////////////////////////////////////////////////////////////////////////
 // EDIT CONTACT
