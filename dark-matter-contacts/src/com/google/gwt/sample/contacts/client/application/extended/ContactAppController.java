@@ -89,5 +89,18 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 		// of one, half a dozen of another.
 	}
 
+	/**
+	 * Since we're using the codeSplit flag on several of our components, there has to be a controller 
+	 * that handles async code loading errors, and  this is it. If the code loading ever fails, we 
+	 * wind up here.
+	 */
+	@Override
+	public void handleAsyncCodeError(String error, Throwable reason) {
+		MessageBox.alert("GWT Error.","GWT dynamic code loading error: " + error + "\n\n" + reason.getLocalizedMessage(), null);
+		fireForceCommsReset();
+		gxtCache.wipeData();
+		placeController.goTo(new LoginPlace(""));
+	}
+
 
 }

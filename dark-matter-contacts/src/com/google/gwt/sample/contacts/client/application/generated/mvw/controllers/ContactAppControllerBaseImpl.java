@@ -20,6 +20,7 @@ import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                            
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                    // DMP communications
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                   // Gxt run context
+import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Is the central async code error handler
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController
@@ -34,7 +35,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEvent;            
 import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEventHandler;                                                    // Required by LogoutEvent
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
-abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralRPCErrorHandlerIF {
+abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralRPCErrorHandlerIF, MvwAsyncErrorHandlerIF {
 
     protected final CommsController commsController;
     protected final EventBus eventBus;

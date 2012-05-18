@@ -23,6 +23,7 @@ import org.dmd.dmp.client.DMPServiceAsync;                                      
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                       // Used by gxtCache
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                        // Gxt run context
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                    // Used by activityMapper
+import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                               // Used by centralAsyncErrorHandler
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                              // Used by placeController
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                        // Mvw run context
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                        // Used by commsController
@@ -38,6 +39,7 @@ public interface ContactAppRunContextIF extends ContactsRunContextIF, Contactsap
     public LoginView                    getLoginViewRCI(LoginViewIF.LoginViewPresenterIF presenter);
     public ActivityManager              getActivityManager();
     public MvwActivityMapper            getActivityMapper();
+    public MvwAsyncErrorHandlerIF       getCentralAsyncErrorHandler();
     public CommsController              getCommsController();
     public DMPServiceAsync              getDmpConnection();
     public EventBus                     getEventBus();
