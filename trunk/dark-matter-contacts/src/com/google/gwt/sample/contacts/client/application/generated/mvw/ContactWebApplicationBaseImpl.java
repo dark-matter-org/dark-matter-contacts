@@ -6,12 +6,24 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.places.LoginPlace;
 
-// Generated from: org.dmd.mvw.tools.mvwgenerator.util.WebApplicationFormatter.formatApplication(WebApplicationFormatter.java:25)
-abstract public class ContactAppBaseImpl {
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.WebApplicationFormatter.formatApplication(WebApplicationFormatter.java:29)
+abstract public class ContactWebApplicationBaseImpl {
 
-    protected ContactAppRunContext rc;
-    protected ContactAppBaseImpl(){
-        rc = GWT.create(ContactAppRunContext.class);
+    protected ContactWebApplicationRunContext rc;
+
+    /**
+     * Use this constructor if you need to use an environment specific run context.
+     */
+    protected ContactWebApplicationBaseImpl(ContactWebApplicationRunContext r){
+        rc = r;
+        initialize();
+    }
+
+    /**
+     * Use this constructor if you want to use the default run context.
+     */
+    protected ContactWebApplicationBaseImpl(){
+        rc = GWT.create(ContactWebApplicationRunContext.class);
         initialize();
     }
 

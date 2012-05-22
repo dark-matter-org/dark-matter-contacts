@@ -51,7 +51,7 @@ description			The ContactAppController provides an overall control point
  automatically register for those events on the eventBus (see ContactAppControllerBaseImpl).
  
 WebApplication
-appName				ContactApp
+appName				ContactWebApplication
 usesController		CommsController
 defaultPlace		LoginPlace
 
