@@ -15,7 +15,6 @@ import com.extjs.gxt.ui.client.widget.layout.FormLayout;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.forms.ContactBinding;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF.EditContactViewPresenterIF;
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;
-import com.google.gwt.user.client.ui.AbstractImagePrototype;
 
 public class ContactForm extends GxtFormPanel implements GxtCancelButtonListenerIF, GxtApplyButtonListenerIF {
 

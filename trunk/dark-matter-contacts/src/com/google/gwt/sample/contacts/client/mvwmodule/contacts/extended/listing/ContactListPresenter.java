@@ -1,5 +1,6 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -203,6 +204,12 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 			view.displayFeedback(contact.getFirstName() + " " + contact.getLastName() + " has been updated.");
 		}
 		placeController.goTo(new ListContactsPlace(""));
+	}
+
+	@Override
+	public void exampleMethod(Date date) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

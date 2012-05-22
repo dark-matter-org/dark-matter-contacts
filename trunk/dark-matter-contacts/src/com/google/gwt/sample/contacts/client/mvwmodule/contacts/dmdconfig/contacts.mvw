@@ -37,7 +37,12 @@ eventName       DeleteContactsEvent
 argVector		(List<ContactGXT> deletedContacts)
 importThis		java.util.List
 importThis		com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
-description     Indicates one or more contacts to be deleted.
+description     Indicates one or more contacts to be deleted. Events can be fired by
+ Views in different ways e.g. local, broadcast or broadcastOnly. If an Event is 
+ only ever fired locally, no GWT Event will be created for it. For either of the 
+ broadcast situations, a GWT Event will be generated. A broadcast event is sent first
+ to the presenter and then on the event bus. A broadcast only event is only sent
+ on the event bus.
  
 Event
 eventName       ContactUpdatedEvent
@@ -108,19 +113,29 @@ broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
 broadcastOnly		LogoutEvent
-viewMethod			void displayContacts(HashMap<DmcObjectName, GxtWrapper> contacts)
+viewMethod			void displayContacts(HashMap<DmcObjectName, GxtWrapper> contacts) 
+ This is called when the presenter has the contacts available.
 viewMethod			void deleteContact(ContactGXT contact)
+ This is called when the presenter receives a deletion event for a contact.
 viewMethod			void addContact(ContactGXT contact)
+  This is called when a new contact has been successfully created on the server.
 viewMethod			void resetToEmpty()
-//viewMethod			void updateContact(ContactGXT contact)
-viewMethod			void contactsSelected(List<ContactGXT> contacts)
+ The presenter will call this when it wants to wipe the current set of data being displayed.
 viewMethod			void displayFeedback(String info)
+ This method will display the specified feedback message.
 viewMethod			void displayError(String info)
-//viewImport			java.util.List
+ This message will display an error indication.
+viewImport			java.util.List
 viewImport			com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
 viewImport			java.util.HashMap
 viewImport			org.dmd.dmc.DmcObjectName
 viewImport			org.dmd.mvw.client.gxt.dmw.GxtWrapper
+presenterMethod		void exampleMethod(Date date)
+ This is just an example of how to define a method for your presenter. You can stick with the
+ event paradigm if you wish, but if you need to get information back from the presenter, you'll
+ need to use something like this. Make sure that you provide a presenterImport spec for any 
+ required imports.
+presenterImport		java.util.Date	
 usesRunContextItem	images
 description			The ContactListView displays a list of Contacts and shows the first
  and last names and the email address of the contact.

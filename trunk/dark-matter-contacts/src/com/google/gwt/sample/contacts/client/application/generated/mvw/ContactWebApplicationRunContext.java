@@ -2,32 +2,32 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:99)
-import com.google.gwt.activity.shared.ActivityManager;                                                                         // Used by activityManager - RunContextItem.java:321
-import com.google.gwt.core.client.GWT;                                                                                         // Used by dmpConnection - RunContextItem.java:324
-import com.google.gwt.core.client.RunAsyncCallback;                                                                            // Handling runAsync() results - RunContextItem.java:339
-import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - RunContextItem.java:321
-import com.google.gwt.place.shared.PlaceHistoryHandler;                                                                        // Used by historyHandler - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                                        // Used by ContactAppControllerRCI - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.application.generated.mvw.places.ContactWebApplicationPlaceHistoryMapper;         // Used by historyMapper - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                 // Used by EditContactViewRCI - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListPresenter;                         // Used by ContactListPresenterRCI - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListView;                              // Used by ContactListViewRCI - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterAsyncIF;          // Needed to create ContactListPresenter instances asynchronously - RunContextItem.java:337
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF;                         // The ContactListView - RunContextItem.java:333
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;                         // The EditContactView - RunContextItem.java:333
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images;                                              // Used by images - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                               // Used by LoginViewRCI - RunContextItem.java:321
-import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                                  // The LoginView - RunContextItem.java:333
-import de.novanic.eventservice.client.event.RemoteEventService;                                                                // Used by eventService - RunContextItem.java:321
-import de.novanic.eventservice.client.event.RemoteEventServiceFactory;                                                         // Used by eventService - RunContextItem.java:324
-import org.dmd.dmp.client.DMPService;                                                                                          // Used by dmpConnection - RunContextItem.java:324
-import org.dmd.dmp.client.DMPServiceAsync;                                                                                     // Used by dmpConnection - RunContextItem.java:321
-import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache - RunContextItem.java:321
-import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                               // Used by activityMapper - RunContextItem.java:321
-import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Used by centralAsyncErrorHandler - RunContextItem.java:321
-import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - RunContextItem.java:321
-import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - RunContextItem.java:324
-import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - RunContextItem.java:321
+import com.google.gwt.activity.shared.ActivityManager;                                                                         // Used by activityManager - RunContextItem.java:325
+import com.google.gwt.core.client.GWT;                                                                                         // Used by dmpConnection - RunContextItem.java:328
+import com.google.gwt.core.client.RunAsyncCallback;                                                                            // Handling runAsync() results - RunContextItem.java:343
+import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - RunContextItem.java:325
+import com.google.gwt.place.shared.PlaceHistoryHandler;                                                                        // Used by historyHandler - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                                        // Used by ContactAppControllerRCI - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.application.generated.mvw.places.ContactWebApplicationPlaceHistoryMapper;         // Used by historyMapper - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                 // Used by EditContactViewRCI - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListPresenter;                         // Used by ContactListPresenterRCI - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListView;                              // Used by ContactListViewRCI - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterAsyncIF;          // Needed to create ContactListPresenter instances asynchronously - RunContextItem.java:341
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.ContactListViewIF;                         // The ContactListView - RunContextItem.java:337
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;                         // The EditContactView - RunContextItem.java:337
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.resources.Images;                                              // Used by images - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                               // Used by LoginViewRCI - RunContextItem.java:325
+import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                                  // The LoginView - RunContextItem.java:337
+import de.novanic.eventservice.client.event.RemoteEventService;                                                                // Used by eventService - RunContextItem.java:325
+import de.novanic.eventservice.client.event.RemoteEventServiceFactory;                                                         // Used by eventService - RunContextItem.java:328
+import org.dmd.dmp.client.DMPService;                                                                                          // Used by dmpConnection - RunContextItem.java:328
+import org.dmd.dmp.client.DMPServiceAsync;                                                                                     // Used by dmpConnection - RunContextItem.java:325
+import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache - RunContextItem.java:325
+import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                               // Used by activityMapper - RunContextItem.java:325
+import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Used by centralAsyncErrorHandler - RunContextItem.java:325
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - RunContextItem.java:325
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - RunContextItem.java:328
+import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - RunContextItem.java:325
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:101)
 public class ContactWebApplicationRunContext implements ContactWebApplicationRunContextIF {

@@ -202,7 +202,12 @@ public class ContactListView extends ContactListViewBaseImpl {
 		contactList.setContacts(contacts);
 	}
 
-	@Override
+	/**
+	 * This is just a local method that the list panel can call to let us know
+	 * that the selection has changed. Depending on how picky you want to be, this
+	 * could have been defined as a viewMethod.
+	 * @param contacts the currently selected contacts.
+	 */
 	public void contactsSelected(List<ContactGXT> contacts) {
 		if (contacts.size() > 0)
 			deleteButton.enable();
