@@ -3,14 +3,14 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.a
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                                   // Is abstract activity - Activity.java:129
-import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus - RunContextItem.java:316
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                            // Used by EditContactViewRCI - RunContextItem.java:316
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context - RunContextItem.java:306
+import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus - RunContextItem.java:320
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                            // Used by EditContactViewRCI - RunContextItem.java:320
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context - RunContextItem.java:310
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEvent;                             // Required by AddContactCompleteEvent - Event.java:183
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                           // Required by EditContactCancelledEvent - Event.java:183
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCompleteEvent;                            // Required by EditContactCompleteEvent - Event.java:183
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;                                    // View interface - View.java:116
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF.EditContactViewPresenterIF;         // Presenter interface - View.java:115
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF;                                    // View interface - View.java:126
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views.EditContactViewIF.EditContactViewPresenterIF;         // Presenter interface - View.java:125
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                                    // Component uses Contact objects - Component.java:257
 import org.dmd.dmc.DmcObjectName;                                                                                                         // Required type
 import org.dmd.dmc.DmcValueException;                                                                                                     // Used when creating SetRequests - Component.java:259
@@ -26,10 +26,10 @@ import org.dmd.dmp.shared.generated.dmo.SetRequestDMO;                          
 import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;                                                                                   // Component receives SetResponses - Component.java:255
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                               // DMP communications - Component.java:393
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                                                                               // Used when creating SetRequests - Component.java:260
-import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                                    // Used by placeController - RunContextItem.java:316
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context - RunContextItem.java:306
-import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController - RunContextItem.java:316
-import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context - RunContextItem.java:306
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                                    // Used by placeController - RunContextItem.java:320
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context - RunContextItem.java:310
+import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController - RunContextItem.java:320
+import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context - RunContextItem.java:310
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ActivityFormatter.formatActivity(ActivityFormatter.java:23)
 abstract public class EditContactActivityBaseImpl extends AbstractActivity  implements EditContactViewPresenterIF, ResponseHandlerIF {

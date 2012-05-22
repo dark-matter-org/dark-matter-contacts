@@ -124,7 +124,7 @@
             <a class="navLink" href="contacts.html">contacts</a>
             </td>
             <td colspan="2" class="description">            <div class="argvector">(List<ContactGXT> deletedContacts) </div> <p/> 
-            Indicates one or more contacts to be deleted.
+            Indicates one or more contacts to be deleted. Events can be fired by Views in different ways e.g. local, broadcast or broadcastOnly. If an Event is  only ever fired locally, no GWT Event will be created for it. For either of the  broadcast situations, a GWT Event will be generated. A broadcast event is sent first to the presenter and then on the event bus. A broadcast only event is only sent on the event bus.
             </td>
         </tr>
         <tr>
