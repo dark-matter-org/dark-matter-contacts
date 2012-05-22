@@ -2,14 +2,13 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.a
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
-import com.google.gwt.activity.shared.AbstractActivity;                                                                       // Is abstract activity
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListPresenter;                        // Used by ContactListPresenterRCI
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                           // Contacts run context
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterAsyncIF;         // Asynchronous creation of ContactListPresenter
-import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                        // Used by placeController
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                  // Mvw run context
-import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                  // Used by commsController
-import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                        // Mvwcomms run context
+import com.google.gwt.activity.shared.AbstractActivity;                                                                       // Is abstract activity - Activity.java:129
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                           // Contacts run context - RunContextItem.java:306
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.presenters.ContactListPresenterAsyncIF;         // Asynchronous creation of ContactListPresenter - RunContextItem.java:313
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                        // Used by placeController - RunContextItem.java:316
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                  // Mvw run context - RunContextItem.java:306
+import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                  // Used by commsController - RunContextItem.java:316
+import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                        // Mvwcomms run context - RunContextItem.java:306
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ActivityFormatter.formatActivity(ActivityFormatter.java:23)
 abstract public class ListContactsActivityBaseImpl extends AbstractActivity implements ContactListPresenterAsyncIF {

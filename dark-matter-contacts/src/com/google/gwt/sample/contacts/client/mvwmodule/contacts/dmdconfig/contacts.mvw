@@ -116,10 +116,10 @@ viewMethod			void resetToEmpty()
 viewMethod			void contactsSelected(List<ContactGXT> contacts)
 viewMethod			void displayFeedback(String info)
 viewMethod			void displayError(String info)
-viewImport			java.util.List
+//viewImport			java.util.List
+viewImport			com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
 viewImport			java.util.HashMap
 viewImport			org.dmd.dmc.DmcObjectName
-viewImport			com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT
 viewImport			org.dmd.mvw.client.gxt.dmw.GxtWrapper
 usesRunContextItem	images
 description			The ContactListView displays a list of Contacts and shows the first

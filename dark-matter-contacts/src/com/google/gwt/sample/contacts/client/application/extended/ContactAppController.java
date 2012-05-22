@@ -7,7 +7,7 @@ import org.dmd.dmp.shared.generated.dmo.LogoutResponseDMO;
 import org.dmd.dmp.shared.generated.dmo.RequestDMO;
 
 import com.extjs.gxt.ui.client.widget.MessageBox;
-import com.google.gwt.sample.contacts.client.application.generated.mvw.ContactAppRunContext;
+import com.google.gwt.sample.contacts.client.application.generated.mvw.ContactWebApplicationRunContextIF;
 import com.google.gwt.sample.contacts.client.application.generated.mvw.controllers.ContactAppControllerBaseImpl;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.places.EditPlace;
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.places.ListContactsPlace;
@@ -18,12 +18,12 @@ public class ContactAppController extends ContactAppControllerBaseImpl {
 	
 	Logger logger = Logger.getLogger("dmcontacts");
 
-	public ContactAppController(ContactAppRunContext rc) {
+	public ContactAppController(ContactWebApplicationRunContextIF rc) {
 		super(rc);
 				
 		// For the purposes of this example, we turn on message tracking throughout the system.
 		// All messages that are sent will be tracked via logging messages on the server.
-		// Loggin on the server must be at level TRACE.
+		// Logging on the server must be at level TRACE.
 		commsController.setGlobalMessageTracking(true);
 		
 		// This turns on tracing of the messages and events as they pass through the comms controller

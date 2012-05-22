@@ -15,7 +15,7 @@ import org.dmd.dmc.types.UUIDName;    // key type import
  * The DmcTypeContactREFMAP provides storage for a map of ContactREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2686)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2685)
  *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:540)
  */
 @SuppressWarnings("serial")
@@ -56,7 +56,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2740)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2739)
     public DmcAttribute<ContactREF> cloneIt(){
         synchronized(this){
             DmcTypeContactREFMAP rc = getNew();
@@ -71,7 +71,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2756)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2755)
     public ContactREF add(Object v) throws DmcValueException {
         synchronized(this){
             ContactREF newval = typeCheck(v);
@@ -91,7 +91,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2777)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2776)
     public ContactREF del(Object key){
         synchronized(this){
            if (key instanceof UUIDName)
@@ -102,7 +102,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2789)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2788)
     public Iterator<ContactREF> getMV(){
         synchronized(this){
             Map<UUIDName,ContactREF> clone = null;
@@ -114,7 +114,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2802)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2801)
     public Map<UUIDName,ContactREF> getMVCopy(){
         synchronized(this){
             Map<UUIDName,ContactREF> clone = null;
@@ -126,7 +126,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2815)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2814)
     @Override
     public int getMVSize(){
         synchronized(this){
@@ -137,7 +137,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2827)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2826)
     public ContactREF getByKey(Object key){
         synchronized(this){
             if (key instanceof UUIDName)
@@ -148,7 +148,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2839)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2838)
     public boolean contains(Object v){
         synchronized(this){
             try {
@@ -161,7 +161,7 @@ public class DmcTypeContactREFMAP extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2860)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2859)
     public boolean containsKey(Object key){
         synchronized(this){
            if (key instanceof UUIDName)

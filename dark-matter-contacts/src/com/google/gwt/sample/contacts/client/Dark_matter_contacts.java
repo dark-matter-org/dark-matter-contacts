@@ -1,7 +1,7 @@
 package com.google.gwt.sample.contacts.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.sample.contacts.client.application.extended.ContactApp;
+import com.google.gwt.sample.contacts.client.application.extended.ContactWebApplication;
 import com.google.gwt.user.client.Window;
 
 /**
@@ -9,7 +9,7 @@ import com.google.gwt.user.client.Window;
  */
 public class Dark_matter_contacts implements EntryPoint {
 	
-	ContactApp	app;
+	ContactWebApplication	app;
 	
 	/**
 	 * This is the entry point method.
@@ -21,7 +21,7 @@ public class Dark_matter_contacts implements EntryPoint {
 		System.out.println("useragent   = " + Window.Navigator.getUserAgent());
 		System.out.println("platform    = " + Window.Navigator.getPlatform());
 		
-		app = new ContactApp();
+		app = new ContactWebApplication();
 		
 		app.run();
 	}

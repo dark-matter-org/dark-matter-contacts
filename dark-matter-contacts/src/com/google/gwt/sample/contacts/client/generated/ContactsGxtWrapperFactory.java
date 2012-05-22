@@ -4,9 +4,9 @@ package com.google.gwt.sample.contacts.client.generated;
 // Called from: org.dmd.mvw.gxt.dmw.generators.GxtDMWGenerator.createAutoWrapperNEW(GxtDMWGenerator.java:211)
 import com.google.gwt.sample.contacts.client.generated.gxt.*;         // Access to the wrappers for the contacts schema
 import com.google.gwt.sample.contacts.shared.generated.dmo.*;         // Access to the DMOs for the contacts schema
-import org.dmd.dmc.DmcObject;                                         // The object we wrap
-import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                         // The wrapper we return
-import org.dmd.mvw.client.gxt.dmw.GxtWrapperFactoryIF;                // The standard wrapper util interface
+import org.dmd.dmc.DmcObject;                                         // The object we wrap - GxtDMWGenerator.java:252
+import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                         // The wrapper we return - GxtDMWGenerator.java:253
+import org.dmd.mvw.client.gxt.dmw.GxtWrapperFactoryIF;                // The standard wrapper util interface - GxtDMWGenerator.java:254
 
 // Generated from: org.dmd.mvw.gxt.dmw.generators.GxtDMWGenerator.createAutoWrapperNEW(GxtDMWGenerator.java:214)
 public class ContactsGxtWrapperFactory implements GxtWrapperFactoryIF {

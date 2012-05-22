@@ -2,10 +2,10 @@ package com.google.gwt.sample.contacts.client.generated;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.gxt.dmw.generators.GxtDMWGenerator.createAutoWrapper(GxtDMWGenerator.java:104)
-import com.google.gwt.sample.contacts.client.generated.gxt.*;         // Access to the wrappers for the contacts schema
-import com.google.gwt.sample.contacts.shared.generated.dmo.*;         // Access to the DMOs for the contacts schema
-import org.dmd.dmc.DmcObject;                                         // The object we wrap
-import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                         // The wrapper we return
+import com.google.gwt.sample.contacts.client.generated.gxt.*;         // Access to the wrappers for the contacts schema - GxtDMWGenerator.java:192
+import com.google.gwt.sample.contacts.shared.generated.dmo.*;         // Access to the DMOs for the contacts schema - GxtDMWGenerator.java:193
+import org.dmd.dmc.DmcObject;                                         // The object we wrap - GxtDMWGenerator.java:135
+import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                         // The wrapper we return - GxtDMWGenerator.java:136
 
 // Generated from: org.dmd.mvw.gxt.dmw.generators.GxtDMWGenerator.createAutoWrapper(GxtDMWGenerator.java:107)
 public class ContactsGxtWrapperUtil {

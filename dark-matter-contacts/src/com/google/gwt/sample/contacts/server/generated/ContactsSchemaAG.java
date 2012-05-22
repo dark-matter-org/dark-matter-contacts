@@ -66,7 +66,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             me.setName("contacts");
             me.setSchemaPackage("com.google.gwt.sample.contacts.shared");
             me.setDmwPackage("com.google.gwt.sample.contacts.server");
-            me.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/contacts.dms");
+            me.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/contacts.dms");
 
             initClasses();
             initAttributes1();
@@ -84,7 +84,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _ContactOBJ.setName("Contact");
             _ContactOBJ.setDmdID("1001");
             _ContactOBJ.setClassType("STRUCTURAL");
-            _ContactOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/classes.dmd");
+            _ContactOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/classes.dmd");
             _ContactOBJ.setLineNumber("20");
             _ContactOBJ.setDescription("The Contact class is used to represent contact information for an individual.");
             _ContactOBJ.setIsNamedBy("uuidName");
@@ -118,7 +118,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _firstNameOBJ.setDmdID("1000");
             _firstNameOBJ.setDescription("A contact's first name.");
             _firstName.setDefinedIn(this);
-            _firstNameOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _firstNameOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _firstNameOBJ.setLineNumber("6");
             addAttributeDefList(_firstName);
 
@@ -130,7 +130,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _middleNameOBJ.setDmdID("1001");
             _middleNameOBJ.setDescription("A contact's middle name.");
             _middleName.setDefinedIn(this);
-            _middleNameOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _middleNameOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _middleNameOBJ.setLineNumber("12");
             addAttributeDefList(_middleName);
 
@@ -142,7 +142,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _lastNameOBJ.setDmdID("1002");
             _lastNameOBJ.setDescription("A contact's last name.");
             _lastName.setDefinedIn(this);
-            _lastNameOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _lastNameOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _lastNameOBJ.setLineNumber("18");
             addAttributeDefList(_lastName);
 
@@ -154,7 +154,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _prefixCEOBJ.setDmdID("1003");
             _prefixCEOBJ.setDescription("The prefix for a contact's name e.g. Mrs. Mr. Dr. etc.");
             _prefixCE.setDefinedIn(this);
-            _prefixCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _prefixCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _prefixCEOBJ.setLineNumber("24");
             addAttributeDefList(_prefixCE);
 
@@ -166,7 +166,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _suffixCEOBJ.setDmdID("1004");
             _suffixCEOBJ.setDescription("The suffix for a contact's name e.g. PhD. DMD. etc.");
             _suffixCE.setDefinedIn(this);
-            _suffixCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _suffixCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _suffixCEOBJ.setLineNumber("30");
             addAttributeDefList(_suffixCE);
 
@@ -178,7 +178,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _nickNameOBJ.setDmdID("1005");
             _nickNameOBJ.setDescription("The nickname for a contact.");
             _nickName.setDefinedIn(this);
-            _nickNameOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _nickNameOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _nickNameOBJ.setLineNumber("36");
             addAttributeDefList(_nickName);
 
@@ -190,7 +190,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _titleAndCompanyOBJ.setDmdID("1006");
             _titleAndCompanyOBJ.setDescription("The person's job title and company info.");
             _titleAndCompany.setDefinedIn(this);
-            _titleAndCompanyOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _titleAndCompanyOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _titleAndCompanyOBJ.setLineNumber("42");
             addAttributeDefList(_titleAndCompany);
 
@@ -201,7 +201,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _phoneNumberCEOBJ.setName("phoneNumberCE");
             _phoneNumberCEOBJ.setDmdID("1007");
             _phoneNumberCE.setDefinedIn(this);
-            _phoneNumberCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _phoneNumberCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _phoneNumberCEOBJ.setLineNumber("47");
             addAttributeDefList(_phoneNumberCE);
 
@@ -212,7 +212,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _emailCEOBJ.setName("emailCE");
             _emailCEOBJ.setDmdID("1008");
             _emailCE.setDefinedIn(this);
-            _emailCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _emailCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _emailCEOBJ.setLineNumber("52");
             addAttributeDefList(_emailCE);
 
@@ -223,7 +223,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _birthdayCEOBJ.setName("birthdayCE");
             _birthdayCEOBJ.setDmdID("1009");
             _birthdayCE.setDefinedIn(this);
-            _birthdayCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _birthdayCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _birthdayCEOBJ.setLineNumber("57");
             addAttributeDefList(_birthdayCE);
 
@@ -236,7 +236,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _urlCEOBJ.setDescription("A collection of URLs associated with a contact.");
             _urlCEOBJ.setValueType("MULTI");
             _urlCE.setDefinedIn(this);
-            _urlCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _urlCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _urlCEOBJ.setLineNumber("64");
             addAttributeDefList(_urlCE);
 
@@ -248,7 +248,7 @@ public class ContactsSchemaAG extends SchemaDefinition {
             _notesCEOBJ.setDmdID("1011");
             _notesCEOBJ.setDescription("Random notes about the contact.");
             _notesCE.setDefinedIn(this);
-            _notesCEOBJ.setFile("/Users/peter/bvw/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
+            _notesCEOBJ.setFile("C:/DevSVN2/map-exploration/dark-matter-contacts/src/com/google/gwt/sample/contacts/shared/dmdconfig/attributes.dmd");
             _notesCEOBJ.setLineNumber("70");
             addAttributeDefList(_notesCE);
 
