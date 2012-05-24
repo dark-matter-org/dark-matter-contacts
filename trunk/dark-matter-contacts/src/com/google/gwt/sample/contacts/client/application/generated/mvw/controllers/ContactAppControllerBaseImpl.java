@@ -2,36 +2,36 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw.controll
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
-import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - RunContextItem.java:320
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent - Event.java:190
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEventHandler;                   // Required by AddContactEvent - Event.java:191
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                // Required by EditContactCancelledEvent - Event.java:190
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEventHandler;         // Required by EditContactCancelledEvent - Event.java:191
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEvent;                         // Required by EditContactEvent - Event.java:190
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEventHandler;                  // Required by EditContactEvent - Event.java:191
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                         // Required type
-import org.dmd.dmp.client.CentralRPCErrorHandlerIF;                                                                            // Is the central RPC error handler - Controller.java:94
-import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                    // DMP communications - Component.java:390
-import org.dmd.dmp.client.ResponseHandlerIF;                                                                                   // DMP communications - Component.java:389
-import org.dmd.dmp.shared.generated.dmo.LogoutRequestDMO;                                                                      // Component sends LogoutRequests - Component.java:254
-import org.dmd.dmp.shared.generated.dmo.LogoutResponseDMO;                                                                     // Component receives LogoutResponses - Component.java:255
-import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                            // DMP communications - Component.java:391
-import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                                           // DMP communications - Component.java:392
-import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                    // DMP communications - Component.java:393
-import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache - RunContextItem.java:320
-import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                   // Gxt run context - RunContextItem.java:310
-import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Is the central async code error handler - Controller.java:97
-import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - RunContextItem.java:320
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context - RunContextItem.java:310
-import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - RunContextItem.java:320
-import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                         // Mvwcomms run context - RunContextItem.java:310
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.ForceCommsReset;                                                       // Required by ForceCommsReset - Event.java:183
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEvent;                                                    // Required by LoginCompleteEvent - Event.java:190
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEventHandler;                                             // Required by LoginCompleteEvent - Event.java:191
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEvent;                                                   // Required by LogoutCompleteEvent - Event.java:190
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandler;                                            // Required by LogoutCompleteEvent - Event.java:191
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEvent;                                                           // Required by LogoutEvent - Event.java:190
-import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEventHandler;                                                    // Required by LogoutEvent - Event.java:191
+import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - (RunContextItem.java:320)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent - (Event.java:190)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEventHandler;                   // Required by AddContactEvent - (Event.java:191)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                // Required by EditContactCancelledEvent - (Event.java:190)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEventHandler;         // Required by EditContactCancelledEvent - (Event.java:191)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEvent;                         // Required by EditContactEvent - (Event.java:190)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactEventHandler;                  // Required by EditContactEvent - (Event.java:191)
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                         // Required type - (Event.java:52)
+import org.dmd.dmp.client.CentralRPCErrorHandlerIF;                                                                            // Is the central RPC error handler - (Controller.java:93)
+import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                    // DMP communications - (Component.java:390)
+import org.dmd.dmp.client.ResponseHandlerIF;                                                                                   // DMP communications - (Component.java:389)
+import org.dmd.dmp.shared.generated.dmo.LogoutRequestDMO;                                                                      // Component sends LogoutRequests - (Component.java:254)
+import org.dmd.dmp.shared.generated.dmo.LogoutResponseDMO;                                                                     // Component receives LogoutResponses - (Component.java:255)
+import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                            // DMP communications - (Component.java:391)
+import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                                           // DMP communications - (Component.java:392)
+import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                    // DMP communications - (Component.java:393)
+import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                  // Used by gxtCache - (RunContextItem.java:320)
+import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                   // Gxt run context - (RunContextItem.java:310)
+import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Is the central async code error handler - (Controller.java:96)
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context - (RunContextItem.java:310)
+import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                         // Mvwcomms run context - (RunContextItem.java:310)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.ForceCommsReset;                                                       // Required by ForceCommsReset - (Event.java:183)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEvent;                                                    // Required by LoginCompleteEvent - (Event.java:190)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LoginCompleteEventHandler;                                             // Required by LoginCompleteEvent - (Event.java:191)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEvent;                                                   // Required by LogoutCompleteEvent - (Event.java:190)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandler;                                            // Required by LogoutCompleteEvent - (Event.java:191)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEvent;                                                           // Required by LogoutEvent - (Event.java:190)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEventHandler;                                                    // Required by LogoutEvent - (Event.java:191)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ControllerFormatter.formatControllerBaseImpl(ControllerFormatter.java:24)
 abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralRPCErrorHandlerIF, MvwAsyncErrorHandlerIF {
