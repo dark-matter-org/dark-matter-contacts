@@ -2,16 +2,16 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.f
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.FormBindingFormatter.formatFormBinding(FormBindingFormatter.java:58)
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;            // For the object we're editting - FormBindingFormatter.java:54
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;         // Required schema - FormBindingFormatter.java:49
-import org.dmd.dmc.DmcNamedObjectIF;                                              // Used when testing if an object named - FormBindingFormatter.java:32
-import org.dmd.dmc.DmcValueException;                                             // Required if we have modification errors - FormBindingFormatter.java:33
-import org.dmd.dmc.DmcValueExceptionSet;                                          // Required if we have modification errors - FormBindingFormatter.java:34
-import org.dmd.dmc.presentation.DmcPresentationTrackerIF;                         // Presentation tracker - FormBindingFormatter.java:44
-import org.dmd.dms.generated.dmo.MetaDMSAG;                                       // Required when edit object has no name - FormBindingFormatter.java:35
-import org.dmd.dms.generated.types.DmcTypeModifierMV;                             // Required when edit object has no name - FormBindingFormatter.java:36
-import org.dmd.dms.generated.types.adapters.StringSVAdapter;                      // Adapter for firstName - FormBindingFormatter.java:46
-import org.dmd.mvw.client.gxtforms.editors.GxtTextField;                          // Editor - FormBindingFormatter.java:47
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;            // For the object we're editting - (FormBindingFormatter.java:54)
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;         // Required schema - (FormBindingFormatter.java:49)
+import org.dmd.dmc.DmcNamedObjectIF;                                              // Used when testing if an object named - (FormBindingFormatter.java:32)
+import org.dmd.dmc.DmcValueException;                                             // Required if we have modification errors - (FormBindingFormatter.java:33)
+import org.dmd.dmc.DmcValueExceptionSet;                                          // Required if we have modification errors - (FormBindingFormatter.java:34)
+import org.dmd.dmc.presentation.DmcPresentationTrackerIF;                         // Presentation tracker - (FormBindingFormatter.java:44)
+import org.dmd.dms.generated.dmo.MetaDMSAG;                                       // Required when edit object has no name - (FormBindingFormatter.java:35)
+import org.dmd.dms.generated.types.DmcTypeModifierMV;                             // Required when edit object has no name - (FormBindingFormatter.java:36)
+import org.dmd.dms.generated.types.adapters.StringSVAdapter;                      // Adapter for firstName - (FormBindingFormatter.java:46)
+import org.dmd.mvw.client.gxtforms.editors.GxtTextField;                          // Editor - (FormBindingFormatter.java:47)
 
 // org.dmd.mvw.tools.mvwgenerator.util.FormBindingFormatter.formatFormBinding(FormBindingFormatter.java:60)
 public class ContactBinding {

@@ -1,13 +1,13 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:258)
-import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // Required by DeleteContactsEvent - View.java:147
-import java.util.Date;                                                         // View import - View.java:207
-import java.util.HashMap;                                                      // View import - View.java:189
-import java.util.List;                                                         // Required by DeleteContactsEvent - View.java:147
-import org.dmd.dmc.DmcObjectName;                                              // View import - View.java:189
-import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                  // View import - View.java:189
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:257)
+import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // Required by DeleteContactsEvent - (View.java:146)
+import java.util.Date;                                                         // View import - (View.java:206)
+import java.util.HashMap;                                                      // View import - (View.java:188)
+import java.util.List;                                                         // Required by DeleteContactsEvent - (View.java:146)
+import org.dmd.dmc.DmcObjectName;                                              // View import - (View.java:188)
+import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                  // View import - (View.java:188)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:23)
 public interface ContactListViewIF {

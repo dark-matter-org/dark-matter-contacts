@@ -1,12 +1,12 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:264)
-import com.google.gwt.event.shared.EventBus;                                                                            // Used by eventBus - RunContextItem.java:320
-import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;         // Required by EditContactCancelledEvent - Event.java:175
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                  // Required by ContactUpdatedEvent - View.java:148
-import com.google.gwt.user.client.ui.IsWidget;                                                                          // Implements IsWidget - View.java:154
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                            // Using run context items - View.java:132
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:263)
+import com.google.gwt.event.shared.EventBus;                                                                            // Used by eventBus - (RunContextItem.java:320)
+import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;         // Required by EditContactCancelledEvent - (Event.java:175)
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                  // Required by ContactUpdatedEvent - (View.java:147)
+import com.google.gwt.user.client.ui.IsWidget;                                                                          // Implements IsWidget - (View.java:153)
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                            // Using run context items - (View.java:131)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:53)
 abstract public class EditContactViewBaseImpl implements EditContactViewIF, IsWidget {
@@ -21,19 +21,19 @@ abstract public class EditContactViewBaseImpl implements EditContactViewIF, IsWi
         eventBus = ((MvwRunContextIF)rc).getEventBus();
     }
 
-    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:143)
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:142)
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:317)
     protected void fireContactUpdatedEvent(ContactDMO modrec){
         presenter.onContactUpdatedEvent(modrec);
     }
 
-    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:143)
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:142)
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:317)
     protected void fireNewContactEvent(ContactDMO contact){
         presenter.onNewContactEvent(contact);
     }
 
-    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:178)
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:177)
     // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewBroadcastOnlyMethod(Event.java:380)
     protected void fireEditContactCancelledEvent(){
         eventBus.fireEvent(new EditContactCancelledEvent());
