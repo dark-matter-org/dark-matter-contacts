@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="extjars/gxt-2.2.4-gwt22.jar"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="lib" path="extjars/slf4j-api-1.5.11.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dark-matter-mvw22"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dark-matter-mvwgxt224"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
