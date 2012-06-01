@@ -10,6 +10,6 @@
 <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.dmd.mvw.tools.mvwgenerator.MvwGeneratorMain"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-contacts/src dark-matter-data/src -docdir dark-matter-contacts/dmsdoc -autogen"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-mvw22/src dark-matter-contacts/src dark-matter-data/src -docdir dark-matter-contacts/dmsdoc -autogen"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dark-matter-contacts"/>
 </launchConfiguration>
