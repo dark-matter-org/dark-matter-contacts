@@ -1,6 +1,0 @@
-SliceDefinition
-name            lightContact
-selectAttribute	firstName
-selectAttribute	lastName
-selectAttribute emailCE
-description 	Get a light version of the Contact.
