@@ -1,0 +1,11 @@
+
+.feedback {
+	text-align: center;
+	font-size: smaller;
+	color: #777777;
+	margin-top: 5px;
+}
+
+.feedback-error {
+    color: #FF0000;
+}
