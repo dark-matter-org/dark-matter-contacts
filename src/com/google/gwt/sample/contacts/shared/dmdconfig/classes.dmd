@@ -1,0 +1,20 @@
+ClassDefinition
+name       	Contact
+classType	STRUCTURAL
+dmdID		1
+isNamedBy  	uuidName
+must		uuidName
+must       	firstName
+must       	lastName
+may       	middleName
+may       	prefixCE
+may        	suffixCE
+may			nickName
+may			titleAndCompany
+may			phoneNumberCE
+may			emailCE
+may			birthdayCE
+may			urlCE
+may			notesCE
+//may			someRelation
+description	The Contact class is used to represent contact information for an individual.

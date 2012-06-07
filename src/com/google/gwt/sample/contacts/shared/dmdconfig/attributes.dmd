@@ -1,0 +1,80 @@
+AttributeDefinition
+name		firstName
+type		String
+dmdID		0
+description A contact's first name.
+
+AttributeDefinition
+name		middleName
+type		String
+dmdID		1
+description A contact's middle name.
+
+AttributeDefinition
+name		lastName
+type		String
+dmdID		2
+description A contact's last name.
+
+AttributeDefinition
+name		prefixCE
+type		String
+dmdID		3
+description The prefix for a contact's name e.g. Mrs. Mr. Dr. etc.
+
+AttributeDefinition
+name		suffixCE
+type		String
+dmdID		4
+description The suffix for a contact's name e.g. PhD. DMD. etc.
+
+AttributeDefinition
+name		nickName
+type		String
+dmdID		5
+description The nickname for a contact.
+
+AttributeDefinition
+name		titleAndCompany
+type		String
+dmdID		6
+description The person's job title and company info.
+
+AttributeDefinition
+name		phoneNumberCE
+type		String
+dmdID		7
+
+AttributeDefinition
+name		emailCE
+type		String
+dmdID		8
+
+AttributeDefinition
+name		birthdayCE
+type		Date
+dmdID		9
+
+AttributeDefinition
+name		urlCE
+type		String
+valueType 	MULTI
+dmdID		10
+description A collection of URLs associated with a contact.
+
+AttributeDefinition
+name		notesCE
+type		String
+dmdID		11
+description Random notes about the contact.
+
+//AttributeDefinition
+//name		someRelation
+//type		SomeRelation
+//valueType       MULTI
+//indexSize       8
+//dmdID		12
+//description Testing extended references.
+
+
+
