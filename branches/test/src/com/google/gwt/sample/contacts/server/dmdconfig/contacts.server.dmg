@@ -1,0 +1,7 @@
+DmgConfig
+genPackage      	com.google.gwt.sample.contacts.server
+schemaToLoad		contacts
+generator			org.dmd.dmg.generators.DmwDMWGenerator
+generatedFileHeader LGPL.txt
+description     	We generate the wrappers for the contacts schema objects that
+ form the basis of the Dark Matter COntacts example.
