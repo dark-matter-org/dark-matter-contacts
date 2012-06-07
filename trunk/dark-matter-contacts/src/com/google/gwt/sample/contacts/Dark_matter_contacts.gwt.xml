@@ -30,7 +30,7 @@
   
   <inherits name="org.dmd.darkmattermvw"/>
   
-  <inherits name="org.dmd.darkmattermvwgxt"/>
+  <inherits name="org.dmd.darkmattergxt"/>
   
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.google.gwt.sample.contacts.client.Dark_matter_contacts'/>
