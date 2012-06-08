@@ -2,10 +2,10 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.v
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:263)
-import com.google.gwt.event.shared.EventBus;                                                                            // Used by eventBus - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;         // Required by EditContactCancelledEvent - (Event.java:175)
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;                                                  // Required by ContactUpdatedEvent - (View.java:147)
 import com.google.gwt.user.client.ui.IsWidget;                                                                          // Implements IsWidget - (View.java:153)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                              // Used by eventBus - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                            // Using run context items - (View.java:131)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:53)
@@ -13,7 +13,7 @@ abstract public class EditContactViewBaseImpl implements EditContactViewIF, IsWi
 
     protected EditContactViewPresenterIF presenter;
 
-    protected final EventBus eventBus;
+    protected final MvwEventBus eventBus;
 
     protected EditContactViewBaseImpl(EditContactViewPresenterIF p, MvwRunContextIF rc){
         presenter = p;

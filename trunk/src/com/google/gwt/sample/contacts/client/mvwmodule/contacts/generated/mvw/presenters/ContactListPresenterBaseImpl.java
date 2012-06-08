@@ -2,7 +2,6 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.p
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
-import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.listing.ContactListView;                                         // Used by ContactListViewRCI - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context - (RunContextItem.java:310)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEvent;                             // Required by AddContactCompleteEvent - (Event.java:190)
@@ -26,6 +25,7 @@ import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                     
 import org.dmd.mvw.client.gxt.cache.GxtCache;                                                                                             // Used by gxtCache - (RunContextItem.java:320)
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                              // Gxt run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                                    // Used by placeController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                                // Used by eventBus - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context - (RunContextItem.java:310)
@@ -38,7 +38,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutCompleteEventHandl
 abstract public class ContactListPresenterBaseImpl implements ContactListViewPresenterIF, ResponseHandlerIF, EventHandlerIF {
 
     protected final CommsController commsController;
-    protected final EventBus eventBus;
+    protected final MvwEventBus eventBus;
     protected final GxtCache gxtCache;
     protected final MvwAsyncPlaceController placeController;
 

@@ -3,7 +3,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw;
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatAppRunContextInterface(RunContextFormatter.java:68)
 import com.google.gwt.activity.shared.ActivityManager;                                                                         // Used by activityManager - (RunContextItem.java:320)
-import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - (RunContextItem.java:320)
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                                        // Used by historyHandler - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                                        // Used by ContactAppControllerRCI - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.application.generated.mvw.ContactsappRunContextIF;                                // Contactsapp run context - (RunContextItem.java:310)
@@ -25,6 +24,7 @@ import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                    
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                               // Used by activityMapper - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Used by centralAsyncErrorHandler - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                         // Mvwcomms run context - (RunContextItem.java:310)
@@ -42,7 +42,7 @@ public interface ContactWebApplicationRunContextIF extends ContactsRunContextIF,
     public MvwAsyncErrorHandlerIF                  getCentralAsyncErrorHandler();
     public CommsController                         getCommsController();
     public DMPServiceAsync                         getDmpConnection();
-    public EventBus                                getEventBus();
+    public MvwEventBus                             getEventBus();
     public RemoteEventService                      getEventService();
     public GxtCache                                getGxtCache();
     public PlaceHistoryHandler                     getHistoryHandler();
