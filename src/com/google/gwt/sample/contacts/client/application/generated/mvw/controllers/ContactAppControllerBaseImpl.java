@@ -2,7 +2,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw.controll
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
-import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEvent;                          // Required by AddContactEvent - (Event.java:190)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactEventHandler;                   // Required by AddContactEvent - (Event.java:191)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.EditContactCancelledEvent;                // Required by EditContactCancelledEvent - (Event.java:190)
@@ -22,6 +21,7 @@ import org.dmd.mvw.client.gxt.cache.GxtCache;                                   
 import org.dmd.mvw.client.gxt.generated.mvw.GxtRunContextIF;                                                                   // Gxt run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Is the central async code error handler - (Controller.java:96)
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                   // Mvw run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                         // Mvwcomms run context - (RunContextItem.java:310)
@@ -37,7 +37,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.events.LogoutEventHandler;     
 abstract public class ContactAppControllerBaseImpl implements ResponseHandlerIF, CentralRPCErrorHandlerIF, MvwAsyncErrorHandlerIF {
 
     protected final CommsController commsController;
-    protected final EventBus eventBus;
+    protected final MvwEventBus eventBus;
     protected final GxtCache gxtCache;
     protected final MvwAsyncPlaceController placeController;
 

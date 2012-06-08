@@ -3,7 +3,6 @@ package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.a
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:154)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                                   // Is abstract activity - (Activity.java:128)
-import com.google.gwt.event.shared.EventBus;                                                                                              // Used by eventBus - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.extended.edit.EditContactView;                                            // Used by EditContactViewRCI - (RunContextItem.java:320)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.ContactsRunContextIF;                                       // Contacts run context - (RunContextItem.java:310)
 import com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.events.AddContactCompleteEvent;                             // Required by AddContactCompleteEvent - (Event.java:183)
@@ -27,6 +26,7 @@ import org.dmd.dmp.shared.generated.dmo.SetResponseDMO;                         
 import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                               // DMP communications - (Component.java:393)
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                                                                               // Used when creating SetRequests - (Component.java:260)
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                                    // Used by placeController - (RunContextItem.java:320)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                                // Used by eventBus - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                                              // Mvw run context - (RunContextItem.java:310)
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                              // Used by commsController - (RunContextItem.java:320)
 import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                                    // Mvwcomms run context - (RunContextItem.java:310)
@@ -35,7 +35,7 @@ import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;          
 abstract public class EditContactActivityBaseImpl extends AbstractActivity  implements EditContactViewPresenterIF, ResponseHandlerIF {
 
     protected final CommsController commsController;
-    protected final EventBus eventBus;
+    protected final MvwEventBus eventBus;
     protected final MvwAsyncPlaceController placeController;
 
     MvwRunContextIF runcontext;

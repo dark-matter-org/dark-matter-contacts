@@ -5,7 +5,6 @@ package com.google.gwt.sample.contacts.client.application.generated.mvw;
 import com.google.gwt.activity.shared.ActivityManager;                                                                         // Used by activityManager - (RunContextItem.java:325)
 import com.google.gwt.core.client.GWT;                                                                                         // Used by dmpConnection - (RunContextItem.java:328)
 import com.google.gwt.core.client.RunAsyncCallback;                                                                            // Handling runAsync() results - (RunContextItem.java:343)
-import com.google.gwt.event.shared.EventBus;                                                                                   // Used by eventBus - (RunContextItem.java:325)
 import com.google.gwt.place.shared.PlaceHistoryHandler;                                                                        // Used by historyHandler - (RunContextItem.java:325)
 import com.google.gwt.sample.contacts.client.application.extended.ContactAppController;                                        // Used by ContactAppControllerRCI - (RunContextItem.java:325)
 import com.google.gwt.sample.contacts.client.application.generated.mvw.places.ContactWebApplicationPlaceHistoryMapper;         // Used by historyMapper - (RunContextItem.java:325)
@@ -26,14 +25,14 @@ import org.dmd.mvw.client.gxt.cache.GxtCache;                                   
 import org.dmd.mvw.client.mvw.MvwActivityMapper;                                                                               // Used by activityMapper - (RunContextItem.java:325)
 import org.dmd.mvw.client.mvw.MvwAsyncErrorHandlerIF;                                                                          // Used by centralAsyncErrorHandler - (RunContextItem.java:325)
 import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                         // Used by placeController - (RunContextItem.java:325)
-import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - (RunContextItem.java:328)
+import org.dmd.mvw.client.mvw.MvwEventBus;                                                                                     // Used by eventBus - (RunContextItem.java:325)
 import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                                   // Used by commsController - (RunContextItem.java:325)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.RunContextFormatter.formatImplementation(RunContextFormatter.java:101)
 public class ContactWebApplicationRunContext implements ContactWebApplicationRunContextIF {
 
     // Defined in module: mvw
-    private final EventBus                                eventBus;
+    private final MvwEventBus                             eventBus;
 
     // Defined in module: mvwcomms
     private final DMPServiceAsync                         dmpConnection;
@@ -79,7 +78,7 @@ public class ContactWebApplicationRunContext implements ContactWebApplicationRun
 
         eventBus                 = new MvwEventBus();
         dmpConnection            = (DMPServiceAsync) GWT.create(DMPService.class);
-        placeController          = new MvwAsyncPlaceController(this, (com.google.gwt.event.shared.EventBus) eventBus);
+        placeController          = new MvwAsyncPlaceController(this, (com.google.web.bindery.event.shared.EventBus) eventBus);
         eventService             = RemoteEventServiceFactory.getInstance().getRemoteEventService();
         commsController          = new CommsController(this);
         activityMapper           = new MvwActivityMapper(this);
@@ -174,7 +173,7 @@ public class ContactWebApplicationRunContext implements ContactWebApplicationRun
 
     // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getImplMethod(RunContextItem.java:269)
     @Override
-    public EventBus getEventBus(){
+    public MvwEventBus getEventBus(){
         return(eventBus);
     }
 
