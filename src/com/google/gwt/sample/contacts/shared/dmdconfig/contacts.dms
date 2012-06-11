@@ -6,6 +6,7 @@ dmwTypeToPackage	gxt com.google.gwt.sample.contacts.client
 schemaBaseID    	1000
 schemaIDRange   	50
 //dependsOn       dmr.base
+defFiles			types.dmd
 defFiles        	attributes.dmd
 defFiles        	classes.dmd
 defFiles			slices.dmd

@@ -1,10 +1,10 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:263)
-import com.google.gwt.user.client.ui.IsWidget;         // Implements IsWidget - (View.java:153)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getViewImplImports(View.java:278)
+import com.google.gwt.user.client.ui.IsWidget;         // Implements IsWidget - (View.java:168)
 
-// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:53)
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewBaseImpl(ViewFormatter.java:68)
 abstract public class LoginViewBaseImpl implements LoginViewIF, IsWidget {
 
     protected LoginViewPresenterIF presenter;
@@ -13,8 +13,8 @@ abstract public class LoginViewBaseImpl implements LoginViewIF, IsWidget {
         presenter = p;
     }
 
-    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:142)
-    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:317)
+    // Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.initCodeGenInfo(View.java:157)
+    // org.dmd.mvw.tools.mvwgenerator.extended.Event.getViewLocalMethod(Event.java:332)
     protected void fireLoginEvent(String username, String password){
         presenter.onLoginEvent(username, password);
     }
