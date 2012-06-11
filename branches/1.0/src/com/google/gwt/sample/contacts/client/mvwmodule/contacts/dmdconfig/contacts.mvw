@@ -25,13 +25,14 @@ description			Image resources for the contact application. If you want to
  </pre>
  in the component where you wanted to access them.
 
-GxtEnumMapping
-mappingName		ContactTypeEnumMapping
-enumName		ContactTypeEnum
-unsetValue		UNKNOWN
+EnumMapping
+mappingName			ContactTypeEnumMapping
+enumName			ContactTypeEnum
+unsetValue			UNKNOWN
 //skipEnumValue	some value you want to skip
-useNameAsLabel	true
-description		Creates a mapping for the type of a Contact.
+useNameAsLabel		true
+mappingGenerator	GXTEnumGenerator
+description			Creates a mapping for the type of a Contact.
 
 
 ///////////////////////////////////////////////////////////////////////////////
