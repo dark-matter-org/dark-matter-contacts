@@ -1,23 +1,23 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.activities;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:169)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.Component.getImports(Component.java:157)
 import com.google.gwt.activity.shared.AbstractActivity;                                                                    // Is abstract activity - (Activity.java:143)
-import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                           // Used by LoginViewRCI - (RunContextItem.java:335)
-import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.LoginRunContextIF;                              // Login run context - (RunContextItem.java:325)
-import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                              // View interface - (View.java:140)
-import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF.LoginViewPresenterIF;         // Presenter interface - (View.java:139)
-import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                // DMP communications - (Component.java:405)
-import org.dmd.dmp.client.ResponseHandlerIF;                                                                               // DMP communications - (Component.java:404)
-import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;                                                                   // Component sends LoginRequests - (Component.java:269)
-import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                                                                  // Component receives LoginResponses - (Component.java:270)
-import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                        // DMP communications - (Component.java:406)
-import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                                       // DMP communications - (Component.java:407)
-import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                // DMP communications - (Component.java:408)
-import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                     // Used by placeController - (RunContextItem.java:335)
-import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                               // Mvw run context - (RunContextItem.java:325)
-import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                               // Used by commsController - (RunContextItem.java:335)
-import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                     // Mvwcomms run context - (RunContextItem.java:325)
+import com.google.gwt.sample.contacts.client.mvwmodule.login.extended.LoginView;                                           // Used by LoginViewRCI - (RunContextItem.java:416)
+import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.LoginRunContextIF;                              // Login run context - (RunContextItem.java:405)
+import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF;                              // View interface - (View.java:155)
+import com.google.gwt.sample.contacts.client.mvwmodule.login.generated.mvw.views.LoginViewIF.LoginViewPresenterIF;         // Presenter interface - (View.java:152)
+import org.dmd.dmp.client.ErrorOptionsEnum;                                                                                // DMP communications - (Component.java:393)
+import org.dmd.dmp.client.ResponseHandlerIF;                                                                               // DMP communications - (Component.java:392)
+import org.dmd.dmp.shared.generated.dmo.LoginRequestDMO;                                                                   // Component sends LoginRequests - (Component.java:257)
+import org.dmd.dmp.shared.generated.dmo.LoginResponseDMO;                                                                  // Component receives LoginResponses - (Component.java:258)
+import org.dmd.dmp.shared.generated.dmo.RequestDMO;                                                                        // DMP communications - (Component.java:394)
+import org.dmd.dmp.shared.generated.dmo.ResponseDMO;                                                                       // DMP communications - (Component.java:395)
+import org.dmd.dmp.shared.generated.enums.ResponseTypeEnum;                                                                // DMP communications - (Component.java:396)
+import org.dmd.mvw.client.mvw.MvwAsyncPlaceController;                                                                     // Used by placeController - (RunContextItem.java:428)
+import org.dmd.mvw.client.mvw.generated.mvw.MvwRunContextIF;                                                               // Mvw run context - (RunContextItem.java:405)
+import org.dmd.mvw.client.mvwcomms.extended.CommsController;                                                               // Used by commsController - (RunContextItem.java:428)
+import org.dmd.mvw.client.mvwcomms.generated.mvw.MvwcommsRunContextIF;                                                     // Mvwcomms run context - (RunContextItem.java:405)
 
 // Generated from: org.dmd.mvw.tools.mvwgenerator.util.ActivityFormatter.formatActivity(ActivityFormatter.java:38)
 abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  implements LoginViewPresenterIF, ResponseHandlerIF {
@@ -37,17 +37,17 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:160)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.RunContextItem.getOnDemandMethod(RunContextItem.java:146)
     public LoginView getNewLoginView(LoginViewIF.LoginViewPresenterIF presenter){
         return( ((LoginRunContextIF)runcontext).getLoginViewRCI(presenter));
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:497)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:485)
     protected void sendLoginRequest(LoginRequestDMO request){
         commsController.sendLoginRequest(request,this,ErrorOptionsEnum.CENTRAL,ErrorOptionsEnum.LOCAL);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:547)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addSendRequestFunction(Component.java:535)
     protected LoginRequestDMO getLoginRequest(){
         LoginRequestDMO request = commsController.getLoginRequest();
         request.setHandlerID(LOGINLOGINCALLBACK);
@@ -55,7 +55,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
         return(request);
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:302)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:290)
     @Override
     final public void handleResponse(ResponseDMO response){
         if (response.getResponseType() == ResponseTypeEnum.ERROR){
@@ -74,7 +74,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
         }
     }
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:336)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component.initCodeGenInfo(Component.java:324)
     @Override
     final public void handleRPCFailure(Throwable caught, RequestDMO request){
         switch(request.getHandlerID()){
@@ -85,7 +85,7 @@ abstract public class PerformLoginActivityBaseImpl extends AbstractActivity  imp
 
     abstract protected void handleLoginResponseError(LoginResponseDMO response);
 
-    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:624)
+    // Generated from: org.dmd.mvw.tools.mvwgenerator.extended.Component$CommsHandler.addHandlers(Component.java:612)
     abstract protected void handleLoginResponse(LoginResponseDMO response);
 
 }

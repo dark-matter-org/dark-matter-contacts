@@ -1,15 +1,15 @@
 package com.google.gwt.sample.contacts.client.mvwmodule.contacts.generated.mvw.views;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:272)
-import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // Required by DeleteContactsEvent - (View.java:161)
-import java.util.Date;                                                         // View import - (View.java:221)
-import java.util.HashMap;                                                      // View import - (View.java:203)
-import java.util.List;                                                         // Required by DeleteContactsEvent - (View.java:161)
-import org.dmd.dmc.DmcObjectName;                                              // View import - (View.java:203)
-import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                  // View import - (View.java:203)
+// Called from: org.dmd.mvw.tools.mvwgenerator.extended.View.getInterfaceImports(View.java:295)
+import com.google.gwt.sample.contacts.client.generated.gxt.ContactGXT;         // Required by DeleteContactsEvent - (View.java:184)
+import java.util.Date;                                                         // View import - (View.java:244)
+import java.util.HashMap;                                                      // View import - (View.java:226)
+import java.util.List;                                                         // Required by DeleteContactsEvent - (View.java:184)
+import org.dmd.dmc.DmcObjectName;                                              // View import - (View.java:226)
+import org.dmd.mvw.client.gxt.dmw.GxtWrapper;                                  // View import - (View.java:226)
 
-// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:38)
+// Generated from: org.dmd.mvw.tools.mvwgenerator.util.ViewFormatter.formatViewInterface(ViewFormatter.java:39)
 public interface ContactListViewIF {
 
     public interface ContactListViewPresenterIF {

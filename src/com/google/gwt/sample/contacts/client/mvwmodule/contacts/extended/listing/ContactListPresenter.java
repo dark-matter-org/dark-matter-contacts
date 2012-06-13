@@ -54,12 +54,13 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 		// Indicate to the cache how to wrap objects form the Contacts schema
 		gxtCache.addWrapperFactory(ContactsGxtWrapperFactory.instance());
 		
+		// SYNCHRONOUS
+		
 		// We've indicated that we both manage and instantiate the ContactListView, so
 		// we instantiate it and pass ourselves in as the presenter
 		view = getNewContactListView(this);
 		
 		view.displayFeedback("Waiting for comms session...");
-		
 	}
 	
 	public ContactListView getView(){
@@ -210,6 +211,13 @@ public class ContactListPresenter extends ContactListPresenterBaseImpl {
 	public void exampleMethod(Date date) {
 		// TODO Auto-generated method stub
 		
+	}
+
+// Hiding the override so that we can split/unsplit the view for code generation testing purposes
+//	@Override
+	public void asyncContactListViewReady(ContactListView v) {
+		view = v;
+		view.displayFeedback("Waiting for comms session...");
 	}
 
 }
