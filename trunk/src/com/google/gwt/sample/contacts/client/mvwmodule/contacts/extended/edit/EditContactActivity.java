@@ -23,39 +23,46 @@ import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 public class EditContactActivity extends EditContactActivityBaseImpl {
 	
-	EditContactView	view;
+	AcceptsOneWidget	panel;
+	EditContactView		view;
 
 	public EditContactActivity(MvwRunContextIF rc) {
 		super(rc);
 	}
 
 	@Override
-	public void start(AcceptsOneWidget panel, EventBus eventBus) {
+	public void start(AcceptsOneWidget p, EventBus eventBus) {
 		if (commsController.isLoggedIn()){
 			Logger logger = Logger.getLogger("EditContactActivity");
 			EditPlace place = (EditPlace) placeController.getWhere();
 			logger.info("EditPlace token: " + place.getToken());
 			
-			// Instantiate the view
-			view = getNewEditContactView(this);
-			panel.setWidget(view);
-
-			if (place.getToken().length() > 0){
-				// We have a contact key UUID, retrieve the details
-				GetRequestDMO request = getGetContactRequest();
-				try {
-					request.addTargets(new UUIDName(place.getToken()));
-				} catch (DmcValueException e) {
-					MessageBox.alert("Internal error", "Couldn't construct name for contact retrieval:\n" + e.toString(), null);
-					placeController.goTo(new ListContactsPlace(""));
-				}
-				
-				sendGetContactRequest(request);
-			}
-			else{
-				// We construct a new contact to edit
-				view.setContact(new ContactDMO());
-			}
+			// Hang on to the panel
+			panel = p;
+			
+			// Asynchronously instantiate the view - we'll be called back at asyncEditContactViewReady()
+			getEditContactViewAsync();
+			
+//			// Instantiate the view
+//			view = getNewEditContactView(this);
+//			panel.setWidget(view);
+//
+//			if (place.getToken().length() > 0){
+//				// We have a contact key UUID, retrieve the details
+//				GetRequestDMO request = getGetContactRequest();
+//				try {
+//					request.addTargets(new UUIDName(place.getToken()));
+//				} catch (DmcValueException e) {
+//					MessageBox.alert("Internal error", "Couldn't construct name for contact retrieval:\n" + e.toString(), null);
+//					placeController.goTo(new ListContactsPlace(""));
+//				}
+//				
+//				sendGetContactRequest(request);
+//			}
+//			else{
+//				// We construct a new contact to edit
+//				view.setContact(new ContactDMO());
+//			}
 		}
 		else{
 			// We're not logged in, goto login
@@ -64,6 +71,32 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 
 	}
 	
+	///////////////////////////////////////////////////////////////////////////
+
+	@Override
+	public void asyncEditContactViewReady(EditContactView v) {
+		view = v;
+		panel.setWidget(view);
+
+		EditPlace place = (EditPlace) placeController.getWhere();
+		if (place.getToken().length() > 0){
+			// We have a contact key UUID, retrieve the details
+			GetRequestDMO request = getGetContactRequest();
+			try {
+				request.addTargets(new UUIDName(place.getToken()));
+			} catch (DmcValueException e) {
+				MessageBox.alert("Internal error", "Couldn't construct name for contact retrieval:\n" + e.toString(), null);
+				placeController.goTo(new ListContactsPlace(""));
+			}
+			
+			sendGetContactRequest(request);
+		}
+		else{
+			// We construct a new contact to edit
+			view.setContact(new ContactDMO());
+		}
+	}
+
 	///////////////////////////////////////////////////////////////////////////
 	
 	@Override
@@ -134,6 +167,6 @@ public class EditContactActivity extends EditContactActivityBaseImpl {
 	public void cancelEdit() {
 		fireEditContactCancelledEvent();
 	}
-
+	
 
 }

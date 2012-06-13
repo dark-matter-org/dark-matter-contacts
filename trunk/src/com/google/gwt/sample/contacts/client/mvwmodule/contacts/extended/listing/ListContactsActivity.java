@@ -44,6 +44,7 @@ public class ListContactsActivity extends ListContactsActivityBaseImpl {
 		}
 	}
 
+// Hiding the override so that we can split/unsplit the presenter for code generation testing purposes
 //	@Override
 	public void asyncContactListPresenterReady(ContactListPresenter p) {
 		panel.setWidget(p.getView());

@@ -119,6 +119,7 @@ description			The ListContactsActivity determines whether or not we're logged
 View
 viewName        	ContactListView
 subpackage			listing
+//codeSplit			true
 broadcastOnly		AddContactEvent
 broadcastOnly		EditContactEvent
 local				DeleteContactsEvent
@@ -212,6 +213,7 @@ description			The EditContactActivity will determine if we're logged in.
 View
 viewName			EditContactView
 subpackage			edit
+codeSplit			true
 local				ContactUpdatedEvent
 local				NewContactEvent
 broadcastOnly		EditContactCancelledEvent
