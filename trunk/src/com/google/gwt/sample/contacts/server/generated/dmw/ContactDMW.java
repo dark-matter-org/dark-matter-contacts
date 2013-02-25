@@ -65,6 +65,12 @@ public class ContactDMW extends DmwNamedObjectWrapper implements DmcNamedObjectI
         super(obj, com.google.gwt.sample.contacts.server.generated.ContactsSchemaAG._Contact);
     }
 
+    public ContactDMW cloneIt() {
+        ContactDMW rc = new ContactDMW();
+        rc.setDmcObject(getDMO().cloneIt());
+        return(rc);
+    }
+
     public ContactDMO getDMO() {
         return((ContactDMO) core);
     }
