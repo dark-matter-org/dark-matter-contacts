@@ -7,14 +7,14 @@ import org.dmd.dms.generated.types.DmcTypeModifierMV;
 import com.google.gwt.sample.contacts.shared.generated.types.DmcTypeContactTypeEnumSET;
 
 @SuppressWarnings("serial")
-// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:50)
+// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:59)
 // Called from: org.dmd.dms.util.AdapterFormatter.dumpAdapterSET(AdapterFormatter.java:20)
 public class ContactTypeEnumSETAdapter extends DmcTypeContactTypeEnumSET implements DmcAdapterIF {
 
     transient DmcTypeContactTypeEnumSET existingValue;
 
     public ContactTypeEnumSETAdapter(DmcAttributeInfo ai){
-    	   attrInfo = ai;
+    	   super(ai);
     }
 
     @Override

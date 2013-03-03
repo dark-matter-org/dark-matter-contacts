@@ -7,14 +7,14 @@ import org.dmd.dms.generated.types.DmcTypeModifierMV;
 import com.google.gwt.sample.contacts.shared.generated.types.DmcTypeContactREFMAP;
 
 @SuppressWarnings("serial")
-// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:50)
+// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:59)
 // Called from: org.dmd.dms.util.AdapterFormatter.dumpAdapterMAP(AdapterFormatter.java:24)
 public class ContactREFMAPAdapter extends DmcTypeContactREFMAP implements DmcAdapterIF {
 
     transient DmcTypeContactREFMAP existingValue;
 
     public ContactREFMAPAdapter(DmcAttributeInfo ai){
-    	   attrInfo = ai;
+    	   super(ai);
     }
 
     @Override

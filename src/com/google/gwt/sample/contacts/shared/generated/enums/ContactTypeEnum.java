@@ -5,7 +5,7 @@ import java.util.*;
 import org.dmd.dmc.DmcEnumIF;
 
 /**
- * The ContactTypeEnum indicates the type of a contact. It is here to
+ * The ContactTypeEnum indicates the type of a contact. It is here to\n
  * illustrate the definition of an enumerated type and the generation of
  * GxtEnums.
  * <P>

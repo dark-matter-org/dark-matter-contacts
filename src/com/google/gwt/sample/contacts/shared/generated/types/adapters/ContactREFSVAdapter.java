@@ -7,14 +7,14 @@ import org.dmd.dms.generated.types.DmcTypeModifierMV;
 import com.google.gwt.sample.contacts.shared.generated.types.DmcTypeContactREFSV;
 
 @SuppressWarnings("serial")
-// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:50)
+// org.dmd.dms.util.AdapterFormatter.dumpAdapter(AdapterFormatter.java:59)
 // Called from: org.dmd.dms.util.AdapterFormatter.dumpAdapterSV(AdapterFormatter.java:12)
 public class ContactREFSVAdapter extends DmcTypeContactREFSV implements DmcAdapterIF {
 
     transient DmcTypeContactREFSV existingValue;
 
     public ContactREFSVAdapter(DmcAttributeInfo ai){
-    	   attrInfo = ai;
+    	   super(ai);
     }
 
     @Override
