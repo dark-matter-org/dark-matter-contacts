@@ -13,12 +13,14 @@ import org.dmd.dmp.server.extended.SetRequest;
 import org.dmd.dmp.server.generated.DmpSchemaAG;
 import org.dmd.dmv.shared.DmvRuleManager;
 import org.dmd.dmw.DmwOmni;
+import org.dmd.examples.contacts.server.generated.ContactsSchemaAG;
+import org.dmd.examples.contacts.shared.generated.dmo.ContactDMO;
+import org.dmd.examples.contacts.shared.generated.dmo.ContactsDMSAG;
 import org.dmd.util.exceptions.ResultException;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gwt.sample.contacts.ContactsTest;
-import com.google.gwt.sample.contacts.server.generated.ContactsSchemaAG;
 
 public class ContactDMOTest extends ContactsTest {
 	
