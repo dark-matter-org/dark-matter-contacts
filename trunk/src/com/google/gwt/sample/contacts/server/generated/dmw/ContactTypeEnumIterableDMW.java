@@ -24,8 +24,8 @@ import com.google.gwt.sample.contacts.shared.generated.enums.ContactTypeEnum;
  * it Iterable.
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpIterable(GenUtility.java:1689)
- *    Called from: org.dmd.dmg.generators.DMWGenerator.createTypeIterables(DMWGenerator.java:102)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpIterable(GenUtility.java:1741)
+ *    Called from: org.dmd.dmg.generators.DMWGenerator.createTypeIterables(DMWGenerator.java:104)
  */
 public class ContactTypeEnumIterableDMW extends DmwMVIterator<ContactTypeEnum> {
 

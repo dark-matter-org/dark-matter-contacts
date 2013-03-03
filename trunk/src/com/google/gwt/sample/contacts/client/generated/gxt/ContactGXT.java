@@ -2,16 +2,16 @@ package com.google.gwt.sample.contacts.client.generated.gxt;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.dmg.generators.BaseDMWGeneratorNewest.dumpWrapper(BaseDMWGeneratorNewest.java:349)
-import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;            // Class not auxiliary or abstract - (BaseDMWGeneratorNewest.java:1068)
+import com.google.gwt.sample.contacts.shared.generated.dmo.ContactDMO;            // Class not auxiliary or abstract - (BaseDMWGeneratorNewest.java:1070)
 import com.google.gwt.sample.contacts.shared.generated.dmo.ContactsDMSAG;         // Attribute urlCE from the contacts schema - (BaseDMWGeneratorNewest.java:733)
-import java.util.ArrayList;                                                       // Support for MULTI attribute - (BaseDMWGeneratorNewest.java:2036)
-import java.util.Date;                                                            // Primitive type - (BaseDMWGeneratorNewest.java:966)
-import java.util.Iterator;                                                        // Support copy of MV objects - (BaseDMWGeneratorNewest.java:2048)
-import org.dmd.dmc.*;                                                             // If any attributes - (BaseDMWGeneratorNewest.java:903)
+import java.util.ArrayList;                                                       // Support for MULTI attribute - (BaseDMWGeneratorNewest.java:2042)
+import java.util.Date;                                                            // Primitive type - (BaseDMWGeneratorNewest.java:968)
+import java.util.Iterator;                                                        // Support copy of MV objects - (BaseDMWGeneratorNewest.java:2054)
+import org.dmd.dmc.*;                                                             // If any attributes - (BaseDMWGeneratorNewest.java:905)
 import org.dmd.dmc.types.UUIDName;                                                // Is named by - (BaseDMWGeneratorNewest.java:884)
-import org.dmd.dms.generated.dmo.MetaDMSAG;                                       // Required for MODREC constructor - (BaseDMWGeneratorNewest.java:892)
-import org.dmd.dms.generated.types.DmcTypeModifierMV;                             // Required for MODREC constructor - (BaseDMWGeneratorNewest.java:891)
-import org.dmd.mvw.client.gxt.dmw.GxtNamedObjectWrapper;                          // Named object wrapper - (BaseDMWGeneratorNewest.java:1058)
+import org.dmd.dms.generated.dmo.MetaDMSAG;                                       // Required for MODREC constructor - (BaseDMWGeneratorNewest.java:894)
+import org.dmd.dms.generated.types.DmcTypeModifierMV;                             // Required for MODREC constructor - (BaseDMWGeneratorNewest.java:893)
+import org.dmd.mvw.client.gxt.dmw.GxtNamedObjectWrapper;                          // Named object wrapper - (BaseDMWGeneratorNewest.java:1060)
 
 
 /**
@@ -52,7 +52,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
         super(obj);
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.getAccessFunctions(BaseDMWGeneratorNewest.java:1113)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.getAccessFunctions(BaseDMWGeneratorNewest.java:1115)
     public UUIDName getObjectName(){
         return(((ContactDMO) core).getUuidName());
     }
@@ -72,7 +72,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
         return(false);
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public Date getBirthdayCE(){
         return(((ContactDMO) core).getBirthdayCE());
     }
@@ -81,7 +81,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets birthdayCE to the specified value.
      * @param value A value compatible with DmcTypeDate
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setBirthdayCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setBirthdayCE(value);
     }
@@ -90,7 +90,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets birthdayCE to the specified value.
      * @param value Date
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setBirthdayCE(Date value){
         ((ContactDMO) core).setBirthdayCE(value);
     }
@@ -98,12 +98,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the birthdayCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remBirthdayCE(){
         ((ContactDMO) core).remBirthdayCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getEmailCE(){
         return(((ContactDMO) core).getEmailCE());
     }
@@ -112,7 +112,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets emailCE to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setEmailCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setEmailCE(value);
     }
@@ -121,7 +121,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets emailCE to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setEmailCE(String value){
         ((ContactDMO) core).setEmailCE(value);
     }
@@ -129,12 +129,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the emailCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remEmailCE(){
         ((ContactDMO) core).remEmailCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getFirstName(){
         return(((ContactDMO) core).getFirstName());
     }
@@ -143,7 +143,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets firstName to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setFirstName(Object value) throws DmcValueException {
         ((ContactDMO) core).setFirstName(value);
     }
@@ -152,7 +152,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets firstName to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setFirstName(String value){
         ((ContactDMO) core).setFirstName(value);
     }
@@ -160,12 +160,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the firstName attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remFirstName(){
         ((ContactDMO) core).remFirstName();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getLastName(){
         return(((ContactDMO) core).getLastName());
     }
@@ -174,7 +174,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets lastName to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setLastName(Object value) throws DmcValueException {
         ((ContactDMO) core).setLastName(value);
     }
@@ -183,7 +183,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets lastName to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setLastName(String value){
         ((ContactDMO) core).setLastName(value);
     }
@@ -191,12 +191,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the lastName attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remLastName(){
         ((ContactDMO) core).remLastName();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getMiddleName(){
         return(((ContactDMO) core).getMiddleName());
     }
@@ -205,7 +205,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets middleName to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setMiddleName(Object value) throws DmcValueException {
         ((ContactDMO) core).setMiddleName(value);
     }
@@ -214,7 +214,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets middleName to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setMiddleName(String value){
         ((ContactDMO) core).setMiddleName(value);
     }
@@ -222,12 +222,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the middleName attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remMiddleName(){
         ((ContactDMO) core).remMiddleName();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getNickName(){
         return(((ContactDMO) core).getNickName());
     }
@@ -236,7 +236,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets nickName to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setNickName(Object value) throws DmcValueException {
         ((ContactDMO) core).setNickName(value);
     }
@@ -245,7 +245,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets nickName to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setNickName(String value){
         ((ContactDMO) core).setNickName(value);
     }
@@ -253,12 +253,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the nickName attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remNickName(){
         ((ContactDMO) core).remNickName();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getNotesCE(){
         return(((ContactDMO) core).getNotesCE());
     }
@@ -267,7 +267,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets notesCE to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setNotesCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setNotesCE(value);
     }
@@ -276,7 +276,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets notesCE to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setNotesCE(String value){
         ((ContactDMO) core).setNotesCE(value);
     }
@@ -284,12 +284,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the notesCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remNotesCE(){
         ((ContactDMO) core).remNotesCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getPhoneNumberCE(){
         return(((ContactDMO) core).getPhoneNumberCE());
     }
@@ -298,7 +298,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets phoneNumberCE to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setPhoneNumberCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setPhoneNumberCE(value);
     }
@@ -307,7 +307,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets phoneNumberCE to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setPhoneNumberCE(String value){
         ((ContactDMO) core).setPhoneNumberCE(value);
     }
@@ -315,12 +315,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the phoneNumberCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remPhoneNumberCE(){
         ((ContactDMO) core).remPhoneNumberCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getPrefixCE(){
         return(((ContactDMO) core).getPrefixCE());
     }
@@ -329,7 +329,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets prefixCE to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setPrefixCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setPrefixCE(value);
     }
@@ -338,7 +338,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets prefixCE to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setPrefixCE(String value){
         ((ContactDMO) core).setPrefixCE(value);
     }
@@ -346,12 +346,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the prefixCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remPrefixCE(){
         ((ContactDMO) core).remPrefixCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getSuffixCE(){
         return(((ContactDMO) core).getSuffixCE());
     }
@@ -360,7 +360,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets suffixCE to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setSuffixCE(Object value) throws DmcValueException {
         ((ContactDMO) core).setSuffixCE(value);
     }
@@ -369,7 +369,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets suffixCE to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setSuffixCE(String value){
         ((ContactDMO) core).setSuffixCE(value);
     }
@@ -377,12 +377,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the suffixCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remSuffixCE(){
         ((ContactDMO) core).remSuffixCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public String getTitleAndCompany(){
         return(((ContactDMO) core).getTitleAndCompany());
     }
@@ -391,7 +391,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets titleAndCompany to the specified value.
      * @param value A value compatible with DmcTypeString
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setTitleAndCompany(Object value) throws DmcValueException {
         ((ContactDMO) core).setTitleAndCompany(value);
     }
@@ -400,7 +400,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets titleAndCompany to the specified value.
      * @param value String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setTitleAndCompany(String value){
         ((ContactDMO) core).setTitleAndCompany(value);
     }
@@ -408,7 +408,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the titleAndCompany attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remTitleAndCompany(){
         ((ContactDMO) core).remTitleAndCompany();
     }
@@ -416,7 +416,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * @return The number of String items.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1483)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1489)
     public int getUrlCESize(){
         return(((ContactDMO) core).getUrlCESize());
     }
@@ -424,7 +424,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * @return true if there are no StringDMO items.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1491)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1497)
     public boolean getUrlCEIsEmpty(){
         if (((ContactDMO) core).getUrlCESize() == 0)
             return(true);
@@ -434,7 +434,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * @return true if there are any StringDMO items.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1501)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1507)
     public boolean getUrlCEHasValue(){
         if (((ContactDMO) core).getUrlCESize() == 0)
             return(false);
@@ -444,7 +444,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * @return An Iterator of String objects.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1930)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1936)
     public Iterator<String> getUrlCE(){
         return(((ContactDMO) core).getUrlCE());
     }
@@ -453,7 +453,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Adds another urlCE value.
      * @param value A value compatible with String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1943)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1949)
     public void addUrlCE(Object value) throws DmcValueException {
         ((ContactDMO) core).addUrlCE(value);
     }
@@ -462,7 +462,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Adds another urlCE value.
      * @param value A value compatible with String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1953)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:1959)
     public void addUrlCE(String value){
         ((ContactDMO) core).addUrlCE(value);
     }
@@ -471,7 +471,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Returns true if the collection contains the urlCE value.
      * @param value A value compatible with String
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2010)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2016)
     public boolean urlCEContains(String value){
         return(((ContactDMO) core).urlCEContains(value));
     }
@@ -479,7 +479,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * @return A COPY of the collection of String objects.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2052)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2058)
     @SuppressWarnings("unchecked")
     public ArrayList<String> getUrlCECopy(){
         DmcAttribute<?> attr = core.get(ContactsDMSAG.__urlCE);
@@ -500,7 +500,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Deletes a urlCE value.
      * @param value The String to be deleted from set of attribute values.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2079)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2085)
     public void delUrlCE(Object value) throws DmcValueException {
         ((ContactDMO) core).delUrlCE(value);
     }
@@ -509,7 +509,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Deletes a urlCE value.
      * @param value The String to be deleted from set of attribute values.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2088)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2094)
     public void delUrlCE(String value){
         ((ContactDMO) core).delUrlCE(value);
     }
@@ -517,12 +517,12 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the urlCE attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2100)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatMV(BaseDMWGeneratorNewest.java:2106)
     public void remUrlCE(){
         ((ContactDMO) core).remUrlCE();
     }
 
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1286)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1292)
     public UUIDName getUuidName(){
         return(((ContactDMO) core).getUuidName());
     }
@@ -531,7 +531,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets uuidName to the specified value.
      * @param value A value compatible with DmcTypeUUIDName
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1396)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1402)
     public void setUuidName(Object value) throws DmcValueException {
         ((ContactDMO) core).setUuidName(value);
     }
@@ -540,7 +540,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
      * Sets uuidName to the specified value.
      * @param value UUIDName
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1405)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1411)
     public void setUuidName(UUIDName value){
         ((ContactDMO) core).setUuidName(value);
     }
@@ -548,7 +548,7 @@ public class ContactGXT extends GxtNamedObjectWrapper implements DmcNamedObjectI
     /**
      * Removes the uuidName attribute value.
      */
-    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1431)
+    // org.dmd.dmg.generators.BaseDMWGeneratorNewest.formatSV(BaseDMWGeneratorNewest.java:1437)
     public void remUuidName(){
         ((ContactDMO) core).remUuidName();
     }

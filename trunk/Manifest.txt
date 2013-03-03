@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Name: dark-matter-data
+Specification-Title: dark-matter Contacts Example
+Specification-Version:1.0.0
+Specification-Vendor: dark-matter-data committers
+Implementation-Title: org.dmd
+Implementation-Version: rev107
+Implementation-Vendor: dark-matter-data committers

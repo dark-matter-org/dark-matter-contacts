@@ -2,24 +2,52 @@ package com.google.gwt.sample.contacts.shared.generated.dmo;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
+import org.dmd.dmc.DmcOmni;
 import org.dmd.dmc.DmcValueException;
 import org.dmd.dmc.DmcValueExceptionSet;
+import org.dmd.dmc.rules.DmcRuleExceptionSet;
 import org.dmd.dmp.server.extended.DMPEvent;
 import org.dmd.dmp.server.extended.SetRequest;
+import org.dmd.dmp.server.generated.DmpSchemaAG;
+import org.dmd.dmv.shared.DmvRuleManager;
+import org.dmd.dmw.DmwOmni;
+import org.dmd.util.exceptions.ResultException;
+import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gwt.sample.contacts.ContactsTest;
+import com.google.gwt.sample.contacts.server.generated.ContactsSchemaAG;
 
 public class ContactDMOTest extends ContactsTest {
 	
+	static boolean initialized = false;
+	
+	static DmvRuleManager	ruleManager;
+
+	@Before
+	public void initialize() throws ResultException, DmcValueException, IOException {
+		if (!initialized){
+			DmcOmni.instance().addCompactSchema(ContactsDMSAG.instance());
+			ruleManager = new DmvRuleManager();
+			ruleManager.loadRules(ContactsDMSAG.instance());
+			
+			DmwOmni.instance().addSchema(new DmpSchemaAG());
+			DmwOmni.instance().addSchema(new ContactsSchemaAG());
+			
+			initialized = true;
+		}
+	}
+
 	@Test
 	public void testContactMissingMandatory(){
 		ContactDMO dmo = new ContactDMO();
 		
 		try {
-			dmo.validate();
+			ruleManager.executeObjectValidation(dmo);
 			assertTrue("Exception for missing mandatory attributes should have been thrown",false);
-		} catch (DmcValueExceptionSet e) {
+		} catch (DmcRuleExceptionSet e) {
 			assertTrue("Exception should be thrown because of missing mandatory attributes.",true);
 			System.out.println(e.toString());
 		}
@@ -34,10 +62,10 @@ public class ContactDMOTest extends ContactsTest {
 		dmo.setLastName("Voss");
 				
 		try {
-			dmo.validate();
+			ruleManager.executeObjectValidation(dmo);
 			assertTrue("Basic validation should be true.",true);
-		} catch (DmcValueExceptionSet e) {
-			assertTrue("Exception should be thrown because of missing mandatory attributes.",true);
+		} catch (DmcRuleExceptionSet e) {
+			assertTrue("There should have been no exceptions.",false);
 			System.out.println(e.toString());
 		}
 		

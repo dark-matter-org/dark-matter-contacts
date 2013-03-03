@@ -13,11 +13,14 @@ import org.dmd.dms.generated.enums.ValueTypeEnum;
  * The DmcTypeContactREFSET provides storage for a set of ContactREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2530)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2595)
  *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:532)
  */
 @SuppressWarnings("serial")
 public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializable {
+    
+     private final static Iterator<ContactREF> emptyList =  (new HashSet<ContactREF>()).iterator();
+    
     
     protected Set<ContactREF> value;
     
@@ -31,7 +34,7 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     void initValue(){
-        if (attrInfo.valueType == ValueTypeEnum.HASHSET)
+        if (getAttributeInfo().valueType == ValueTypeEnum.HASHSET)
             value = new HashSet<ContactREF>();
         else
             value = new TreeSet<ContactREF>();
@@ -39,14 +42,18 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     
     @Override
     public DmcTypeContactREFSET getNew(){
-        return(new DmcTypeContactREFSET(attrInfo));
+        return(new DmcTypeContactREFSET(getAttributeInfo()));
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2567)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2636)
     public DmcAttribute<ContactREF> cloneIt(){
         synchronized(this){
             DmcTypeContactREFSET rc = getNew();
+    
+            if (value == null)
+                return(rc);
+    
             for(ContactREF val: value)
             try {
                 rc.add(val);
@@ -58,7 +65,7 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2586)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2659)
     public ContactREF add(Object v) throws DmcValueException {
         synchronized(this){
             ContactREF rc = typeCheck(v);
@@ -74,7 +81,7 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2603)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2676)
     public ContactREF del(Object v){
         synchronized(this){
             ContactREF rc = null;
@@ -98,28 +105,39 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2628)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2701)
     public Iterator<ContactREF> getMV(){
         synchronized(this){
-            if (attrInfo.valueType == ValueTypeEnum.HASHSET)
+            if (value == null)
+                return(emptyList);
+
+            if (getAttributeInfo().valueType == ValueTypeEnum.HASHSET)
                 return( (new HashSet<ContactREF>(value)).iterator() );
             else
                 return( (new TreeSet<ContactREF>(value)).iterator() );
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2645)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2715)
     public Set<ContactREF> getMVCopy(){
         synchronized(this){
-            if (attrInfo.valueType == ValueTypeEnum.HASHSET)
-                return(new HashSet<ContactREF>(value));
-            else
-                return(new TreeSet<ContactREF>(value));
+            if (getAttributeInfo().valueType == ValueTypeEnum.HASHSET){
+                if (value == null)
+                    return(new HashSet<ContactREF>());
+                else
+                    return(new HashSet<ContactREF>(value));
+            }
+            else{
+                if (value == null)
+                    return(new TreeSet<ContactREF>(value));
+                else
+                    return(new TreeSet<ContactREF>(value));
+            }
         }
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2663)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2735)
     public int getMVSize(){
         synchronized(this){
             if (value == null)
@@ -129,7 +147,7 @@ public class DmcTypeContactREFSET extends DmcTypeContactREF implements Serializa
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2674)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2746)
     public boolean contains(Object v){
         synchronized(this){
             if (value == null)
