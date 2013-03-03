@@ -12,5 +12,5 @@ pluginClass		org.dmd.dmp.server.servlet.base.plugins.BasicRequestTrackerPlugin
 
 PluginConfig
 pluginName		contacts
-pluginClass		com.google.gwt.sample.contacts.server.plugins.ContactsPlugin
+pluginClass		org.dmd.examples.contacts.server.plugins.ContactsPlugin
 
