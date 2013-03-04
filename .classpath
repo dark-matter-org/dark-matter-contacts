@@ -9,8 +9,8 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-api-1.5.11.jar"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/gwt-2.4.0"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-data-2.0.5.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-gxt-1.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-mvw-1.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-data-2.0.5.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
