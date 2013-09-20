@@ -3751,6 +3751,11 @@
       <td class="label">Used in:</td>
       <td>
         <table>
+        <tr>
+          <td> DotNamedObject (<a href="dmrbase.html#DotNamedObject">dmrbase</a>) </td>
+          <td> HierarchicObject (<a href="dmrbase.html#HierarchicObject">dmrbase</a>) </td>
+          <td> LDAPHierarchicObject (<a href="dmrldap.html#LDAPHierarchicObject">dmrldap</a>) </td>
+        </tr>
         </table>
       </td>
     </tr>
@@ -5512,6 +5517,7 @@
         <table>
         <tr>
           <td> DmsDefinition (<a href="meta.html#DmsDefinition">meta</a>) </td>
+          <td> HierarchicObject (<a href="dmrbase.html#HierarchicObject">dmrbase</a>) </td>
           <td> RuleData (<a href="meta.html#RuleData">meta</a>) </td>
         </tr>
         </table>
@@ -6347,6 +6353,7 @@
         <table>
         <tr>
           <td> DmsDefinition (<a href="meta.html#DmsDefinition">meta</a>) </td>
+          <td> HierarchicObject (<a href="dmrbase.html#HierarchicObject">dmrbase</a>) </td>
           <td> RuleData (<a href="meta.html#RuleData">meta</a>) </td>
         </tr>
         </table>
@@ -6753,6 +6760,18 @@
  plus the value of the naming attribute (type:value) is used to create the
  name of an object. It is best if the naming attribute value is created by
  the application; it shouldn't be based on any user configurable value.<p/>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="spacer"> </td>
+      <td class="label">Used in:</td>
+      <td>
+        <table>
+        <tr>
+          <td> LDAPClassAUX (<a href="dmrldap.html#LDAPClassAUX">dmrldap</a>) </td>
+        </tr>
+        </table>
       </td>
     </tr>
 
@@ -8669,22 +8688,27 @@
     <td> lastName (<a href="contacts.html#lastName">contacts</a>) </td>
 </tr>
   <tr>
+    <td> ldapIdPrefix (<a href="dmrldap.html#ldapIdPrefix">dmrldap</a>) </td>
     <td> middleName (<a href="contacts.html#middleName">contacts</a>) </td>
     <td> msgKey (<a href="meta.html#msgKey">meta</a>) </td>
-    <td> msgParam (<a href="meta.html#msgParam">meta</a>) </td>
 </tr>
   <tr>
+    <td> msgParam (<a href="meta.html#msgParam">meta</a>) </td>
     <td> nickName (<a href="contacts.html#nickName">contacts</a>) </td>
     <td> notesCE (<a href="contacts.html#notesCE">contacts</a>) </td>
-    <td> nullReturnValue (<a href="meta.html#nullReturnValue">meta</a>) </td>
 </tr>
   <tr>
+    <td> nullReturnValue (<a href="meta.html#nullReturnValue">meta</a>) </td>
     <td> obsoleteVersion (<a href="meta.html#obsoleteVersion">meta</a>) </td>
+    <td> password (<a href="dmrbase.html#password">dmrbase</a>) </td>
+</tr>
+  <tr>
     <td> phoneNumberCE (<a href="contacts.html#phoneNumberCE">contacts</a>) </td>
     <td> prefixCE (<a href="contacts.html#prefixCE">contacts</a>) </td>
+    <td> primitiveType (<a href="meta.html#primitiveType">meta</a>) </td>
 </tr>
   <tr>
-    <td> primitiveType (<a href="meta.html#primitiveType">meta</a>) </td>
+    <td> reposName (<a href="dmrldap.html#reposName">dmrldap</a>) </td>
     <td> ruleImport (<a href="meta.html#ruleImport">meta</a>) </td>
     <td> ruleTitle (<a href="meta.html#ruleTitle">meta</a>) </td>
 </tr>
@@ -8701,9 +8725,10 @@
   <tr>
     <td> urlCE (<a href="contacts.html#urlCE">contacts</a>) </td>
     <td> useInterface (<a href="meta.html#useInterface">meta</a>) </td>
-    <td> usesInterface (<a href="meta.html#usesInterface">meta</a>) </td>
+    <td> userName (<a href="dmrbase.html#userName">dmrbase</a>) </td>
 </tr>
   <tr>
+    <td> usesInterface (<a href="meta.html#usesInterface">meta</a>) </td>
     <td> wrapperClassName (<a href="meta.html#wrapperClassName">meta</a>) </td>
 </tr>
 </table>
@@ -9728,6 +9753,8 @@ SPACE</td>
 <!-- org.dmd.dms.doc.web.Summarizer.buildSidebar(Summarizer.java:98) -->
     <div id="sidebar">
         <a class="navLink" href="contacts.html"> contacts</a>
+        <a class="navLink" href="dmrbase.html"> dmrbase</a>
+        <a class="navLink" href="dmrldap.html"> dmrldap</a>
         <a class="navLink" href="meta.html"> meta</a>
         <a class="navLink" href="SchemaSummaryPage.html"> Summary </a>
     </div>
