@@ -1,0 +1,1 @@
+This project provides a complete working example of using the dark-matter Model View Whatever (MVW) framework to implement the Contacts example associated with the GWT document that describes [Large scale application development and MVP](https://developers.google.com/web-toolkit/articles/mvp-architecture).
