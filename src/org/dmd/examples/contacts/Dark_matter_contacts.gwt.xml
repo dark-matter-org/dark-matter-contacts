@@ -45,10 +45,10 @@
   <!-- Enable the simple remote handler -->
   <!-- <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" /> -->
 
+  <!-- Try uncommenting some of the following to configure logging further
   <set-property name="gwt.logging.enabled" value="TRUE"/> 
   <set-property name="gwt.logging.logLevel" value="ALL"/>
   <set-property name="gwt.logging.popupHandler" value="DISABLED" />
-  <!-- Try uncommenting some of the following to configure logging further
   <set-property name="gwt.logging.enabled" value="FALSE"/> 
   <set-property name="gwt.logging.logLevel" value="FINE"/>
   <set-property name="gwt.logging.consoleHandler" value="DISABLED" />

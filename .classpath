@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-gxt-1.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/dark-matter-mvw-1.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-io-2.0.1.jar"/>
+	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
